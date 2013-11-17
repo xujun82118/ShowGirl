@@ -368,8 +368,11 @@
     
     
 	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kMissionStringKey"];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.opaque = YES;
     
     cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+
 
 
     

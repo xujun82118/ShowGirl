@@ -143,7 +143,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell1";
+    static NSString *CellIdentifier = @"Cellmission";
     
     [tableView registerClass:[UITableViewCell class]  forCellReuseIdentifier:CellIdentifier];
     
@@ -152,11 +152,12 @@
     
     // Configure the cell...
     
-    
-	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kMissionStringKey"];
-    
-   // cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
 
+	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kMissionStringKey"];
+    cell.backgroundColor = [UIColor redColor];
+    cell.opaque = NO;
+   
     return cell;
 }
 

@@ -22,7 +22,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
 @implementation ChooseStringViewController
 
-@synthesize declareTableView;
+@synthesize declareTableView, addDeclareString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,6 +69,20 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
         
     }
 
+    addDeclareString.borderStyle = UITextBorderStyleBezel;
+    addDeclareString.textColor = [UIColor blackColor];
+    addDeclareString.font = [UIFont systemFontOfSize:17.0];
+    addDeclareString.placeholder = @"说点什么？";
+    addDeclareString.backgroundColor = [UIColor whiteColor];
+    
+    addDeclareString.keyboardType = UIKeyboardTypeDefault;
+    addDeclareString.returnKeyType = UIReturnKeyDone;
+    addDeclareString.secureTextEntry = NO;	// make the text entry secure (bullets)
+    
+    addDeclareString.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
+    
+    addDeclareString.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
+    
     //currentSelect = [defaults integerForKey:@"initSelect"];
    // if (currentSelect == 0) {
   //      currentSelect = 1;
@@ -79,6 +93,8 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     // [defaults synchronize];
     
+      // [declareTableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionBottom animated:NO];
+   //[ declareTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
 }
 
 
@@ -96,6 +112,49 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	// the user pressed the "Done" button, so dismiss the keyboard
+	[textField resignFirstResponder];
+	return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+    CGRect frame = textField.frame;
+    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 216.0);//键盘高度216
+    NSTimeInterval animationDuration = 0.30f;
+    [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    float width = self.view.frame.size.width;
+    float height = self.view.frame.size.height;
+    if(offset > 0)
+    {
+        CGRect rect = CGRectMake(0.0f, -offset,width,height);
+        self.view.frame = rect;
+    }
+    [UIView commitAnimations];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    // When the user presses return, take focus away from the text field so that the keyboard is dismissed.
+    NSTimeInterval animationDuration = 0.30f;
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    CGRect rect = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height);
+    self.view.frame = rect;
+    [UIView commitAnimations];
+    [textField resignFirstResponder];
+    //return YES;
+}
+
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -108,13 +167,14 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+
     return [self.dataSourceArray count];
 
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell1";
+    static NSString *CellIdentifier = @"Cellchoose";
     
     [tableView registerClass:[UITableViewCell class]  forCellReuseIdentifier:CellIdentifier];
 
@@ -127,7 +187,8 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kDeclareStringKey"];
 
     cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
-   
+    cell.backgroundColor = [UIColor clearColor];
+    cell.opaque = YES;
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     currentSelect = [defaults integerForKey:@"current"];
@@ -147,6 +208,8 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
+
+    
  // 列寬
  CGFloat contentWidth = self.view.frame.size.width;
 
@@ -198,6 +261,12 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 }
 
 /*
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -251,4 +320,56 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+
+- (IBAction)addNewDeclare:(id)sender
+{
+    for (int i=0; i<self.dataSourceArray.count; i++)
+    {
+        NSString *now = [[self.dataSourceArray objectAtIndex:i]objectForKey:@"kMissionStringKey"];
+        
+        if ([self.addDeclareString.text isEqualToString:now])
+        {
+            
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"亲^_^"
+                                  message:@"此宣言已在任务列表中！"
+                                  delegate:self
+                                  cancelButtonTitle:@"确定"
+                                  otherButtonTitles: nil];
+            [alert show];
+            
+            return;
+        }
+        
+    }
+    
+    if ([self.addDeclareString.text isEqualToString:@""]) {
+        return;
+    }
+    
+    [self.dataSourceArray addObject:
+     [NSDictionary dictionaryWithObjectsAndKeys: self.addDeclareString.text, @"kDeclareStringKey",nil]];
+    
+    //存储自定认任务
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:self.dataSourceArray forKey:DEFAULT_CHOOSE_STRING_KEY];
+    
+    [defaults synchronize];
+    
+    [declareTableView reloadData];
+
+    NSInteger s = [self.declareTableView numberOfSections];
+    if (s<1) return;
+    NSInteger r = [self.declareTableView numberOfRowsInSection:s-1];
+    if (r<1) return;
+    
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:r-1 inSection:s-1];
+    
+    [self.declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+
+    
+}
+
 @end

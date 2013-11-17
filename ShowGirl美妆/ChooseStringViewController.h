@@ -19,6 +19,8 @@
 
 - (IBAction)finishReturn:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITextField *addDeclareString;
+- (IBAction)addNewDeclare:(id)sender;
 
 
 @property (nonatomic, retain) NSMutableArray *dataSourceArray;
