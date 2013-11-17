@@ -1,0 +1,16 @@
+/* 
+  File.strings
+  ShowGirl美妆
+
+  Created by 徐 军 on 13-11-7.
+  Copyright (c) 2013年 徐 军. All rights reserved.
+*/
+
+
+"Mission_1" = "做了一次面膜！";
+"Mission_2" = "做了十分钟的瑜伽！";
+"Mission_3" = "有氧运动十分钟！";
+
+"DeclareString_1" = "美丽的早晨，美丽的我！";
+"DeclareString_2" = "美丽，自信的我！";
+"DeclareString_3" = "多么清纯可爱的我！";

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HoldBeautyView">
+            <connections>
+                <outlet property="CurrentMissionTableView" destination="VsT-Va-d4w" id="uJl-8P-crw"/>
+                <outlet property="changeImageButton" destination="zqT-vS-vrX" id="u0U-Wi-HeE"/>
+                <outlet property="deleteImageButton" destination="LAn-0L-51e" id="Q8J-4I-f0d"/>
+                <outlet property="insertPhotoButton" destination="jLr-sN-gDM" id="aOa-sZ-tvP"/>
+                <outlet property="proveImage" destination="cU5-Rd-sAy" id="qYZ-OP-lm3"/>
+                <outlet property="textSelf" destination="jC8-Sn-hqU" id="oYU-HC-ZrP"/>
+                <outlet property="textSelfString" destination="0Qt-0u-1Nk" id="pPb-li-byg"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <userGuides>
+                <userLayoutGuide location="139" affinity="minY"/>
+            </userGuides>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="美丽任务底图.png" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-oy-fWS">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="1pl-ed-kaJ"/>
+                        <constraint firstAttribute="height" constant="568" id="qea-C1-3gu"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" alpha="0.59999999999999964" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="230" y="399" width="90" height="66"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="完成" backgroundImage="纯色长形底图.png">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backToStart:" destination="-1" eventType="touchUpInside" id="14"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.59999999999999964" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKg-A7-Xg0">
+                    <rect key="frame" x="115" y="400" width="90" height="66"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="分享" backgroundImage="纯色长形底图.png">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doShare:" destination="-1" eventType="touchUpInside" id="pUu-ny-P6R"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLr-sN-gDM">
+                    <rect key="frame" x="0.0" y="399" width="90" height="66"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="有图为证" backgroundImage="纯色长形底图.png">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="insertPhoto:" destination="-1" eventType="touchUpInside" id="9tP-zJ-5OY"/>
+                    </connections>
+                </button>
+                <button hidden="YES" alpha="0.59999999999999964" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-vS-vrX">
+                    <rect key="frame" x="0.0" y="399" width="90" height="66"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="换个图" backgroundImage="纯色长形底图.png">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="changeImage:" destination="-1" eventType="touchUpInside" id="KUT-GZ-MoD"/>
+                        <action selector="insertPhoto:" destination="-1" eventType="touchUpInside" id="LuX-dr-40O"/>
+                    </connections>
+                </button>
+                <button hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAn-0L-51e">
+                    <rect key="frame" x="0.0" y="316" width="90" height="66"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="I6I-1u-d9G"/>
+                        <constraint firstAttribute="height" constant="66" id="pqz-Is-H5A"/>
+                    </constraints>
+                    <state key="normal" title="不需要图" backgroundImage="纯色长形底图.png">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteImage:" destination="-1" eventType="touchUpInside" id="SWK-xi-MrX"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cU5-Rd-sAy">
+                    <rect key="frame" x="122" y="306" width="77" height="86"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="RsU-On-B9q"/>
+                        <constraint firstAttribute="width" constant="77" id="luK-1l-KwO"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" alpha="0.69999999999999973" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VsT-Va-d4w">
+                    <rect key="frame" x="0.0" y="56" width="320" height="200"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="sectionIndexColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="c7X-3g-R3M"/>
+                        <outlet property="delegate" destination="-1" id="hkZ-gu-nL6"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qt-0u-1Nk">
+                    <rect key="frame" x="88" y="268" width="212" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jC8-Sn-hqU">
+                    <rect key="frame" x="20" y="268" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="onTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="1" green="0.64330512410828833" blue="0.2184612713121884" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="changeSwitchSelf:" destination="-1" eventType="valueChanged" id="pRF-kc-Krp"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天完成的美丽任务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rt3-9P-EiC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.80500105397616595" blue="0.27407937540507188" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VsT-Va-d4w" firstAttribute="top" secondItem="Rt3-9P-EiC" secondAttribute="bottom" id="1a6-WR-bla"/>
+                <constraint firstItem="cU5-Rd-sAy" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="122" id="1lV-2W-8Oe"/>
+                <constraint firstItem="LAn-0L-51e" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3dh-FG-dvL"/>
+                <constraint firstItem="0Qt-0u-1Nk" firstAttribute="leading" secondItem="jC8-Sn-hqU" secondAttribute="trailing" constant="19" id="9Mh-fg-JGQ"/>
+                <constraint firstItem="VsT-Va-d4w" firstAttribute="top" secondItem="Rt3-9P-EiC" secondAttribute="bottom" id="Bjv-vx-F30"/>
+                <constraint firstItem="VsT-Va-d4w" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="DBi-Va-p7J"/>
+                <constraint firstAttribute="bottom" secondItem="Rt3-9P-EiC" secondAttribute="bottom" constant="512" id="FZh-QP-3zH"/>
+                <constraint firstItem="Izn-oy-fWS" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="LNR-dX-bMS"/>
+                <constraint firstAttribute="trailing" secondItem="0Qt-0u-1Nk" secondAttribute="trailing" constant="20" id="Lab-jR-5xH"/>
+                <constraint firstAttribute="trailing" secondItem="Izn-oy-fWS" secondAttribute="trailing" id="T1a-AM-aT6"/>
+                <constraint firstItem="0Qt-0u-1Nk" firstAttribute="top" secondItem="VsT-Va-d4w" secondAttribute="bottom" constant="12" id="UHV-sY-BUa"/>
+                <constraint firstItem="Rt3-9P-EiC" firstAttribute="top" secondItem="1" secondAttribute="top" id="Uek-SA-neP"/>
+                <constraint firstAttribute="bottom" secondItem="Izn-oy-fWS" secondAttribute="bottom" id="Uoi-ZI-LOY"/>
+                <constraint firstItem="LAn-0L-51e" firstAttribute="top" secondItem="jC8-Sn-hqU" secondAttribute="bottom" constant="17" id="V6K-OW-XOa"/>
+                <constraint firstItem="cU5-Rd-sAy" firstAttribute="top" secondItem="0Qt-0u-1Nk" secondAttribute="bottom" constant="8" id="W9R-gb-ze9"/>
+                <constraint firstItem="0Qt-0u-1Nk" firstAttribute="leading" secondItem="jC8-Sn-hqU" secondAttribute="trailing" constant="19" id="hnO-7k-qLB"/>
+                <constraint firstItem="jC8-Sn-hqU" firstAttribute="top" secondItem="VsT-Va-d4w" secondAttribute="bottom" constant="12" id="jvh-vn-QRK"/>
+                <constraint firstAttribute="trailing" secondItem="cU5-Rd-sAy" secondAttribute="trailing" constant="121" id="l5O-zM-h7z"/>
+                <constraint firstItem="Izn-oy-fWS" firstAttribute="top" secondItem="1" secondAttribute="top" id="mRq-pQ-Xzd"/>
+                <constraint firstAttribute="trailing" secondItem="VsT-Va-d4w" secondAttribute="trailing" id="nWP-vN-RSL"/>
+                <constraint firstItem="Rt3-9P-EiC" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="oEo-1p-ywY"/>
+                <constraint firstItem="jC8-Sn-hqU" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="pFd-oz-g4h"/>
+                <constraint firstAttribute="trailing" secondItem="Rt3-9P-EiC" secondAttribute="trailing" id="qtl-tF-e7I"/>
+                <constraint firstItem="VsT-Va-d4w" firstAttribute="top" secondItem="1" secondAttribute="top" constant="56" id="vFr-de-uj8"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="纯色长形底图.png" width="309" height="66"/>
+        <image name="美丽任务底图.png" width="640" height="960"/>
+    </resources>
+</document>
