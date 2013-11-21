@@ -155,12 +155,19 @@
     //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
 
 	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kMissionStringKey"];
-    cell.backgroundColor = [UIColor redColor];
-    cell.opaque = NO;
+    cell.backgroundColor = [UIColor clearColor];
+    cell.opaque = YES;
    
     return cell;
 }
 
+
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -225,6 +232,17 @@
     [defaults synchronize];
 				
     [missionTableView reloadData];
+    
+    NSInteger s = [self.missionTableView numberOfSections];
+    if (s<1) return;
+    NSInteger r = [self.missionTableView numberOfRowsInSection:s-1];
+    if (r<1) return;
+    
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:r-1 inSection:s-1];
+    
+    [self.missionTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
+    
     
 }
 

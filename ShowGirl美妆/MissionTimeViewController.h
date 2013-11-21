@@ -11,6 +11,10 @@
 #define DEFAULT_MISSION_TIME @"defaultMissionTime"
 
 @interface MissionTimeViewController : UIViewController
+{
+        UILocalNotification *missionNotification;
+    
+}
 
 - (IBAction)doSelect:(id)sender;
 

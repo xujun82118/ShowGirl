@@ -32,6 +32,8 @@
     [self.datePicker setDate:now animated:NO];
     [self.datePicker setDatePickerMode:UIDatePickerModeTime];
     
+    missionNotification=[[UILocalNotification alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,6 +66,36 @@
     
     // NSString *message = [[NSString alloc] initWithFormat:
     //                      @"The date and time you selected is: %@", selected];
+    
+    NSArray *myArray=[[UIApplication sharedApplication] scheduledLocalNotifications];
+    NSLog(@"local notify is %d", [myArray count]);
+    for (int i=0; i<[myArray count]; i++)
+    {
+        UILocalNotification *myUILocalNotification=[myArray objectAtIndex:i];
+        
+        if ([[[myUILocalNotification userInfo] objectForKey:@"DeclareOrMissionTime"] isEqualToString:@"IsMissionTime"])
+        {
+            [[UIApplication sharedApplication] cancelLocalNotification:myUILocalNotification];
+        }
+        
+    }
+
+    if (missionNotification!=nil)
+    {
+        [[UIApplication sharedApplication] cancelLocalNotification:missionNotification];
+        missionNotification.fireDate = selected;
+        missionNotification.repeatInterval = kCFCalendarUnitDay;
+        missionNotification.timeZone=[NSTimeZone defaultTimeZone];
+        missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+        
+        NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsMissionTime" forKey:@"DeclareOrMissionTime"];
+        missionNotification.userInfo = info;
+        
+        [[UIApplication sharedApplication] scheduleLocalNotification:missionNotification];
+        
+    }
+    
+    
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"Date and Time Selected"
                           message:message

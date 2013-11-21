@@ -11,6 +11,11 @@
 #define DEFAULT_DECLARE_TIME @"DefaultDeclareTime"
 
 @interface DeclareTimePickerViewController : UIViewController
+{
+    
+    UILocalNotification *declareNotification;
+    
+}
 
 - (IBAction)doSelect:(id)sender;
 

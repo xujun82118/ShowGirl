@@ -50,6 +50,48 @@
         
         isDeclare = NO;
         
+        
+        //定时闹钟
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSDate *declareTime = [defaults valueForKey:DEFAULT_DECLARE_TIME];
+        
+        if ([defaults boolForKey:DEFAULTS_IS_DECLARE_TIME]&&declareTime)
+        {
+            UILocalNotification *declareNotification=[[UILocalNotification alloc] init];
+            if (declareNotification!=nil)
+            {
+                
+                declareNotification.fireDate = declareTime;
+                declareNotification.repeatInterval = kCFCalendarUnitDay;
+                declareNotification.timeZone=[NSTimeZone defaultTimeZone];
+                declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
+                
+                //NSDictionary* info = [NSDictionary dictionaryWithObject:@"test1" forKey:@"testkey"];
+                //declareNotification.userInfo = info;
+                
+                [[UIApplication sharedApplication] scheduleLocalNotification:declareNotification];
+                
+            }
+        }
+        if ([defaults boolForKey:DEFAULTS_IS_MISSION_TIME]&&declareTime)
+        {
+            UILocalNotification *missionNotification=[[UILocalNotification alloc] init];
+            if (missionNotification!=nil)
+            {
+                
+                missionNotification.fireDate = declareTime;
+                missionNotification.repeatInterval = kCFCalendarUnitDay;
+                missionNotification.timeZone=[NSTimeZone defaultTimeZone];
+                missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+                
+                [[UIApplication sharedApplication] scheduleLocalNotification:missionNotification];
+                
+            }
+        }
+        
+        
+        
+        
     }
     return self;
 }

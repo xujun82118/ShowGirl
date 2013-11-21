@@ -31,6 +31,9 @@
     NSDate *now = [NSDate date];
     [self.datePicker setDate:now animated:NO];
     [self.datePicker setDatePickerMode:UIDatePickerModeTime];
+    
+    declareNotification=[[UILocalNotification alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,15 +53,50 @@
     comps =[calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit |NSSecondCalendarUnit)fromDate:selected];
     NSInteger hour = [comps hour];
     NSInteger miniute = [comps minute];
-   // NSInteger second = [comps second];
+    NSInteger second = [comps second];
     NSString *message = [[NSString alloc] initWithFormat:
-                         @"%d:%d", hour, miniute];
+                         @"%d:%d:%d", hour, miniute, second];
 
     //存用户选择的时间
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     //[defaults setInteger: hour forKey:DEFAULT_DECLARE_TIME];
     [defaults setObject:selected forKey:@"DEFAULT_DECLARE_TIME"];
     [defaults synchronize];
+    
+    //设置定时每天通知
+
+    NSArray *myArray=[[UIApplication sharedApplication] scheduledLocalNotifications];
+    NSLog(@"local notify is %d", [myArray count]);
+    for (int i=0; i<[myArray count]; i++)
+    {
+        UILocalNotification *myUILocalNotification=[myArray objectAtIndex:i];
+        
+        if ([[[myUILocalNotification userInfo] objectForKey:@"DeclareOrMissionTime"] isEqualToString:@"IsDeclareTime"])
+        {
+            [[UIApplication sharedApplication] cancelLocalNotification:myUILocalNotification];
+        }
+        
+    }
+    
+    
+        if (declareNotification!=nil)
+        {
+   
+            declareNotification.fireDate = selected;
+            declareNotification.repeatInterval = kCFCalendarUnitDay;
+            declareNotification.timeZone=[NSTimeZone defaultTimeZone];
+            //notification.soundName = @"ping.caf";
+            
+            NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsDeclareTime" forKey:@"DeclareOrMissionTime"];
+            declareNotification.userInfo = info;
+            
+            declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
+       
+            [[UIApplication sharedApplication] scheduleLocalNotification:declareNotification];
+            
+        }
+
+    
     
     
    // NSString *message = [[NSString alloc] initWithFormat:

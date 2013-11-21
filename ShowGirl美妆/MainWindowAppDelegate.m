@@ -16,10 +16,6 @@
 #import "YouMiWall.h"
 
 
-//test11
-//12344
-
-
 @interface WBBaseRequest ()
 - (void)debugPrint;
 @end
@@ -52,7 +48,40 @@
     //[YouMiConfig setFullScreenWindow:self.window];
     [YouMiWall enable];
     
+    
     return YES;
+}
+
+
+- (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif
+{
+
+        NSLog(@"Recieved Notification %@",notif);
+        NSDictionary* infoDic = notif.userInfo;
+        NSLog(@"userInfo description=%@",[infoDic description]);
+        NSString* codeStr = [infoDic objectForKey:@"DeclareOrMissionTime"];
+    NSLog(@"codeStr is  %@", codeStr);
+    
+    NSString* Mesg = nil;
+    if ([codeStr isEqualToString:@"IsMissionTime"]) {
+        Mesg = NSLocalizedString(@"Mission time is on", @"");
+    }else if ([codeStr isEqualToString:@"IsDeclareTime"])
+    {
+        Mesg = NSLocalizedString(@"Declare time is on", @"");
+
+    }
+    
+    if (Mesg != nil) {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"亲 ^-^"
+                              message:Mesg
+                              delegate:nil
+                              cancelButtonTitle:@"Yes, I did."
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -65,6 +94,9 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
