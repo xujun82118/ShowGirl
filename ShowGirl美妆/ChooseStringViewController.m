@@ -230,7 +230,21 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     return YES;
 }
 
-
+//继承该方法时,左右滑动会出现删除按钮(自定义按钮),点击按钮时的操作
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self.dataSourceArray removeObjectAtIndex:indexPath.row];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+    
+    //存储自定认任务
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:self.dataSourceArray forKey:DEFAULT_CHOOSE_STRING_KEY];
+    
+    [defaults synchronize];
+    
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -247,7 +261,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     [defaults synchronize];
     
-
+    addDeclareString.text = cell.textLabel.text;
     
 }
 
@@ -315,6 +329,12 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 }
 
  */
+
+- (IBAction)editString:(id)sender {
+    
+     [declareTableView setEditing:!self.declareTableView.editing animated:YES];
+    
+}
 
 - (IBAction)finishReturn:(id)sender {
     

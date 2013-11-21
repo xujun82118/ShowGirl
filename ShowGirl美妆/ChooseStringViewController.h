@@ -16,6 +16,7 @@
     NSInteger currentSelect;
     
 }
+- (IBAction)editString:(id)sender;
 
 - (IBAction)finishReturn:(id)sender;
 

@@ -20,7 +20,7 @@
 }
 @property (strong, nonatomic) IBOutlet UITextField *addMissionString;
 - (IBAction)addNewMission:(id)sender;
-
+- (IBAction)editString:(id)sender;
 
 - (IBAction)finishReturn:(id)sender;
 

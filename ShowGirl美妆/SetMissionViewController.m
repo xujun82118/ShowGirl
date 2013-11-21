@@ -176,6 +176,22 @@
     
 }
 
+//继承该方法时,左右滑动会出现删除按钮(自定义按钮),点击按钮时的操作
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self.dataSourceArray removeObjectAtIndex:indexPath.row];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+    
+    //存储自定认任务
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:self.dataSourceArray forKey:DEFAULT_MISSION_STRING_KEY];
+    
+    [defaults synchronize];
+    
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     // 列寬
@@ -243,6 +259,12 @@
     [self.missionTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     
     
+    
+}
+
+- (IBAction)editString:(id)sender {
+    
+    [missionTableView setEditing:!self.missionTableView.editing animated:YES];
     
 }
 
