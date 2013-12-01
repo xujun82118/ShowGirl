@@ -31,7 +31,7 @@
 - (IBAction)insertPhoto:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UITextField *textSelfString;
-@property (strong, nonatomic) IBOutlet UISwitch *textSelf;
+//@property (strong, nonatomic) IBOutlet UISwitch *textSelf;
 
 /*
 - (IBAction)changeSwitchSelf:(id)sender;

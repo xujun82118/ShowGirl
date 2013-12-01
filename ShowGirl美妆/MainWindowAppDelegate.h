@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//test1
-//2
-//3
-//4
-//5
-//
 
 
 @class MainWindowViewController;

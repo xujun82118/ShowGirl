@@ -37,7 +37,7 @@
     // Override point for customization after application launch.
     self.viewController = [[MainWindowViewController alloc] initWithNibName:@"MainWindowViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    //[self.window makeKeyAndVisible];
     
     //有米广告初始化
     [YouMiConfig setUserID:@"BeatufifullEveryday"]; // [可选] 例如开发者的应用是有登录功能的，则可以使用登录后的用户账号来替代有米为每台机器提供的标识（有米会为每台设备生成的唯一标识符）。
@@ -130,11 +130,30 @@
 {
     if ([response isKindOfClass:WBSendMessageToWeiboResponse.class])
     {
-        NSString *title = @"发送结果";
-        NSString *message = [NSString stringWithFormat:@"响应状态: %d\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",
-                             response.statusCode, response.userInfo, response.requestUserInfo];
+        NSString *title = @"亲^_^";
+        NSString *msg;
+        if (response.statusCode == WeiboSDKResponseStatusCodeSuccess) {
+            msg = @"分享成功";
+        }else if (response.statusCode == WeiboSDKResponseStatusCodeUserCancel)
+        {
+            msg = @"取消分享";
+        }else if (response.statusCode == WeiboSDKResponseStatusCodeSentFail)
+        {
+            msg = @"分享失败";
+        }else if (response.statusCode == WeiboSDKResponseStatusCodeAuthDeny)
+        {
+            msg = @"授权失败";
+        }else if (response.statusCode ==WeiboSDKResponseStatusCodeUserCancelInstall)
+        {
+            msg = @"无微博客户端";
+        }else
+        {
+            msg = @"分享失败";
+        }
+        
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
+                                                        message:msg
                                                        delegate:nil
                                               cancelButtonTitle:@"确定"
                                               otherButtonTitles:nil];

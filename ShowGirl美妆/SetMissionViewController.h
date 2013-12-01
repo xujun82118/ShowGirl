@@ -19,6 +19,9 @@
     
 }
 @property (strong, nonatomic) IBOutlet UITextField *addMissionString;
+@property (strong, nonatomic) IBOutlet UIButton *addString;
+@property (strong, nonatomic) IBOutlet UIImageView *addStringBackGround;
+@property (strong, nonatomic) IBOutlet UIButton *editeString;
 - (IBAction)addNewMission:(id)sender;
 - (IBAction)editString:(id)sender;
 

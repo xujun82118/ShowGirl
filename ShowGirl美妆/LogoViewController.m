@@ -14,6 +14,9 @@
 
 @implementation LogoViewController
 
+@synthesize startViewController;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,7 +31,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-
+    //初始化start界面
+    startViewController = [[StartView alloc] initWithNibName:@"StartView" bundle:nil];
     
 }
 
@@ -36,6 +40,28 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction) startApp:(id)sender
+{
+   
+    [UIView beginAnimations:@"Start View" context:nil];
+    
+    [UIView setAnimationDuration:1];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    
+    //设置动画方式
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+    
+    
+    
+    //显示相关的view
+    [self presentViewController:startViewController animated:YES completion:NULL];
+    
+    //退出函数时，应用之
+    [UIView  commitAnimations];
+    
+    
 }
 
 @end

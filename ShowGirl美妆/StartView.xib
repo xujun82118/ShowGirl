@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
@@ -15,62 +15,63 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="首页清新.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="红伞.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82">
-                    <rect key="frame" x="0.0" y="38" width="120" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82">
+                    <rect key="frame" x="35" y="86" width="100" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="58L-ds-sws"/>
-                        <constraint firstAttribute="width" constant="120" id="bY0-Eq-Ao2"/>
+                        <constraint firstAttribute="height" constant="100" id="9e1-lh-dVQ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="早晨宣言" backgroundImage="纯色长形底图.png">
-                        <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="早晨宣言" backgroundImage="开始-圆-1.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="showDeclaration:" destination="-1" eventType="touchUpInside" id="93"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94">
-                    <rect key="frame" x="0.0" y="115" width="120" height="50"/>
+                    <rect key="frame" x="196" y="143" width="90" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Onj-Dg-ZqW"/>
+                        <constraint firstAttribute="width" constant="90" id="YfX-C3-uN6"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="美丽任务" backgroundImage="纯色长形底图.png">
-                        <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="美丽任务" backgroundImage="开始-圆-2.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="ShowHold:" destination="-1" eventType="touchUpInside" id="111"/>
                     </connections>
                 </button>
                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQu-80-rQF">
-                    <rect key="frame" x="0.0" y="192" width="120" height="50"/>
+                    <rect key="frame" x="81" y="285" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="7e1-5z-GFO"/>
+                        <constraint firstAttribute="width" constant="70" id="cd9-qC-z8e"/>
+                        <constraint firstAttribute="height" constant="70" id="wy8-7v-bEG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="设置" backgroundImage="纯色长形底图.png">
-                        <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="设置" backgroundImage="完成-圆-btn.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="setup:" destination="-1" eventType="touchUpInside" id="Emj-Lw-uze"/>
                     </connections>
                 </button>
                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvL-YS-zAg">
-                    <rect key="frame" x="0.0" y="269" width="120" height="50"/>
+                    <rect key="frame" x="108" y="546" width="120" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="HFP-Py-zxb"/>
+                        <constraint firstAttribute="width" constant="120" id="9tb-rU-0KM"/>
+                        <constraint firstAttribute="height" constant="22" id="G7u-0g-o3q"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="轻松心情" backgroundImage="纯色长形底图.png">
-                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="美丽应用" backgroundImage="半透明信息提示框.png">
+                        <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="youMiAd:" destination="-1" eventType="touchUpInside" id="Vsw-Dg-rF0"/>
@@ -79,28 +80,29 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="26K-Od-kqc"/>
-                <constraint firstItem="MvL-YS-zAg" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="4WE-Ch-EG8"/>
-                <constraint firstItem="MvL-YS-zAg" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="8cK-Lc-KPV"/>
-                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="9vk-Wz-vc8"/>
-                <constraint firstItem="82" firstAttribute="top" secondItem="1" secondAttribute="top" constant="38" id="ATk-Yy-LHM"/>
-                <constraint firstItem="MvL-YS-zAg" firstAttribute="top" secondItem="sQu-80-rQF" secondAttribute="bottom" constant="27" id="AoJ-lw-ymD"/>
-                <constraint firstItem="sQu-80-rQF" firstAttribute="trailing" secondItem="94" secondAttribute="trailing" id="BUD-lc-bfH"/>
-                <constraint firstItem="94" firstAttribute="trailing" secondItem="82" secondAttribute="trailing" id="Bcu-dG-h4e"/>
-                <constraint firstItem="sQu-80-rQF" firstAttribute="trailing" secondItem="MvL-YS-zAg" secondAttribute="trailing" id="Uw0-1K-ldb"/>
-                <constraint firstItem="94" firstAttribute="leading" secondItem="82" secondAttribute="leading" id="VxU-ki-IKV"/>
-                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="b95-Qz-ZJ2"/>
-                <constraint firstItem="sQu-80-rQF" firstAttribute="leading" secondItem="94" secondAttribute="leading" id="c6Q-Js-8e1"/>
-                <constraint firstItem="94" firstAttribute="top" secondItem="82" secondAttribute="bottom" constant="27" id="iaO-ZV-g1I"/>
-                <constraint firstItem="MvL-YS-zAg" firstAttribute="leading" secondItem="sQu-80-rQF" secondAttribute="leading" id="lNF-lq-RBg"/>
-                <constraint firstItem="sQu-80-rQF" firstAttribute="top" secondItem="94" secondAttribute="bottom" constant="27" id="usI-XB-1J6"/>
+                <constraint firstAttribute="trailing" secondItem="94" secondAttribute="trailing" constant="34" id="3vG-AE-2qf"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="9xv-Tx-Vd5"/>
+                <constraint firstItem="sQu-80-rQF" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="81" id="BYS-lK-Flg"/>
+                <constraint firstItem="94" firstAttribute="leading" secondItem="82" secondAttribute="trailing" constant="61" id="JlI-06-dLT"/>
+                <constraint firstItem="82" firstAttribute="top" secondItem="1" secondAttribute="top" constant="86" id="KXV-ru-ye0"/>
+                <constraint firstItem="sQu-80-rQF" firstAttribute="top" secondItem="82" secondAttribute="bottom" constant="99" id="aZ5-v0-wN2"/>
+                <constraint firstItem="94" firstAttribute="top" secondItem="1" secondAttribute="top" constant="143" id="ah8-rH-h6Q"/>
+                <constraint firstAttribute="bottom" secondItem="MvL-YS-zAg" secondAttribute="bottom" id="dya-Ao-1YV"/>
+                <constraint firstItem="MvL-YS-zAg" firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="fWq-mN-Q25"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="hZj-bN-VHo"/>
+                <constraint firstAttribute="trailing" secondItem="MvL-YS-zAg" secondAttribute="trailing" constant="92" id="lYU-wk-aiH"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="mSF-qr-bwj"/>
+                <constraint firstItem="82" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="35" id="ybA-Y8-0HD"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="纯色长形底图.png" width="309" height="66"/>
-        <image name="首页清新.png" width="640" height="960"/>
+        <image name="半透明信息提示框.png" width="627" height="169"/>
+        <image name="完成-圆-btn.png" width="89" height="90"/>
+        <image name="开始-圆-1.png" width="89" height="90"/>
+        <image name="开始-圆-2.png" width="89" height="90"/>
+        <image name="红伞.png" width="640" height="960"/>
     </resources>
 </document>

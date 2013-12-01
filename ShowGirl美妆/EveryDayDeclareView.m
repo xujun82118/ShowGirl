@@ -64,7 +64,8 @@
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
     }else{
-        [picker setIsSingle:YES];//??
+        [picker setIsSingle:YES];
+        [picker setIsDeclare:YES];
         [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
     //指向他的委托函数？？

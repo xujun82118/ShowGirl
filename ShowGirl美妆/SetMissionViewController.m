@@ -16,7 +16,7 @@
 
 @implementation SetMissionViewController
 
-@synthesize missionTableView, addMissionString;
+@synthesize missionTableView, addMissionString,addString,addStringBackGround,editeString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +38,7 @@
    
     if (self.dataSourceArray == nil)
     {
+        
         self.dataSourceArray = [NSMutableArray arrayWithObjects:
          [NSDictionary dictionaryWithObjectsAndKeys:
          NSLocalizedString(@"Mission_1", @""), @"kMissionStringKey",
@@ -49,6 +50,8 @@
          NSLocalizedString(@"Mission_3", @""), @"kMissionStringKey",
          nil],
          nil];
+        
+        
         
         [defaults setObject:self.dataSourceArray forKey:DEFAULT_MISSION_STRING_KEY];
         [defaults synchronize];
@@ -71,8 +74,10 @@
    
     addMissionString.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
 
-    
-    
+
+    addMissionString.hidden = YES;
+    addString.hidden = YES;
+    addStringBackGround.hidden = YES;
     
 }
 
@@ -137,6 +142,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    NSLog(@"mission count is %d", [self.dataSourceArray count]);
+    //return 2;
     return [self.dataSourceArray count];
     
 }
@@ -151,10 +158,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kMissionStringKey"];
     //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
-
-	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kMissionStringKey"];
     cell.backgroundColor = [UIColor clearColor];
     cell.opaque = YES;
    
@@ -168,6 +173,7 @@
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -206,7 +212,6 @@
     return size.height;
     
 }
-
 
 
 
@@ -263,13 +268,26 @@
 }
 
 - (IBAction)editString:(id)sender {
+   
     
+    [addStringBackGround setHidden:!addStringBackGround.hidden];
+    [addMissionString setHidden:!addMissionString.hidden];
+    [addString setHidden:!addString.hidden];
+
     [missionTableView setEditing:!self.missionTableView.editing animated:YES];
     
+    if (self.missionTableView.editing == YES) {
+        [editeString setTitle:@"完成" forState:UIControlStateNormal];
+    }else
+    {
+        [editeString setTitle:@"编辑" forState:UIControlStateNormal];
+    }
+
 }
 
 - (IBAction)finishReturn:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
 @end

@@ -15,6 +15,7 @@
     id<CustomImagePickerControllerDelegate> _customDelegate;
 }
 @property(nonatomic)BOOL isSingle;
+@property (nonatomic)BOOL isDeclare;
 @property(nonatomic)id<CustomImagePickerControllerDelegate> customDelegate;
 @end
 

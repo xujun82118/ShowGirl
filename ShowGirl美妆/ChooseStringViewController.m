@@ -8,10 +8,7 @@
 
 #import "ChooseStringViewController.h"
 
-#define FONT_SIZE 14.0f
-#define CELL_CONTENT_WIDTH 320.0f
-#define CELL_CONTENT_MARGIN 10.0f
-#define DEFAULT_CHOOSE_STRING_KEY  @"DefaultChooseString"
+
 
 
 @interface ChooseStringViewController ()
@@ -22,7 +19,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
 @implementation ChooseStringViewController
 
-@synthesize declareTableView, addDeclareString;
+@synthesize declareTableView, addDeclareString,addString,addStringBackGround,editeString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,26 +45,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     self.dataSourceArray = [defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
-    if (self.dataSourceArray == nil)
-    {
-        self.dataSourceArray = [NSMutableArray arrayWithObjects:
-                                [NSDictionary dictionaryWithObjectsAndKeys:
-                                 NSLocalizedString(@"DeclareString_1", @""), @"kDeclareStringKey",
-                                 self.SelectDeclare, @"KSelectKey",
-                                 nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:
-                                 NSLocalizedString(@"DeclareString_2", @""),@"kDeclareStringKey",
-                                 self.SelectDeclare, @"KSelectKey",
-                                 nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:
-                                 NSLocalizedString(@"DeclareString_3", @""), @"kDeclareStringKey",
-                                 self.SelectDeclare, @"KSelectKey",
-                                 nil],
-                                nil];
-        [defaults setObject:self.dataSourceArray forKey:DEFAULT_CHOOSE_STRING_KEY];
-        [defaults synchronize];
-        
-    }
+
 
     addDeclareString.borderStyle = UITextBorderStyleBezel;
     addDeclareString.textColor = [UIColor blackColor];
@@ -87,23 +65,24 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
    // if (currentSelect == 0) {
   //      currentSelect = 1;
    // }
-
     
+  
    // [defaults setInteger:initSelect forKey:@"initSelect"];
     
     // [defaults synchronize];
     
       // [declareTableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionBottom animated:NO];
    //[ declareTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    
+    
+    addDeclareString.hidden = YES;
+    addString.hidden = YES;
+    addStringBackGround.hidden = YES;
+    
+    
 }
 
 
-- (UITableViewCell*) SelectDeclare
-{
-    
-    
-    return NULL;
-}
 
 
 - (void)didReceiveMemoryWarning
@@ -167,7 +146,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-
+   NSLog(@"declare count is %d", [self.dataSourceArray count]);
     return [self.dataSourceArray count];
 
 }
@@ -185,10 +164,11 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
     
 	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kDeclareStringKey"];
-
     cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
     cell.backgroundColor = [UIColor clearColor];
     cell.opaque = YES;
+    
+    
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     currentSelect = [defaults integerForKey:@"current"];
@@ -246,6 +226,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -261,7 +242,6 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     [defaults synchronize];
     
-    addDeclareString.text = cell.textLabel.text;
     
 }
 
@@ -274,20 +254,15 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
 }
 
-/*
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
 }
 
 
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+
+
 /*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -332,8 +307,19 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
 - (IBAction)editString:(id)sender {
     
-     [declareTableView setEditing:!self.declareTableView.editing animated:YES];
+    [addStringBackGround setHidden:!addStringBackGround.hidden];
+    [addDeclareString setHidden:!addDeclareString.hidden];
+    [addString setHidden:!addString.hidden];
     
+    [declareTableView setEditing:!self.declareTableView.editing animated:YES];
+    
+    if (self.declareTableView.editing == YES) {
+        [editeString setTitle:@"完成" forState:UIControlStateNormal];
+    }else
+    {
+        [editeString setTitle:@"编辑" forState:UIControlStateNormal];
+    }
+
 }
 
 - (IBAction)finishReturn:(id)sender {
@@ -346,7 +332,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 {
     for (int i=0; i<self.dataSourceArray.count; i++)
     {
-        NSString *now = [[self.dataSourceArray objectAtIndex:i]objectForKey:@"kMissionStringKey"];
+        NSString *now = [[self.dataSourceArray objectAtIndex:i]objectForKey:@"kDeclareStringKey"];
         
         if ([self.addDeclareString.text isEqualToString:now])
         {

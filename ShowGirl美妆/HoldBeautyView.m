@@ -18,7 +18,7 @@
 
 @synthesize proveImage,insertPhotoButton,changeImageButton,deleteImageButton;
 
-@synthesize CurrentMissionTableView,textSelf, textSelfString;
+@synthesize CurrentMissionTableView, textSelfString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,6 +73,8 @@
     textSelfString.secureTextEntry = NO;	// make the text entry secure (bullets)
     
     textSelfString.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
+	// this will cause automatic vertical resize when the table is resized
+	textSelfString.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     //textSelfString.tag = kViewTag;		// tag this control so we can remove it later for recycled cells
     
@@ -81,7 +83,7 @@
     // Add an accessibility label that describes what the text field is for.
     //[textSelfString setAccessibilityLabel:NSLocalizedString(@"SecureTextField", @"")];
     
-    self.textSelf.on = NO;
+    //self.textSelf.on = NO;
      
     changeImageButton.hidden = YES;
     deleteImageButton.hidden = YES;
@@ -124,44 +126,25 @@
     [WeiboSDK sendRequest:request];
 }
 
+
 //填充微博信息
 - (WBMessageObject *)messageToShare
 {
     WBMessageObject *message = [WBMessageObject message];
     
-
-    /*
-    if (self.text1.on)
-    {
-        message.text = text1String.text;
-
-    }else if (self.text2.on)
-    {
-        message.text = text2String.text;
-        
-    }else if (self.text3.on)
-    {
-        message.text = text3String.text;
-        
-    }else if (self.textSelf.on)
-    {
-        message.text = textSelfString.text;
-        
-    }
-    */
-    
     UITableViewCell *cell = [self.CurrentMissionTableView cellForRowAtIndexPath:[self.CurrentMissionTableView indexPathForSelectedRow]];
     
-    if (self.textSelf.on)
+    if (![self.textSelfString.text isEqualToString:@""])
     {
         message.text = textSelfString.text;
         
-    }else if(![cell.textLabel.text isEqualToString:@""])
+    }else if(![cell.textLabel.text isEqualToString:@""] && cell != nil)
     {
-        message.text = cell.textLabel.text;
+        NSString * preString = NSLocalizedString(@"FromUri", @"");
+        message.text = [preString stringByAppendingString:cell.textLabel.text];
     }
 
-    if (proveImage!=Nil) {
+    if (proveImage.image!=Nil) {
         WBImageObject *image = [WBImageObject object];
         image.imageData = UIImagePNGRepresentation(proveImage.image);
         //image.imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image_1" ofType:@"jpg"]];
@@ -184,6 +167,12 @@
 }
 
 
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
+{
+    
+    NSLog(@"Receive Weibo reponse");
+    
+}
 
 - (IBAction)insertPhoto:(id)sender {
     
@@ -194,6 +183,7 @@
         [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
     }else{
         [picker setIsSingle:YES];//??
+        [picker setIsDeclare:NO];
         [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
     [picker setCustomDelegate:self];
@@ -253,13 +243,15 @@
 }
 
 
-
+/*
 - (IBAction)changeSwitchSelf:(id)sender {
     
     if (self.textSelf.on) {
         [self.CurrentMissionTableView reloadData];
     }
 }
+ */
+ 
 /*
 
 
@@ -318,6 +310,11 @@
         self.view.frame = rect;
     }
     [UIView commitAnimations];
+    
+    
+    [self.CurrentMissionTableView reloadData];
+    
+    
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
@@ -331,10 +328,6 @@
     [UIView commitAnimations];
     [textField resignFirstResponder];
     
-    //更新表状态来全不选
-    if (self.textSelf.on) {
-        [self.CurrentMissionTableView reloadData];
-    }
     
 }
 

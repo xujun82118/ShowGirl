@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StartView.h"
 
 @interface LogoViewController : UIViewController
+
+@property (retain, nonatomic) StartView* startViewController;
+
+
+- (IBAction) startApp:(id)sender;
 
 @end

@@ -17,7 +17,7 @@
 
 @implementation CustomImagePickerController
 
-@synthesize customDelegate = _customDelegate;
+@synthesize customDelegate = _customDelegate, isDeclare,isSingle=_isSingle;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -92,35 +92,35 @@
         [overlyView addSubview:photoBtn];
         
         
-        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-        NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
-        NSInteger currentSelect = [defaults integerForKey:@"current"];
+        if (isDeclare) {
+            NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+            NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
+            NSInteger currentSelect = [defaults integerForKey:@"current"];
+            
+            
+            UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(80, -150, 180, 80)];
+            //设置背景色
+            //label1.backgroundColor = [UIColor grayColor];
+            label1.tag = 91;
+            //设置标签文本
+            NSString *preString = @"^_^Smile and Say\n";
+            
+            label1.text = [preString stringByAppendingString:[[dataSourceArray objectAtIndex:currentSelect] objectForKey:@"kDeclareStringKey"]];
+            
+            //设置标签文本字体和字体大小
+            label1.font = [UIFont fontWithName:@"Arial" size:20];
+            label1.textColor = [UIColor yellowColor];
+            
+            //设置文本对其方式
+            label1.textAlignment = UITextAlignmentCenter;
+            //设置字体大小适应label宽度
+            label1.adjustsFontSizeToFitWidth = YES;
+            label1.numberOfLines = 3;
+            
+            [overlyView addSubview:label1];
+        }
         
         
-        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(80, -150, 180, 80)];
-        //设置背景色
-        //label1.backgroundColor = [UIColor grayColor];
-        label1.tag = 91;
-        //设置标签文本
-        //label1.text = @"hello world";
-        label1.text = [[dataSourceArray objectAtIndex:currentSelect] objectForKey:@"kDeclareStringKey"];
-        
-        //设置标签文本字体和字体大小
-        label1.font = [UIFont fontWithName:@"Arial" size:30];
-        //设置文本对其方式
-        label1.textAlignment = UITextAlignmentCenter;
-        //文本对齐方式有以下三种
-        //typedef enum {
-        //    UITextAlignmentLeft = 0,左对齐
-        //    UITextAlignmentCenter,居中对齐
-        //    UITextAlignmentRight, 右对齐
-        //} UITextAlignment;
-        //label1.backgroundColor = [UIColor redColor];
-        //设置字体大小适应label宽度
-        label1.adjustsFontSizeToFitWidth = YES;
-        label1.numberOfLines = 2;
-        
-        [overlyView addSubview:label1];
         
         self.cameraOverlayView = overlyView;
     }
