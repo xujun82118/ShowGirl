@@ -105,7 +105,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 {
     
     CGRect frame = textField.frame;
-    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 216.0);//键盘高度216
+    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 250.0);//键盘高度216
     NSTimeInterval animationDuration = 0.30f;
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
@@ -164,18 +164,18 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
     
 	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kDeclareStringKey"];
-    cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
     cell.backgroundColor = [UIColor clearColor];
     cell.opaque = YES;
     
     
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    currentSelect = [defaults integerForKey:@"current"];
+    currentSelect = [defaults integerForKey:@"current1"];
     
     if (indexPath.row == currentSelect) {
         [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
-        cell.imageView.image = [UIImage imageNamed:@"camera_btn_ok.png"];
+        cell.imageView.image = [UIImage imageNamed:@"选择.png"];
 
     }
     
@@ -233,16 +233,16 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     
-    cell.imageView.image = [UIImage imageNamed:@"camera_btn_ok.png"];
+    cell.imageView.image = [UIImage imageNamed:@"选择.png"];
  
     
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setInteger:indexPath.row forKey:@"current"];
-    
+    [defaults setInteger:indexPath.row forKey:@"current1"];
+
     [defaults synchronize];
     
-    
+    // int currentSelect = [defaults integerForKey:@"current"];
 }
 
 
@@ -250,7 +250,8 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+    cell.imageView.image = nil;
+    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
     
 }
 
@@ -338,7 +339,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
         {
             
             UIAlertView *alert = [[UIAlertView alloc]
-                                  initWithTitle:@"亲^_^"
+                                  initWithTitle:nil
                                   message:@"此宣言已在任务列表中！"
                                   delegate:self
                                   cancelButtonTitle:@"确定"

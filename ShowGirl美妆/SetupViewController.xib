@@ -129,7 +129,7 @@
                         <constraint firstAttribute="width" constant="80" id="U7Z-32-bpz"/>
                         <constraint firstAttribute="height" constant="80" id="gek-WJ-J16"/>
                     </constraints>
-                    <state key="normal" title="完成" backgroundImage="完成-圆-btn.png">
+                    <state key="normal" title="返回" backgroundImage="完成-圆-btn.png">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -399,7 +399,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="riB-6c-owC"/>
                         </constraints>
-                        <state key="normal" title="完成" backgroundImage="完成-圆-btn.png">
+                        <state key="normal" title="返回" backgroundImage="完成-圆-btn.png">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -407,10 +407,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <action selector="finishReturn:" destination="Vyu-GS-WWk" eventType="touchUpInside" id="t9Y-ZT-xih"/>
                         </connections>
                     </button>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" background="纯黄底图.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-Xm-dlI">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-Xm-dlI">
                         <rect key="frame" x="20" y="382" width="193" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -515,7 +514,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="iZU-cv-eMM"/>
                         </constraints>
-                        <state key="normal" title="完成" backgroundImage="完成-圆-btn.png">
+                        <state key="normal" title="返回" backgroundImage="完成-圆-btn.png">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -523,10 +522,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <action selector="finishReturn:" destination="J0O-Eg-GQV" eventType="touchUpInside" id="4DT-N6-Hbs"/>
                         </connections>
                     </button>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" background="纯黄底图.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZVS-xk-zRc">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVS-xk-zRc">
                         <rect key="frame" x="20" y="382" width="193" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -605,7 +603,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="完成-圆-btn.png" width="89" height="90"/>
         <image name="朦胧图副本.png" width="640" height="960"/>
         <image name="横条.png" width="247" height="97"/>
-        <image name="纯黄底图.png" width="130" height="109"/>
         <image name="设置-btn-1.png" width="374" height="126"/>
         <image name="设置-btn-2.png" width="76" height="76"/>
     </resources>

@@ -95,7 +95,7 @@
 {
     
     CGRect frame = textField.frame;
-    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 216.0);//键盘高度216
+    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 260.0);//键盘高度216
     NSTimeInterval animationDuration = 0.30f;
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
@@ -226,7 +226,7 @@
         {
             
             UIAlertView *alert = [[UIAlertView alloc]
-                                  initWithTitle:@"亲^_^"
+                                  initWithTitle:nil
                                   message:@"此任务已在任务列表中！"
                                   delegate:self
                                   cancelButtonTitle:@"确定"

@@ -54,18 +54,20 @@
     comps =[calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit |NSSecondCalendarUnit)fromDate:selected];
     NSInteger hour = [comps hour];
     NSInteger miniute = [comps minute];
-    NSInteger second = [comps second];
     NSString *message = [[NSString alloc] initWithFormat:
-                         @"%d:%d:%d", hour, miniute, second];
+                         @"%d:%d", hour, miniute];
+   
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    
+    [components setHour:hour];
+    [components setMinute:miniute];
+    [components setSecond:0];
+    NSDate *fireDate = [calendar dateFromComponents:components];//目标时间
     
     //存用户选择的时间
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    //[defaults setInteger: hour forKey:DEFAULT_MISSION_TIME];
-    [defaults setObject:selected forKey:DEFAULT_MISSION_TIME];
+    [defaults setObject:fireDate forKey:DEFAULT_MISSION_TIME];
     [defaults synchronize];
-    
-    // NSString *message = [[NSString alloc] initWithFormat:
-    //                      @"The date and time you selected is: %@", selected];
     
     NSArray *myArray=[[UIApplication sharedApplication] scheduledLocalNotifications];
     NSLog(@"local notify is %d", [myArray count]);
@@ -83,7 +85,7 @@
     if (missionNotification!=nil)
     {
         [[UIApplication sharedApplication] cancelLocalNotification:missionNotification];
-        missionNotification.fireDate = selected;
+        missionNotification.fireDate = fireDate;
         missionNotification.repeatInterval = kCFCalendarUnitDay;
         missionNotification.timeZone=[NSTimeZone defaultTimeZone];
         missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
@@ -97,10 +99,10 @@
     
     
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"Date and Time Selected"
+                          initWithTitle:@"定时时间为："
                           message:message
                           delegate:nil
-                          cancelButtonTitle:@"Yes, I did."
+                          cancelButtonTitle:@"Yes"
                           otherButtonTitles:nil];
     [alert show];
     

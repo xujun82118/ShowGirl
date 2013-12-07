@@ -19,16 +19,23 @@
     // bool selectingImage;
     IBOutlet UIImageView *ivEditingImage;
     
+    UIActionSheet *actionSheetSaveImage;
+    UIActionSheet *actionSheetShare;
+
     id <ImageEditingProcessDelegate> imageEditingDelegate;
     
 }
 - (IBAction)doFinishReturn:(id)sender;
 - (IBAction)doShare:(id)sender;
 - (IBAction)reDoPhoto:(id)sender;
+- (IBAction)saveImage:(id)sender;
 
 - (WBMessageObject *)messageToShare;
 
+
+@property (strong, nonatomic) IBOutlet UIButton *saveImageBtn;
 @property (nonatomic, retain) UIImage *editImage;
+@property (nonatomic, retain) CustomImagePickerController *picker;
 @property(nonatomic) id<ImageEditingProcessDelegate> imageEditingDelegate;
 @end
 

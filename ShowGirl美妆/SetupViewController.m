@@ -86,7 +86,22 @@
 
     //NSLog(@"declare time is %d", isEveryDayDeclare.on);
     
+    if (isEveryDayDeclare.on==NO) {
+        NSArray *myArray=[[UIApplication sharedApplication] scheduledLocalNotifications];
+        for (int i=0; i<[myArray count]; i++)
+        {
+            UILocalNotification *myUILocalNotification=[myArray objectAtIndex:i];
+            
+            if ([[[myUILocalNotification userInfo] objectForKey:@"DeclareOrMissionTime"] isEqualToString:@"IsDeclareTime"])
+            {
+                [[UIApplication sharedApplication] cancelLocalNotification:myUILocalNotification];
+            }
+            
+        }
+    }
     
+    
+
 }
 
 - (IBAction)isMissionTimeChanged:(id)sender
@@ -94,6 +109,22 @@
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:isEveryDayMission.on forKey:DEFAULTS_IS_MISSION_TIME];
     [defaults synchronize];
+    
+    if (isEveryDayMission.on==NO) {
+        NSArray *myArray=[[UIApplication sharedApplication] scheduledLocalNotifications];
+        for (int i=0; i<[myArray count]; i++)
+        {
+            UILocalNotification *myUILocalNotification=[myArray objectAtIndex:i];
+            
+            if ([[[myUILocalNotification userInfo] objectForKey:@"DeclareOrMissionTime"] isEqualToString:@"IsMissionTime"])
+            {
+                [[UIApplication sharedApplication] cancelLocalNotification:myUILocalNotification];
+            }
+            
+        }
+    }
+
+    
 }
 
 

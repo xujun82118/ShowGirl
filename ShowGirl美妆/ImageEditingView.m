@@ -14,7 +14,7 @@
 
 @implementation ImageEditingView
 
-@synthesize editImage, imageEditingDelegate = imageEditingDelegate;
+@synthesize editImage, imageEditingDelegate = imageEditingDelegate,picker,saveImageBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,7 +48,13 @@
 		[ivEditingImage setImage:editImage];
 		//[self.view sendSubviewToBack:ivEditingImage];
         [self.view addSubview:ivEditingImage];
-	}
+        
+        saveImageBtn.hidden = NO;
+        [self.view addSubview:saveImageBtn];
+	}else
+    {
+        saveImageBtn.hidden = YES;
+    }
 	
 
 }
@@ -97,6 +103,18 @@
 
 - (IBAction)doShare:(id)sender {
     
+    
+    actionSheetShare = [[UIActionSheet alloc]
+                                  initWithTitle:nil
+                                  delegate:self
+                                  cancelButtonTitle:@"取消"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"分享到新浪微博", nil];//define other button with buttongIndex
+    actionSheetShare.actionSheetStyle =UIActionSheetStyleBlackOpaque;//Define the actionsheet show style.
+    [actionSheetShare showInView:self.view];//show actionsheet in the self view.
+    
+    
+    /*
     WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]];
     request.userInfo = @{@"ShareMessageFrom": @"SendMessageToWeiboViewController",
                          @"Other_Info_1": [NSNumber numberWithInt:123],
@@ -105,6 +123,7 @@
     //    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
     
     [WeiboSDK sendRequest:request];
+     */
 }
 
 //填充微博信息
@@ -120,6 +139,8 @@
         //image.imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image_1" ofType:@"jpg"]];
         message.imageObject = image;
     }
+    
+ 
 
      /*
      if (self.mediaSwitch.on)
@@ -141,12 +162,13 @@
     
     
     //调用自定义的图片处理控制器
-    CustomImagePickerController *picker = [[CustomImagePickerController alloc] init];
+    picker = [[CustomImagePickerController alloc] init];
     //判断是否有相机
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        [picker setIsDeclare:YES];
     }else{
-        [picker setIsSingle:YES];//??
+        [picker setIsSingle:YES];
         [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
     [picker setCustomDelegate:self];
@@ -170,9 +192,96 @@
     if (image != nil)
 	{
 		[ivEditingImage setImage:image];
-		[self.view sendSubviewToBack:ivEditingImage];
-	}
-     
+		//[self.view sendSubviewToBack:ivEditingImage];
+        [self.view addSubview:ivEditingImage];
+        
+        saveImageBtn.hidden = NO;
+        [self.view addSubview:saveImageBtn];
+
+	}else
+    {
+        saveImageBtn.hidden = YES;
+    }
+    
+}
+
+
+- (IBAction)saveImage:(id)sender
+{
+    
+    
+    //delegate functon will include actionSheet:several paramter.
+    actionSheetSaveImage = [[UIActionSheet alloc]
+                                  initWithTitle:nil//define the title
+                                  delegate:self//transfer self as parameter to delegate function
+                                  cancelButtonTitle:@"取消"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"保存到相册", nil];//define other button with buttongIndex
+    actionSheetSaveImage.actionSheetStyle =UIActionSheetStyleBlackOpaque;//Define the actionsheet show style.
+    [actionSheetSaveImage showInView:self.view];//show actionsheet in the self view.
+    
+}
+
+
+
+//The first fun called by the delelgate. choose the buttonIndex to call the different fun.
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (actionSheet == actionSheetSaveImage) {
+        if (buttonIndex == 0) {
+            
+            UIImageWriteToSavedPhotosAlbum(editImage, nil, nil,nil);
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"保存成功！"
+                                  message:nil//show the msg in the alert.
+                                  delegate:self//delegate itself
+                                  cancelButtonTitle:@"确定"
+                                  otherButtonTitles: nil];
+            [alert show];
+        }else if (buttonIndex == 1) {
+            //[self showAlert:@"取消"];
+        }
+    }else if (actionSheet == actionSheetShare)
+    {
+        if (buttonIndex == 0) {
+            WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]];
+            request.userInfo = @{@"ShareMessageFrom": @"SendMessageToWeiboViewController",
+                                 @"Other_Info_1": [NSNumber numberWithInt:123],
+                                 @"Other_Info_2": @[@"obj1", @"obj2"],
+                                 @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
+            //    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
+            
+            [WeiboSDK sendRequest:request];
+
+        }else if (buttonIndex == 1) {
+            //[self showAlert:@"取消"];
+        }
+        
+    }
+
+    
+}
+
+
+//called when home button is pressed, but not, it's wired.
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet{
+    
+    NSLog(@"ssssss");
+    
+}
+
+
+
+
+//called after dismiss the actionsheet button
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    
+}
+
+
+//called will dismiss the actionsheet button
+-(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex{
+    
 }
 
 @end

@@ -47,9 +47,13 @@
 - (NSInteger)getCurrentHour;
 - (NSInteger)getCurrentDay;
 
-
-@property (retain, nonatomic) EveryDayDeclareView* declareVeiwController;
+@property (retain, nonatomic) CustomImagePickerController *picker;
 @property (retain, nonatomic) HoldBeautyView*  holdBeautyVeiwController; 
 @property (retain, nonatomic) SetupViewController* setupViewController;
+
+@property (retain, nonatomic) IBOutlet  UILabel* staticLabel1;
+@property (retain, nonatomic) IBOutlet  UILabel* staticLabel2;
+@property (retain, nonatomic) IBOutlet  UILabel* staticLabel3;
+
 
 @end

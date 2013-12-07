@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomImagePickerController.h"
+#import "CustomImagePickerController1.h"
 #import "ImageFilterProcessViewController.h"
 
 
-@interface HoldBeautyView : UIViewController<UITextFieldDelegate,CustomImagePickerControllerDelegate,ImageFitlerProcessDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface HoldBeautyView : UIViewController<UITextFieldDelegate,CustomImagePickerControllerDelegate1,ImageFitlerProcessDelegate, UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView* CurrentMissionTableView;
+    
+    
+    UIActionSheet *actionSheetSaveImage;
+    UIActionSheet *actionSheetShare;
+    
 }
 
 @property (nonatomic, retain) NSMutableArray *dataSourceArray;
@@ -23,8 +28,11 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *deleteImageButton;
 @property (strong, nonatomic) IBOutlet UIButton *changeImageButton;
+@property (strong, nonatomic) IBOutlet UIButton *saveImageButton;
 - (IBAction)deleteImage:(id)sender;
 - (IBAction)changeImage:(id)sender;
+- (IBAction)saveImage:(id)sender;
+
 
 @property (strong, nonatomic) IBOutlet UIButton *insertPhotoButton;
 @property (strong, nonatomic) IBOutlet UIImageView *proveImage;

@@ -23,8 +23,8 @@
                     <rect key="frame" x="120" y="255" width="80" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="L2y-OY-iEo"/>
-                        <constraint firstAttribute="height" constant="80" id="dGN-dA-vqH"/>
+                        <constraint firstAttribute="width" constant="80" id="5wx-Ck-XAi"/>
+                        <constraint firstAttribute="height" constant="80" id="gyA-sb-x8L"/>
                     </constraints>
                     <state key="normal" title="支持美丽" backgroundImage="外圆.png">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,44 +33,34 @@
                         <action selector="startView:" destination="-1" eventType="touchUpInside" id="mx5-Gk-rtC"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="工作室.png" translatesAutoresizingMaskIntoConstraints="NO" id="EX8-9P-sAj">
-                    <rect key="frame" x="64" y="510" width="192" height="38"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="38" id="tSj-m8-6A2"/>
-                    </constraints>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="大标题.png" translatesAutoresizingMaskIntoConstraints="NO" id="aX3-VG-zKP">
-                    <rect key="frame" x="0.0" y="101" width="335" height="109"/>
+                    <rect key="frame" x="16" y="147" width="288" height="42"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="109" id="0fF-3C-7Va"/>
+                        <constraint firstAttribute="height" constant="42" id="urp-9H-plB"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="纪念.png" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-Q9-Txn">
                     <rect key="frame" x="40" y="464" width="240" height="74"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="74" id="UZV-NX-cBF"/>
+                        <constraint firstAttribute="height" constant="74" id="Wnz-rH-Q1k"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ksJ-Q9-Txn" firstAttribute="centerX" secondItem="jCb-hW-FzO" secondAttribute="centerX" id="1qr-st-P97"/>
-                <constraint firstItem="ksJ-Q9-Txn" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="40" id="3R2-ON-vqD"/>
-                <constraint firstItem="jCb-hW-FzO" firstAttribute="leading" secondItem="aX3-VG-zKP" secondAttribute="leading" id="6om-u3-8jE"/>
-                <constraint firstItem="jCb-hW-FzO" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="7W4-S9-4Ch"/>
-                <constraint firstItem="jCb-hW-FzO" firstAttribute="top" secondItem="6" secondAttribute="top" id="DEu-K7-GeV"/>
-                <constraint firstAttribute="bottom" secondItem="ksJ-Q9-Txn" secondAttribute="bottom" constant="30" id="E5L-rR-nZt"/>
-                <constraint firstItem="EX8-9P-sAj" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="64" id="LxL-76-D6E"/>
-                <constraint firstAttribute="bottom" secondItem="EX8-9P-sAj" secondAttribute="bottom" constant="20" symbolic="YES" id="UlY-MT-1vR"/>
-                <constraint firstAttribute="trailing" secondItem="jCb-hW-FzO" secondAttribute="trailing" id="oW1-Pa-HB6"/>
-                <constraint firstItem="RPS-B9-Fwa" firstAttribute="centerX" secondItem="ksJ-Q9-Txn" secondAttribute="centerX" id="tXy-Tp-UF1"/>
-                <constraint firstItem="aX3-VG-zKP" firstAttribute="top" secondItem="6" secondAttribute="top" constant="101" id="uR1-ww-oym"/>
-                <constraint firstItem="EX8-9P-sAj" firstAttribute="centerX" secondItem="ksJ-Q9-Txn" secondAttribute="centerX" id="wuL-KH-A1i"/>
-                <constraint firstItem="RPS-B9-Fwa" firstAttribute="top" secondItem="aX3-VG-zKP" secondAttribute="bottom" constant="45" id="xXv-uW-SXb"/>
-                <constraint firstAttribute="trailing" secondItem="aX3-VG-zKP" secondAttribute="trailing" constant="-15" id="zpk-wd-Dm1"/>
+                <constraint firstItem="ksJ-Q9-Txn" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="40" id="37S-m6-O2H"/>
+                <constraint firstItem="aX3-VG-zKP" firstAttribute="top" secondItem="6" secondAttribute="top" constant="147" id="7Mq-Fh-GRf"/>
+                <constraint firstAttribute="bottom" secondItem="ksJ-Q9-Txn" secondAttribute="bottom" constant="30" id="9Jq-Sa-U9z"/>
+                <constraint firstItem="RPS-B9-Fwa" firstAttribute="top" secondItem="aX3-VG-zKP" secondAttribute="bottom" constant="66" id="Age-n8-fY5"/>
+                <constraint firstItem="RPS-B9-Fwa" firstAttribute="centerX" secondItem="aX3-VG-zKP" secondAttribute="centerX" id="QdL-Ug-Y62"/>
+                <constraint firstItem="jCb-hW-FzO" firstAttribute="centerX" secondItem="RPS-B9-Fwa" secondAttribute="centerX" id="WfL-L5-n9P"/>
+                <constraint firstItem="jCb-hW-FzO" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="XoK-MJ-bQ3"/>
+                <constraint firstAttribute="trailing" secondItem="jCb-hW-FzO" secondAttribute="trailing" id="kV2-Lb-htL"/>
+                <constraint firstItem="aX3-VG-zKP" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="16" id="khc-LN-ypo"/>
+                <constraint firstItem="ksJ-Q9-Txn" firstAttribute="centerX" secondItem="RPS-B9-Fwa" secondAttribute="centerX" id="ufo-5A-BLM"/>
+                <constraint firstItem="jCb-hW-FzO" firstAttribute="top" secondItem="6" secondAttribute="top" id="vJe-DA-Wwj"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -78,8 +68,7 @@
     </objects>
     <resources>
         <image name="外圆.png" width="176" height="171"/>
-        <image name="大标题.png" width="500" height="124"/>
-        <image name="工作室.png" width="432" height="91"/>
+        <image name="大标题.png" width="542" height="70"/>
         <image name="清绿底图.png" width="320" height="568"/>
         <image name="纪念.png" width="500" height="146"/>
     </resources>

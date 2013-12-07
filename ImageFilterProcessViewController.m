@@ -52,18 +52,20 @@
     [self.view addSubview:rightBtn];
     
     [self.view setBackgroundColor:[UIColor colorWithWhite:0.388 alpha:1.000]];
-    rootImageView = [[UIImageView alloc ] initWithFrame:CGRectMake(40, 70, 230, 300)];
+    rootImageView = [[UIImageView alloc ] initWithFrame:CGRectMake(60, 70, 200, 300)];
     rootImageView.image = currentImage;
     [self.view addSubview:rootImageView];
-    
+
+
     NSArray *arr = [NSArray arrayWithObjects:@"原图",@"LOMO",@"黑白",@"复古",@"哥特",@"锐色",@"淡雅",@"酒红",@"青柠",@"浪漫",@"光晕",@"蓝调",@"梦幻",@"夜色", nil];
-    scrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, ScreenHeight - 150, 320, 80)];
+    scrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, ScreenHeight - 100, 320, 80)];
     scrollerView.backgroundColor = [UIColor clearColor];
     scrollerView.indicatorStyle = UIScrollViewIndicatorStyleBlack;
     scrollerView.showsHorizontalScrollIndicator = NO;
     scrollerView.showsVerticalScrollIndicator = NO;//关闭纵向滚动条
     scrollerView.bounces = NO;
   
+    
     float x ;
     for(int i=0;i<14;i++)
     {
@@ -73,7 +75,7 @@
         recognizer.numberOfTapsRequired = 1;
         recognizer.delegate = self;
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x, 53, 40, 23)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x-5, 53, 40, 23)];
         [label setBackgroundColor:[UIColor clearColor]];
         [label setText:[arr objectAtIndex:i]];
         [label setTextAlignment:NSTextAlignmentCenter];
@@ -86,16 +88,16 @@
         [scrollerView addSubview:label];
        // [label release];
         
-        UIImageView *bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(x, 10, 40, 43)];
+        UIImageView *bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(x, 10, 30, 40)];
         [bgImageView setTag:i];
         [bgImageView addGestureRecognizer:recognizer];
         [bgImageView setUserInteractionEnabled:YES];
         UIImage *bgImage = [self changeImage:i imageView:nil];
         bgImageView.image = bgImage;
         [scrollerView addSubview:bgImageView];
-       // [bgImageView release];
+        //[bgImageView release];
         
-       // [recognizer release];
+        //[recognizer release];
 
     }
     scrollerView.contentSize = CGSizeMake(x + 55, 80);
@@ -199,8 +201,8 @@
 - (void)dealloc
 {
     //[super dealloc];
-    scrollerView = nil;
-    rootImageView = nil;
+    //scrollerView = nil;
+    //rootImageView = nil;
     //[currentImage release],currentImage  =nil;
     
 }

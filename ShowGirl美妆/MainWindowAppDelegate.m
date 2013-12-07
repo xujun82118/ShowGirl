@@ -73,10 +73,10 @@
     
     if (Mesg != nil) {
         UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"亲 ^-^"
+                              initWithTitle:nil
                               message:Mesg
                               delegate:nil
-                              cancelButtonTitle:@"Yes, I did."
+                              cancelButtonTitle:@"Yes"
                               otherButtonTitles:nil];
         [alert show];
     }
@@ -152,7 +152,7 @@
         }
         
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                         message:msg
                                                        delegate:nil
                                               cancelButtonTitle:@"确定"

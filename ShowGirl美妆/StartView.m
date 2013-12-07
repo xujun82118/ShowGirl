@@ -8,7 +8,6 @@
 
 #import "StartView.h"
 
-#import "EveryDayDeclareView.h"
 #import "HoldBeautyView.h"
 #import "ImageEditingView.h"
 #import "SetupViewController.h"
@@ -23,9 +22,9 @@
 
 @implementation StartView
 
-@synthesize declareVeiwController;
 @synthesize holdBeautyVeiwController;
 @synthesize setupViewController;
+@synthesize staticLabel1, staticLabel2, staticLabel3;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,11 +32,13 @@
     if (self) {
         // Custom initialization
         
-        [NSTimer scheduledTimerWithTimeInterval:3.0
+       /* [NSTimer scheduledTimerWithTimeInterval:3.0
                                          target:self
                                        selector:@selector(targetMethodCheckTime:)
                                        userInfo:[self userInfo]
                                         repeats:YES];
+        */
+        
         if ([self getCurrentHour] <SHOWTIME_END) {
             isRemindedDeclare = NO;
         }else{
@@ -89,8 +90,22 @@
             }
         }
         
+        /*
+        //调用自定义的图片处理控制器
+         _picker = [[CustomImagePickerController alloc] init];
+        //判断是否有相机
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+            _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+            [_picker setIsDeclare:YES];
+        }else{
+            [_picker setIsSingle:YES];
+            [_picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        }
+        //指向他的委托函数？？
+        [_picker setCustomDelegate:self];
         
-        
+        */
         
     }
     return self;
@@ -110,6 +125,10 @@
 
 -(void)targetMethodCheckTime:(NSTimer*)theTimer
 {
+    
+
+    
+    /*
     //另一天后，自动置为未宣言
     if ([self getCurrentDay] != CurrentDay) {
         isRemindedDeclare = NO;
@@ -156,7 +175,7 @@
             isRemindedMission = YES;
         } 
     }
-    
+    */
 }
 
 - (void)viewDidLoad
@@ -178,11 +197,7 @@
     
     imageEditing = [[ImageEditingView alloc] initWithNibName:@"ImageEditingView" bundle:nil];
     
-    self.declareVeiwController = [[EveryDayDeclareView alloc] initWithNibName:@"EveryDayDeclareView" bundle:nil];
-    
-    if (self.declareVeiwController == nil) {
-        NSLog(@"declareVeiwController == nil");
-    }
+
     
     
     self.holdBeautyVeiwController = [[HoldBeautyView alloc] initWithNibName:@"HoldBeautyView" bundle:nil];
@@ -206,7 +221,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL isFirstTime = [defaults boolForKey:@"isFirstTimeUse"];
+    if (isFirstTime == NO) {
+        
+        [defaults setBool:YES forKey:@"isFirstTimeUse"];
+        
+    }else
+    {
+        staticLabel1.hidden = YES;
+        staticLabel2.hidden = YES;
+        staticLabel3.hidden = YES;
+        
+    }
+    
+}
 
 //显示每日养言界面
 - (IBAction)ShowHold:(id)sender
@@ -223,8 +256,6 @@
 {
     NSLog(@"Into Show declaraion....");
    
-   //[self dismissViewControllerAnimated:NO completion:(NULL)];
-   //[self presentViewController:self.declareVeiwController animated:NO completion:NULL];
    [self doTakePhoto:NULL];
     
 
@@ -234,10 +265,10 @@
 
 - (IBAction)youMiAd:(id)sender
 {
-    [YouMiWall showOffers:YES didShowBlock:^{
-        NSLog(@"有米积分墙已显示");
+    [YouMiWall showOffers:NO didShowBlock:^{
+        NSLog(@"有米积推荐已显示");
     } didDismissBlock:^{
-        NSLog(@"有米积分墙已退出");
+        NSLog(@"有米积推荐已退出");
     }];
     
 }
@@ -245,16 +276,14 @@
 
 - (IBAction)doTakePhoto:(id)sender
 {
+    /*
     //一天只能宣言一次
     if (isDeclare && setupViewController.isEveryDayDeclare.on) {
         [self showAlert:@"你今天已经做过宣言了！"];
         return;
     }
-    
-    if (setupViewController.isEveryDayDeclare.on) {
-        NSLog(@"lllll");
-    }
-    
+     */
+
     /*
      //限制宣言时间为早上
      if (self.getCurrentHour>SHOWTIME_START && self.getCurrentHour <=SHOWTIME_END)
@@ -269,30 +298,38 @@
      }
      */
     
-    
+
     //调用自定义的图片处理控制器
-    CustomImagePickerController *picker = [[CustomImagePickerController alloc] init];
-    //判断是否有相机
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-    }else{
-        [picker setIsSingle:YES];//??
-        [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    if (!_picker) {
+        _picker = [[CustomImagePickerController alloc] init];
+        //判断是否有相机
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+            _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+            [_picker setIsDeclare:YES];
+        }else{
+            [_picker setIsSingle:YES];
+            [_picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        }
+        //指向他的委托函数？？
+        [_picker setCustomDelegate:self];
     }
-    //指向他的委托函数？？
-    [picker setCustomDelegate:self];
-    //调起pick处理器，及其view
-    [self presentViewController:picker animated:YES completion:NULL];
+
+     
     
+    //调起pick处理器，及其view
+    [self presentViewController:_picker animated:YES completion:NULL];
     
 }
 
 
 - (void)cameraPhoto:(UIImage *)image  //选择完图片
 {
+    
     ImageFilterProcessViewController *fitler = [[ImageFilterProcessViewController alloc] init];
     [fitler setDelegate:self];
     fitler.currentImage = image;
+    NSLog(@"image size = %lu", sizeof(image));
     //[self presentModalViewController:fitler animated:YES];
     [self presentViewController:fitler animated:YES completion:NULL];
     
@@ -311,7 +348,7 @@
 -(void)showAlert:(NSString *)msg
 {
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"亲^_^"
+                          initWithTitle:nil
                           message:msg
                           delegate:self
                           cancelButtonTitle:@"确定"
@@ -335,7 +372,7 @@
 - (void)imageEditingFinishReturn
 {
     NSLog(@"Get delegate imageEditingFinishReturn");
-    [self backToStart:NULL];
+    //[self backToStart:NULL];
 }
 
 

@@ -34,6 +34,9 @@ static CGContextRef CreateRGBABitmapContext (CGImageRef inImage)// 返回一个�
 	CGColorSpaceRelease( colorSpace ); 
     //Core Foundation中通过含有Create、Alloc的方法名字创建的指针，需要使用CFRelease()函数释放
     
+    //xujun:修改可能的内存泄露
+    //free(bitmapData);
+    
 	return context;
 }
 

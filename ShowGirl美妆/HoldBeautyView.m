@@ -16,7 +16,7 @@
 
 @implementation HoldBeautyView
 
-@synthesize proveImage,insertPhotoButton,changeImageButton,deleteImageButton;
+@synthesize proveImage,insertPhotoButton,changeImageButton,deleteImageButton,saveImageButton;
 
 @synthesize CurrentMissionTableView, textSelfString;
 
@@ -87,6 +87,8 @@
      
     changeImageButton.hidden = YES;
     deleteImageButton.hidden = YES;
+    saveImageButton.hidden = YES;
+    
     
 }
 
@@ -115,15 +117,28 @@
 
 - (IBAction)doShare:(id)sender {
     
+    
+    
+    actionSheetShare = [[UIActionSheet alloc]
+                        initWithTitle:nil
+                        delegate:self
+                        cancelButtonTitle:@"取消"
+                        destructiveButtonTitle:nil
+                        otherButtonTitles:@"分享到新浪微博", nil];//define other button with buttongIndex
+    actionSheetShare.actionSheetStyle =UIActionSheetStyleBlackOpaque;//Define the actionsheet show style.
+    [actionSheetShare showInView:self.view];//show actionsheet in the self view.
+    
+    /*
     WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]];
-   /* request.userInfo = @{@"ShareMessageFrom": @"SendMessageToWeiboViewController",
+   request.userInfo = @{@"ShareMessageFrom": @"SendMessageToWeiboViewController",
                          @"Other_Info_1": [NSNumber numberWithInt:123],
                          @"Other_Info_2": @[@"obj1", @"obj2"],
                          @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
-    */
+   
     //    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
     
     [WeiboSDK sendRequest:request];
+    */
 }
 
 
@@ -155,7 +170,7 @@
     if ([message.text isEqualToString:@""] || message.text == nil) {
         
         UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"亲^_^"
+                              initWithTitle:nil
                               message:@"您未选择任务！"
                               delegate:self
                               cancelButtonTitle:@"确定"
@@ -177,13 +192,13 @@
 - (IBAction)insertPhoto:(id)sender {
     
     //调用自定义的图片处理控制器
-    CustomImagePickerController *picker = [[CustomImagePickerController alloc] init];
+    CustomImagePickerController1 *picker = [[CustomImagePickerController1 alloc] init];
     //判断是否有相机
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-    }else{
-        [picker setIsSingle:YES];//??
         [picker setIsDeclare:NO];
+    }else{
+        [picker setIsSingle:YES];
         [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
     [picker setCustomDelegate:self];
@@ -212,6 +227,10 @@
         insertPhotoButton.hidden = YES;
         changeImageButton.hidden = NO;
         deleteImageButton.hidden = NO;
+        saveImageButton.hidden = NO;
+        
+        [self.view addSubview:saveImageButton];
+        [self.view addSubview:deleteImageButton];
 	}
     
 }
@@ -228,6 +247,10 @@
         insertPhotoButton.hidden = NO;
         changeImageButton.hidden = YES;
         deleteImageButton.hidden = YES;
+        saveImageButton.hidden = YES;
+        
+        [self.view addSubview:saveImageButton];
+        [self.view addSubview:deleteImageButton];
         
     }
 }
@@ -242,6 +265,60 @@
     
 }
 
+- (IBAction)saveImage:(id)sender
+{
+    
+    
+    //delegate functon will include actionSheet:several paramter.
+    actionSheetSaveImage = [[UIActionSheet alloc]
+                            initWithTitle:nil//define the title
+                            delegate:self//transfer self as parameter to delegate function
+                            cancelButtonTitle:@"取消"
+                            destructiveButtonTitle:nil
+                            otherButtonTitles:@"保存到相册", nil];//define other button with buttongIndex
+    actionSheetSaveImage.actionSheetStyle =UIActionSheetStyleBlackOpaque;//Define the actionsheet show style.
+    [actionSheetSaveImage showInView:self.view];//show actionsheet in the self view.
+    
+}
+
+
+//The first fun called by the delelgate. choose the buttonIndex to call the different fun.
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (actionSheet == actionSheetSaveImage) {
+        if (buttonIndex == 0) {
+            
+            UIImageWriteToSavedPhotosAlbum(proveImage.image, nil, nil,nil);
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"保存成功！"
+                                  message:nil//show the msg in the alert.
+                                  delegate:self//delegate itself
+                                  cancelButtonTitle:@"确定"
+                                  otherButtonTitles: nil];
+            [alert show];
+        }else if (buttonIndex == 1) {
+            //[self showAlert:@"取消"];
+        }
+    }else if (actionSheet == actionSheetShare)
+    {
+        if (buttonIndex == 0) {
+            WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]];
+            request.userInfo = @{@"ShareMessageFrom": @"SendMessageToWeiboViewController",
+                                 @"Other_Info_1": [NSNumber numberWithInt:123],
+                                 @"Other_Info_2": @[@"obj1", @"obj2"],
+                                 @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
+            //    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
+            
+            [WeiboSDK sendRequest:request];
+            
+        }else if (buttonIndex == 1) {
+            //[self showAlert:@"取消"];
+        }
+        
+    }
+    
+    
+}
 
 /*
 - (IBAction)changeSwitchSelf:(id)sender {
@@ -298,7 +375,7 @@
 {
 
     CGRect frame = textField.frame;
-    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 216.0);//键盘高度216
+    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 260.0);//键盘高度216
     NSTimeInterval animationDuration = 0.30f;
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
@@ -364,7 +441,7 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.opaque = YES;
     
-    cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
 
 
 
@@ -397,7 +474,7 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     
-    cell.imageView.image = [UIImage imageNamed:@"camera_btn_ok.png"];
+    cell.imageView.image = [UIImage imageNamed:@"选择.png"];
 
     
     
@@ -407,9 +484,9 @@
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
     
 }
 

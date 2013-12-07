@@ -53,14 +53,20 @@
     comps =[calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit |NSSecondCalendarUnit)fromDate:selected];
     NSInteger hour = [comps hour];
     NSInteger miniute = [comps minute];
-    NSInteger second = [comps second];
     NSString *message = [[NSString alloc] initWithFormat:
-                         @"%d:%d:%d", hour, miniute, second];
+                         @"%d:%d", hour, miniute];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    
+    [components setHour:hour];
+    [components setMinute:miniute];
+    [components setSecond:0];
+    NSDate *fireDate = [calendar dateFromComponents:components];//目标时间
+
 
     //存用户选择的时间
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    //[defaults setInteger: hour forKey:DEFAULT_DECLARE_TIME];
-    [defaults setObject:selected forKey:@"DEFAULT_DECLARE_TIME"];
+    [defaults setObject:fireDate forKey:@"DEFAULT_DECLARE_TIME"];
     [defaults synchronize];
     
     //设置定时每天通知
@@ -82,7 +88,7 @@
         if (declareNotification!=nil)
         {
    
-            declareNotification.fireDate = selected;
+            declareNotification.fireDate = fireDate;
             declareNotification.repeatInterval = kCFCalendarUnitDay;
             declareNotification.timeZone=[NSTimeZone defaultTimeZone];
             //notification.soundName = @"ping.caf";
@@ -102,10 +108,10 @@
    // NSString *message = [[NSString alloc] initWithFormat:
    //                      @"The date and time you selected is: %@", selected];
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"Date and Time Selected"
+                          initWithTitle:@"定时时间为："
                           message:message
                           delegate:nil
-                          cancelButtonTitle:@"Yes, I did."
+                          cancelButtonTitle:@"Yes"
                           otherButtonTitles:nil];
     [alert show];
     

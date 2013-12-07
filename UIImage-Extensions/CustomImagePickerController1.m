@@ -17,7 +17,7 @@
 
 @implementation CustomImagePickerController1
 
-@synthesize customDelegate = _customDelegate, isDeclare,isSingle=_isSingle;
+@synthesize customDelegate = _customDelegate, isDeclare=_isDeclare,isSingle=_isSingle;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -57,10 +57,14 @@
     }
     
     if(self.sourceType == UIImagePickerControllerSourceTypeCamera){
+        
+        
         UIImage *deviceImage = [UIImage imageNamed:@"camera_button_switch_camera.png"];
         UIButton *deviceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [deviceBtn setBackgroundImage:deviceImage forState:UIControlStateNormal];
         [deviceBtn addTarget:self action:@selector(swapFrontAndBackCameras:) forControlEvents:UIControlEventTouchUpInside];
+        self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        
         [deviceBtn setFrame:CGRectMake(250, 20, deviceImage.size.width, deviceImage.size.height)];
         
         UIView *PLCameraView=[self findView:viewController.view withName:@"PLCameraView"];
@@ -68,8 +72,10 @@
         
         [self setShowsCameraControls:NO];
         
-        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - 134, 320, 44)];
+        
+        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - 50, 320, 44)];
         [overlyView setBackgroundColor:[UIColor clearColor]];
+        
         
         UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         UIImage *backImage = [UIImage imageNamed:@"camera_cancel.png"];
@@ -92,7 +98,7 @@
         [overlyView addSubview:photoBtn];
         
         
-        if (isDeclare) {
+        if (_isDeclare) {
             NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
             NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
             NSInteger currentSelect = [defaults integerForKey:@"current"];
@@ -117,6 +123,7 @@
             label1.adjustsFontSizeToFitWidth = YES;
             label1.numberOfLines = 3;
             
+            //[self.cameraOverlayView addSubview:label1];
             [overlyView addSubview:label1];
         }
         
@@ -124,6 +131,11 @@
         
         self.cameraOverlayView = overlyView;
     }
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;//隐藏为YES，显示为NO
 }
 
 
