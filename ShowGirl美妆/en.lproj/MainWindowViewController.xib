@@ -23,8 +23,8 @@
                     <rect key="frame" x="120" y="255" width="80" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="5wx-Ck-XAi"/>
-                        <constraint firstAttribute="height" constant="80" id="gyA-sb-x8L"/>
+                        <constraint firstAttribute="width" constant="80" id="GKV-uR-owl"/>
+                        <constraint firstAttribute="height" constant="80" id="bii-is-7N9"/>
                     </constraints>
                     <state key="normal" title="支持美丽" backgroundImage="外圆.png">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,30 +37,30 @@
                     <rect key="frame" x="16" y="147" width="288" height="42"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="42" id="urp-9H-plB"/>
+                        <constraint firstAttribute="height" constant="42" id="eeD-In-gUH"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="纪念.png" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-Q9-Txn">
-                    <rect key="frame" x="40" y="464" width="240" height="74"/>
+                <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="纪念.png" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-Q9-Txn">
+                    <rect key="frame" x="40" y="500" width="240" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="74" id="Wnz-rH-Q1k"/>
+                        <constraint firstAttribute="height" constant="20" id="jME-OR-4PV"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ksJ-Q9-Txn" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="40" id="37S-m6-O2H"/>
-                <constraint firstItem="aX3-VG-zKP" firstAttribute="top" secondItem="6" secondAttribute="top" constant="147" id="7Mq-Fh-GRf"/>
-                <constraint firstAttribute="bottom" secondItem="ksJ-Q9-Txn" secondAttribute="bottom" constant="30" id="9Jq-Sa-U9z"/>
-                <constraint firstItem="RPS-B9-Fwa" firstAttribute="top" secondItem="aX3-VG-zKP" secondAttribute="bottom" constant="66" id="Age-n8-fY5"/>
-                <constraint firstItem="RPS-B9-Fwa" firstAttribute="centerX" secondItem="aX3-VG-zKP" secondAttribute="centerX" id="QdL-Ug-Y62"/>
-                <constraint firstItem="jCb-hW-FzO" firstAttribute="centerX" secondItem="RPS-B9-Fwa" secondAttribute="centerX" id="WfL-L5-n9P"/>
-                <constraint firstItem="jCb-hW-FzO" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="XoK-MJ-bQ3"/>
-                <constraint firstAttribute="trailing" secondItem="jCb-hW-FzO" secondAttribute="trailing" id="kV2-Lb-htL"/>
-                <constraint firstItem="aX3-VG-zKP" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="16" id="khc-LN-ypo"/>
-                <constraint firstItem="ksJ-Q9-Txn" firstAttribute="centerX" secondItem="RPS-B9-Fwa" secondAttribute="centerX" id="ufo-5A-BLM"/>
-                <constraint firstItem="jCb-hW-FzO" firstAttribute="top" secondItem="6" secondAttribute="top" id="vJe-DA-Wwj"/>
+                <constraint firstItem="RPS-B9-Fwa" firstAttribute="centerX" secondItem="ksJ-Q9-Txn" secondAttribute="centerX" id="4Zx-Ez-dWx"/>
+                <constraint firstItem="RPS-B9-Fwa" firstAttribute="centerX" secondItem="aX3-VG-zKP" secondAttribute="centerX" id="CGd-Hf-DlU"/>
+                <constraint firstAttribute="bottom" secondItem="ksJ-Q9-Txn" secondAttribute="bottom" constant="48" id="Dzf-DY-EpR"/>
+                <constraint firstItem="jCb-hW-FzO" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="Gir-4T-6GE"/>
+                <constraint firstItem="RPS-B9-Fwa" firstAttribute="top" secondItem="aX3-VG-zKP" secondAttribute="bottom" constant="66" id="JBi-Dk-W1y"/>
+                <constraint firstItem="ksJ-Q9-Txn" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="40" id="MdO-by-bZP"/>
+                <constraint firstAttribute="trailing" secondItem="jCb-hW-FzO" secondAttribute="trailing" id="ZPI-2r-eZ7"/>
+                <constraint firstItem="aX3-VG-zKP" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="16" id="bcN-fS-ahQ"/>
+                <constraint firstItem="aX3-VG-zKP" firstAttribute="top" secondItem="6" secondAttribute="top" constant="147" id="nor-Q6-vQN"/>
+                <constraint firstItem="jCb-hW-FzO" firstAttribute="top" secondItem="6" secondAttribute="top" id="tvg-8H-d6c"/>
+                <constraint firstItem="aX3-VG-zKP" firstAttribute="centerX" secondItem="jCb-hW-FzO" secondAttribute="centerX" id="z4a-fw-yaw"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -70,6 +70,6 @@
         <image name="外圆.png" width="176" height="171"/>
         <image name="大标题.png" width="542" height="70"/>
         <image name="清绿底图.png" width="320" height="568"/>
-        <image name="纪念.png" width="500" height="146"/>
+        <image name="纪念.png" width="538" height="29"/>
     </resources>
 </document>

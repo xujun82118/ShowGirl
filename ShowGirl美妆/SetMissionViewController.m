@@ -63,7 +63,7 @@
     addMissionString.borderStyle = UITextBorderStyleBezel;
     addMissionString.textColor = [UIColor blackColor];
     addMissionString.font = [UIFont systemFontOfSize:17.0];
-    addMissionString.placeholder = @"说点什么？";
+    addMissionString.placeholder = @"更多简单美丽任务。。。";
     addMissionString.backgroundColor = [UIColor whiteColor];
     
     addMissionString.keyboardType = UIKeyboardTypeDefault;
@@ -75,6 +75,21 @@
     addMissionString.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
 
 
+    addMissionString.hidden = YES;
+    addString.hidden = YES;
+    addStringBackGround.hidden = YES;
+    
+}
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+
+    self.missionTableView.editing = NO;
+    
+    [editeString setTitle:@"编辑" forState:UIControlStateNormal];
+    addMissionString.text = nil;
+    
     addMissionString.hidden = YES;
     addString.hidden = YES;
     addStringBackGround.hidden = YES;
@@ -281,6 +296,7 @@
     }else
     {
         [editeString setTitle:@"编辑" forState:UIControlStateNormal];
+        addMissionString.text = nil;
     }
 
 }

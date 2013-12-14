@@ -52,60 +52,9 @@
         isDeclare = NO;
         
         
-        //定时闹钟
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSDate *declareTime = [defaults valueForKey:DEFAULT_DECLARE_TIME];
+
         
-        if ([defaults boolForKey:DEFAULTS_IS_DECLARE_TIME]&&declareTime)
-        {
-            UILocalNotification *declareNotification=[[UILocalNotification alloc] init];
-            if (declareNotification!=nil)
-            {
-                
-                declareNotification.fireDate = declareTime;
-                declareNotification.repeatInterval = kCFCalendarUnitDay;
-                declareNotification.timeZone=[NSTimeZone defaultTimeZone];
-                declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
-                
-                //NSDictionary* info = [NSDictionary dictionaryWithObject:@"test1" forKey:@"testkey"];
-                //declareNotification.userInfo = info;
-                
-                [[UIApplication sharedApplication] scheduleLocalNotification:declareNotification];
-                
-            }
-        }
-        if ([defaults boolForKey:DEFAULTS_IS_MISSION_TIME]&&declareTime)
-        {
-            UILocalNotification *missionNotification=[[UILocalNotification alloc] init];
-            if (missionNotification!=nil)
-            {
-                
-                missionNotification.fireDate = declareTime;
-                missionNotification.repeatInterval = kCFCalendarUnitDay;
-                missionNotification.timeZone=[NSTimeZone defaultTimeZone];
-                missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
-                
-                [[UIApplication sharedApplication] scheduleLocalNotification:missionNotification];
-                
-            }
-        }
-        
-        /*
-        //调用自定义的图片处理控制器
-         _picker = [[CustomImagePickerController alloc] init];
-        //判断是否有相机
-        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-            [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-            _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-            [_picker setIsDeclare:YES];
-        }else{
-            [_picker setIsSingle:YES];
-            [_picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-        }
-        //指向他的委托函数？？
-        [_picker setCustomDelegate:self];
-        
-        */
+
         
     }
     return self;
@@ -189,7 +138,68 @@
         [defaults setBool:YES forKey:DEFAULTS_IS_DECLARE_TIME];
         [defaults setBool:YES forKey:DEFAULTS_IS_MISSION_TIME];
         
-        [defaults setObject:@"Not New" forKey:@"isNewAPP"];
+        //设置默认的提醒时间
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        NSCalendar* calendar = [NSCalendar currentCalendar];
+       
+        [components setHour:7];
+        [components setMinute:0];
+        [components setSecond:0];
+        NSDate *fireDate = [calendar dateFromComponents:components];
+        [defaults setObject:fireDate forKey:DEFAULT_DECLARE_TIME];
+        [defaults synchronize];
+        
+        [components setHour:21];
+        [components setMinute:0];
+        [components setSecond:0];
+        NSDate *fireDate1 = [calendar dateFromComponents:components];
+        [defaults setObject:fireDate1 forKey:DEFAULT_MISSION_TIME];
+        [defaults synchronize];
+
+        
+        //设置不是第一次起动
+        [defaults setObject:@"Not New" forKey:@"isNewApp"];
+        [defaults synchronize];
+    }
+    
+    
+    //定时闹钟
+    NSDate *declareTime = [defaults valueForKey:DEFAULT_DECLARE_TIME];
+    
+    if ([defaults boolForKey:DEFAULTS_IS_DECLARE_TIME]&&declareTime)
+    {
+        UILocalNotification *declareNotification=[[UILocalNotification alloc] init];
+        if (declareNotification!=nil)
+        {
+            
+            declareNotification.fireDate = declareTime;
+            declareNotification.repeatInterval = kCFCalendarUnitDay;
+            declareNotification.timeZone=[NSTimeZone defaultTimeZone];
+            declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
+            
+            //NSDictionary* info = [NSDictionary dictionaryWithObject:@"test1" forKey:@"testkey"];
+            //declareNotification.userInfo = info;
+            
+            [[UIApplication sharedApplication] scheduleLocalNotification:declareNotification];
+            
+        }
+    }
+    
+    NSDate *missioTime = [defaults valueForKey:DEFAULT_MISSION_TIME];
+    if ([defaults boolForKey:DEFAULTS_IS_MISSION_TIME]&&missioTime)
+    {
+        UILocalNotification *missionNotification=[[UILocalNotification alloc] init];
+        if (missionNotification!=nil)
+        {
+            
+            missionNotification.fireDate = missioTime;
+            missionNotification.repeatInterval = kCFCalendarUnitDay;
+            missionNotification.timeZone=[NSTimeZone defaultTimeZone];
+            missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+            
+            [[UIApplication sharedApplication] scheduleLocalNotification:missionNotification];
+            
+        }
     }
     
     
@@ -238,6 +248,7 @@
         staticLabel3.hidden = YES;
         
     }
+
     
 }
 
@@ -247,7 +258,7 @@
     NSLog(@"Into Show hold view....");
     
     //[self dismissViewControllerAnimated:NO completion:(NULL)];
-    [self presentViewController:self.holdBeautyVeiwController animated:NO completion:NULL];
+    [self presentViewController:self.holdBeautyVeiwController animated:YES completion:NULL];
     
 }
 
@@ -326,11 +337,11 @@
 - (void)cameraPhoto:(UIImage *)image  //选择完图片
 {
     
-    ImageFilterProcessViewController *fitler = [[ImageFilterProcessViewController alloc] init];
-    [fitler setDelegate:self];
+    if (!fitler) {
+        fitler = [[ImageFilterProcessViewController alloc] init];
+        [fitler setDelegate:self];
+    }
     fitler.currentImage = image;
-    NSLog(@"image size = %lu", sizeof(image));
-    //[self presentModalViewController:fitler animated:YES];
     [self presentViewController:fitler animated:YES completion:NULL];
     
 }
@@ -369,6 +380,7 @@
     
 }
 
+//暂时没用
 - (void)imageEditingFinishReturn
 {
     NSLog(@"Get delegate imageEditingFinishReturn");

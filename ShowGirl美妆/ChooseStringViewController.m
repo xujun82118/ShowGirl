@@ -35,12 +35,6 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-   // [self registerClass:[CustomCell class] forCellReuseIdentifier:@"Cell1"];
 
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
@@ -50,7 +44,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     addDeclareString.borderStyle = UITextBorderStyleBezel;
     addDeclareString.textColor = [UIColor blackColor];
     addDeclareString.font = [UIFont systemFontOfSize:17.0];
-    addDeclareString.placeholder = @"说点什么？";
+    addDeclareString.placeholder = @"更多美丽宣言。。。";
     addDeclareString.backgroundColor = [UIColor whiteColor];
     
     addDeclareString.keyboardType = UIKeyboardTypeDefault;
@@ -61,18 +55,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     addDeclareString.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
     
-    //currentSelect = [defaults integerForKey:@"initSelect"];
-   // if (currentSelect == 0) {
-  //      currentSelect = 1;
-   // }
-    
-  
-   // [defaults setInteger:initSelect forKey:@"initSelect"];
-    
-    // [defaults synchronize];
-    
-      // [declareTableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionBottom animated:NO];
-   //[ declareTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+
     
     
     addDeclareString.hidden = YES;
@@ -82,7 +65,22 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    
+    [declareTableView setEditing:NO animated:YES];
+    
+    [editeString setTitle:@"编辑" forState:UIControlStateNormal];
+    addDeclareString.text = nil;
+    
+    addDeclareString.hidden = YES;
+    addString.hidden = YES;
+    addStringBackGround.hidden = YES;
+    
 
+
+    
+}
 
 
 - (void)didReceiveMemoryWarning
@@ -171,14 +169,17 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    currentSelect = [defaults integerForKey:@"current1"];
+    currentSelect = [defaults integerForKey:@"current"];
     
     if (indexPath.row == currentSelect) {
         [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
         cell.imageView.image = [UIImage imageNamed:@"选择.png"];
+        
 
+    }else
+    {
+        cell.imageView.image = nil;
     }
-    
 
     
     return cell;
@@ -238,11 +239,11 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setInteger:indexPath.row forKey:@"current1"];
+    [defaults setInteger:indexPath.row forKey:@"current"];
 
     [defaults synchronize];
     
-    // int currentSelect = [defaults integerForKey:@"current"];
+    [declareTableView reloadData];
 }
 
 
@@ -251,7 +252,6 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     cell.imageView.image = nil;
-    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
     
 }
 
@@ -319,6 +319,19 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     }else
     {
         [editeString setTitle:@"编辑" forState:UIControlStateNormal];
+        addDeclareString.text = nil;
+        
+        NSInteger s = [self.declareTableView numberOfSections];
+        if (s<1) return;
+        NSInteger r = [self.declareTableView numberOfRowsInSection:s-1];
+        if (r<1) return;
+        
+        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+        NSInteger selected = [defaults integerForKey:@"current"];
+        
+        NSIndexPath *ip = [NSIndexPath indexPathForRow:selected inSection:s-1];
+        [declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+
     }
 
 }

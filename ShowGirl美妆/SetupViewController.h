@@ -12,7 +12,7 @@
 #import "ChooseStringViewController.h"
 #import "SetMissionViewController.h"
 
-#define DEFAULTS_IS_DECLARE_TIME @"defaultsIsDeclareTime"
+#define DEFAULTS_IS_DECLARE_TIME @"defaultsIsDeclareTime7"
 #define DEFAULTS_IS_MISSION_TIME @"defaultsIsMissionTime"
 
 @interface SetupViewController : UIViewController

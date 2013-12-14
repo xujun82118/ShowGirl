@@ -24,7 +24,7 @@
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
-	<string>TestApp2013.09.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>TestApp2013.09.everyday</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

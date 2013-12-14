@@ -32,7 +32,7 @@
 }
 - (IBAction)fitlerDone:(id)sender
 {
-    [self dismissViewControllerAnimated:NO completion:^{
+    [self dismissViewControllerAnimated:YES completion:^{
         [delegate imageFitlerProcessDone:rootImageView.image];
     }];
 }

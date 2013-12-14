@@ -88,9 +88,9 @@
         [defaults synchronize];
     }
     
-    [defaults setInteger:0 forKey:@"current"];
+    //[defaults setInteger:0 forKey:@"current"];
     
-    [defaults synchronize];
+    //[defaults synchronize];
     
 /*
     [UIView beginAnimations:@"Start View" context:nil];

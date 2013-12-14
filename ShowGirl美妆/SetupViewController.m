@@ -74,7 +74,7 @@
 
 - (IBAction)chooseDeclare:(id)sender{
     
-    [self presentViewController:chooseDeclare animated:YES completion:NULL];
+    [self presentViewController:chooseDeclare animated:YES completion:nil];
 
 }
 
@@ -84,7 +84,7 @@
     [defaults setBool:isEveryDayDeclare.on forKey:DEFAULTS_IS_DECLARE_TIME];
     [defaults synchronize];
 
-    //NSLog(@"declare time is %d", isEveryDayDeclare.on);
+
     
     if (isEveryDayDeclare.on==NO) {
         NSArray *myArray=[[UIApplication sharedApplication] scheduledLocalNotifications];
@@ -96,6 +96,21 @@
             {
                 [[UIApplication sharedApplication] cancelLocalNotification:myUILocalNotification];
             }
+            
+        }
+    }else
+    {
+        NSDate *declareTime = [defaults valueForKey:DEFAULT_DECLARE_TIME];
+        UILocalNotification *declareNotification=[[UILocalNotification alloc] init];
+        if (declareNotification!=nil)
+        {
+            declareNotification.fireDate = declareTime;
+            declareNotification.repeatInterval = kCFCalendarUnitDay;
+            declareNotification.timeZone=[NSTimeZone defaultTimeZone];
+            declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
+
+            
+            [[UIApplication sharedApplication] scheduleLocalNotification:declareNotification];
             
         }
     }
@@ -120,6 +135,21 @@
             {
                 [[UIApplication sharedApplication] cancelLocalNotification:myUILocalNotification];
             }
+            
+        }
+    }else
+    {
+        NSDate *missioTime = [defaults valueForKey:DEFAULT_MISSION_TIME];
+        UILocalNotification *missionNotification=[[UILocalNotification alloc] init];
+        if (missionNotification!=nil)
+        {
+            
+            missionNotification.fireDate = missioTime;
+            missionNotification.repeatInterval = kCFCalendarUnitDay;
+            missionNotification.timeZone=[NSTimeZone defaultTimeZone];
+            missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+            
+            [[UIApplication sharedApplication] scheduleLocalNotification:missionNotification];
             
         }
     }

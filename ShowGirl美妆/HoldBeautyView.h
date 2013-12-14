@@ -7,17 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomImagePickerController1.h"
+#import "CustomImagePickerController.h"
 #import "ImageFilterProcessViewController.h"
 
 
-@interface HoldBeautyView : UIViewController<UITextFieldDelegate,CustomImagePickerControllerDelegate1,ImageFitlerProcessDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface HoldBeautyView : UIViewController<UITextFieldDelegate,CustomImagePickerControllerDelegate,ImageFitlerProcessDelegate, UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView* CurrentMissionTableView;
     
     
     UIActionSheet *actionSheetSaveImage;
     UIActionSheet *actionSheetShare;
+    CustomImagePickerController *picker;
+    ImageFilterProcessViewController *fitler;
     
 }
 

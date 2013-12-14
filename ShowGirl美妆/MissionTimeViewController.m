@@ -28,11 +28,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSDate *now = [NSDate date];
-    [self.datePicker setDate:now animated:NO];
-    [self.datePicker setDatePickerMode:UIDatePickerModeTime];
+
     
     missionNotification=[[UILocalNotification alloc] init];
+    
+}
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSDate *missioTime = [defaults valueForKey:DEFAULT_MISSION_TIME];
+    
+    NSDate *now = missioTime;
+    [self.datePicker setDate:now animated:YES];
+    [self.datePicker setDatePickerMode:UIDatePickerModeTime];
     
 }
 

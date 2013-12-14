@@ -7,6 +7,7 @@
 //
 
 #import "ImageEditingView.h"
+#import "ChooseStringViewController.h"
 
 @interface ImageEditingView ()
 
@@ -131,7 +132,14 @@
 {
     WBMessageObject *message = [WBMessageObject message];
    
-    message.text = @"新的一天，美丽的我!";
+   
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
+    NSInteger currentSelect = [defaults integerForKey:@"current"];
+  
+    NSString * preString = NSLocalizedString(@"FromUri", @"");
+    message.text = [[[dataSourceArray objectAtIndex:currentSelect] objectForKey:@"kDeclareStringKey"] stringByAppendingString:preString];
+
  
     if (editImage!=Nil) {
         WBImageObject *image = [WBImageObject object];
@@ -162,16 +170,19 @@
     
     
     //调用自定义的图片处理控制器
-    picker = [[CustomImagePickerController alloc] init];
-    //判断是否有相机
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-        [picker setIsDeclare:YES];
-    }else{
-        [picker setIsSingle:YES];
-        [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    if (!picker) {
+        picker = [[CustomImagePickerController alloc] init];
+        //判断是否有相机
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+            [picker setIsDeclare:YES];
+        }else{
+            [picker setIsSingle:YES];
+            [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        }
+        [picker setCustomDelegate:self];
     }
-    [picker setCustomDelegate:self];
+
     //调起pick处理器，及其view
     [self presentViewController:picker animated:YES completion:NULL];
     

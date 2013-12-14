@@ -27,12 +27,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
-    NSDate *now = [NSDate date];
-    [self.datePicker setDate:now animated:NO];
-    [self.datePicker setDatePickerMode:UIDatePickerModeTime];
     
     declareNotification=[[UILocalNotification alloc] init];
+    
+}
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSDate *declareTime = [defaults valueForKey:DEFAULT_DECLARE_TIME];
+    
+    NSDate *now = declareTime;
+    [self.datePicker setDate:now animated:YES];
+    [self.datePicker setDatePickerMode:UIDatePickerModeTime];
     
 }
 
@@ -66,7 +75,7 @@
 
     //存用户选择的时间
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setObject:fireDate forKey:@"DEFAULT_DECLARE_TIME"];
+    [defaults setObject:fireDate forKey:DEFAULT_DECLARE_TIME];
     [defaults synchronize];
     
     //设置定时每天通知

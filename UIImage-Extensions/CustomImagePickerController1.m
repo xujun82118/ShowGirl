@@ -73,7 +73,7 @@
         [self setShowsCameraControls:NO];
         
         
-        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - 50, 320, 44)];
+        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - 70, 320, 44)];
         [overlyView setBackgroundColor:[UIColor clearColor]];
         
         

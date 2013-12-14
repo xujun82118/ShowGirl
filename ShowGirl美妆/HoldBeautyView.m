@@ -56,16 +56,12 @@
         [defaults synchronize];
     }
     
-    NSInteger  currentSelect = [defaults integerForKey:@"initSelect"];
-    if (currentSelect == 100) {
-        currentSelect = 0;
-    }
     
     
     textSelfString.borderStyle = UITextBorderStyleBezel;
     textSelfString.textColor = [UIColor blackColor];
     textSelfString.font = [UIFont systemFontOfSize:17.0];
-    textSelfString.placeholder = @"说点什么？";
+    textSelfString.placeholder = @"简单美丽任务";
     textSelfString.backgroundColor = [UIColor whiteColor];
     
     textSelfString.keyboardType = UIKeyboardTypeDefault;
@@ -148,15 +144,15 @@
     WBMessageObject *message = [WBMessageObject message];
     
     UITableViewCell *cell = [self.CurrentMissionTableView cellForRowAtIndexPath:[self.CurrentMissionTableView indexPathForSelectedRow]];
-    
+  
+    NSString * preString = NSLocalizedString(@"FromUri", @"");
     if (![self.textSelfString.text isEqualToString:@""])
     {
-        message.text = textSelfString.text;
+        message.text = [textSelfString.text stringByAppendingString:preString];
         
     }else if(![cell.textLabel.text isEqualToString:@""] && cell != nil)
     {
-        NSString * preString = NSLocalizedString(@"FromUri", @"");
-        message.text = [preString stringByAppendingString:cell.textLabel.text];
+        message.text = [cell.textLabel.text stringByAppendingString:preString];
     }
 
     if (proveImage.image!=Nil) {
@@ -192,16 +188,20 @@
 - (IBAction)insertPhoto:(id)sender {
     
     //调用自定义的图片处理控制器
-    CustomImagePickerController1 *picker = [[CustomImagePickerController1 alloc] init];
-    //判断是否有相机
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-        [picker setIsDeclare:NO];
-    }else{
-        [picker setIsSingle:YES];
-        [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    
+    if (!picker) {
+        picker = [[CustomImagePickerController alloc] init];
+        //判断是否有相机
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+            [picker setIsDeclare:NO];
+        }else{
+            [picker setIsSingle:YES];
+            [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        }
+        [picker setCustomDelegate:self];
     }
-    [picker setCustomDelegate:self];
+
     //调起pick处理器，及其view
     [self presentViewController:picker animated:YES completion:NULL];
     
@@ -210,10 +210,11 @@
 
 - (void)cameraPhoto:(UIImage *)image  //选择完图片
 {
-    ImageFilterProcessViewController *fitler = [[ImageFilterProcessViewController alloc] init];
-    [fitler setDelegate:self];
+    if (!fitler) {
+        fitler = [[ImageFilterProcessViewController alloc] init];
+        [fitler setDelegate:self];
+    }
     fitler.currentImage = image;
-    //[self presentModalViewController:fitler animated:YES];
     [self presentViewController:fitler animated:YES completion:NULL];
     
 }
@@ -441,7 +442,7 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.opaque = YES;
     
-    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+    cell.imageView.image = nil;
 
 
 
@@ -476,17 +477,22 @@
     
     cell.imageView.image = [UIImage imageNamed:@"选择.png"];
 
-    
-    
+    NSTimeInterval animationDuration = 0.30f;
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    CGRect rect = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height);
+    self.view.frame = rect;
+    [UIView commitAnimations];
+    [textSelfString resignFirstResponder];
 }
 
 
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    //cell.imageView.image = [UIImage imageNamed:@"btn_back.png"];
+    cell.imageView.image = nil;
     
 }
 

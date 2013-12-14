@@ -25,6 +25,9 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每天一简单美丽任务, 让美丽持久" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="das-Eb-XEB">
                     <rect key="frame" x="67" y="167" width="280" height="102"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="102" id="PaS-YN-sgr"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -33,8 +36,8 @@
                     <rect key="frame" x="20" y="344" width="160" height="41"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="41" id="Ztq-Hz-1ua"/>
-                        <constraint firstAttribute="width" constant="160" id="rb0-te-ETp"/>
+                        <constraint firstAttribute="width" constant="160" id="8cb-Uf-cUi"/>
+                        <constraint firstAttribute="height" constant="41" id="UAl-kQ-CHf"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,7 +47,7 @@
                     <rect key="frame" x="0.0" y="15" width="280" height="57"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="57" id="4z0-1G-Eug"/>
+                        <constraint firstAttribute="height" constant="57" id="1Wl-ZU-FD7"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,7 +57,7 @@
                     <rect key="frame" x="35" y="59" width="100" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="ofO-Uh-s0w"/>
+                        <constraint firstAttribute="width" constant="100" id="oev-8o-lEs"/>
                     </constraints>
                     <state key="normal" title="晨起宣言" backgroundImage="开始-圆-1.png">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,7 +70,7 @@
                     <rect key="frame" x="197" y="239" width="90" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="90" id="VZI-58-VdY"/>
+                        <constraint firstAttribute="width" constant="90" id="A7k-Gq-vLS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="美丽任务" backgroundImage="开始-圆-2.png">
@@ -81,8 +84,8 @@
                     <rect key="frame" x="55" y="382" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="1lt-sE-Q10"/>
-                        <constraint firstAttribute="height" constant="70" id="ez3-Ik-xd1"/>
+                        <constraint firstAttribute="width" constant="70" id="Pnd-sh-8Kw"/>
+                        <constraint firstAttribute="height" constant="70" id="yB8-m6-igC"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="设置" backgroundImage="完成-圆-btn.png">
@@ -93,11 +96,11 @@
                     </connections>
                 </button>
                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvL-YS-zAg">
-                    <rect key="frame" x="20" y="480" width="50" height="50"/>
+                    <rect key="frame" x="9" y="520" width="35" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="B2C-YT-YfJ"/>
-                        <constraint firstAttribute="width" constant="50" id="SNO-TE-COx"/>
+                        <constraint firstAttribute="height" constant="35" id="728-DC-sSI"/>
+                        <constraint firstAttribute="width" constant="35" id="WQv-nw-0BS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,28 +112,27 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="das-Eb-XEB" firstAttribute="top" secondItem="bnv-Or-mVM" secondAttribute="bottom" constant="95" id="15r-73-Pjx"/>
-                <constraint firstItem="das-Eb-XEB" firstAttribute="top" secondItem="82" secondAttribute="bottom" constant="8" symbolic="YES" id="1xB-lJ-iSc"/>
-                <constraint firstItem="MvL-YS-zAg" firstAttribute="top" secondItem="sQu-80-rQF" secondAttribute="bottom" constant="28" id="4Ml-Cx-Aef"/>
-                <constraint firstItem="82" firstAttribute="top" secondItem="1" secondAttribute="top" constant="59" id="5tQ-My-It6"/>
-                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="7Qt-15-5GY"/>
-                <constraint firstAttribute="trailing" secondItem="bnv-Or-mVM" secondAttribute="trailing" constant="40" id="Ddt-rq-8IL"/>
-                <constraint firstItem="Rix-LL-1nl" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="Ggj-as-e9R"/>
-                <constraint firstAttribute="bottom" secondItem="MvL-YS-zAg" secondAttribute="bottom" constant="38" id="MiE-6k-fRW"/>
-                <constraint firstAttribute="trailing" secondItem="das-Eb-XEB" secondAttribute="trailing" constant="-27" id="PnI-5H-3M3"/>
-                <constraint firstItem="94" firstAttribute="centerY" secondItem="4" secondAttribute="centerY" id="Prb-va-g11"/>
-                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="QL0-Co-WG5"/>
-                <constraint firstItem="Rix-LL-1nl" firstAttribute="top" secondItem="das-Eb-XEB" secondAttribute="bottom" constant="75" id="Zae-Nh-hQ1"/>
-                <constraint firstItem="Rix-LL-1nl" firstAttribute="leading" secondItem="MvL-YS-zAg" secondAttribute="leading" id="ca8-vU-giI"/>
-                <constraint firstItem="bnv-Or-mVM" firstAttribute="top" secondItem="1" secondAttribute="top" constant="15" id="fm2-Ye-Gym"/>
-                <constraint firstItem="MvL-YS-zAg" firstAttribute="top" secondItem="Rix-LL-1nl" secondAttribute="bottom" constant="95" id="i9e-M0-pKQ"/>
-                <constraint firstItem="bnv-Or-mVM" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="kTR-La-IPd"/>
-                <constraint firstItem="82" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="35" id="oxW-Xc-wS6"/>
-                <constraint firstAttribute="trailing" secondItem="94" secondAttribute="trailing" constant="33" id="rxM-5V-KLJ"/>
-                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="sTJ-by-8Hs"/>
-                <constraint firstItem="sQu-80-rQF" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="55" id="vpu-Ly-bXw"/>
-                <constraint firstItem="das-Eb-XEB" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="67" id="wGk-3Y-Ufr"/>
-                <constraint firstItem="bnv-Or-mVM" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="wwF-lG-g0x"/>
+                <constraint firstItem="94" firstAttribute="centerY" secondItem="4" secondAttribute="centerY" id="1Oy-4Q-q3x"/>
+                <constraint firstItem="das-Eb-XEB" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="67" id="4pd-a4-Yux"/>
+                <constraint firstAttribute="bottom" secondItem="sQu-80-rQF" secondAttribute="bottom" constant="116" id="8Ks-2q-oab"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="9bu-kL-cLd"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="DCa-SY-R4J"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="bnv-Or-mVM" secondAttribute="leading" id="NPj-tv-h4m"/>
+                <constraint firstItem="82" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="35" id="P2l-Rb-N5b"/>
+                <constraint firstAttribute="bottom" secondItem="MvL-YS-zAg" secondAttribute="bottom" constant="13" id="PxL-Hx-5cu"/>
+                <constraint firstItem="82" firstAttribute="top" secondItem="1" secondAttribute="top" constant="59" id="RLR-AI-rLM"/>
+                <constraint firstItem="das-Eb-XEB" firstAttribute="top" secondItem="82" secondAttribute="bottom" constant="8" symbolic="YES" id="WKZ-7s-dWt"/>
+                <constraint firstItem="Rix-LL-1nl" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="XOF-eW-jY6"/>
+                <constraint firstAttribute="trailing" secondItem="94" secondAttribute="trailing" constant="33" id="byM-zf-yqO"/>
+                <constraint firstItem="sQu-80-rQF" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="55" id="dUo-aX-Rb4"/>
+                <constraint firstItem="bnv-Or-mVM" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="f2u-2c-beO"/>
+                <constraint firstItem="Rix-LL-1nl" firstAttribute="top" secondItem="das-Eb-XEB" secondAttribute="bottom" constant="75" id="iL2-SK-42f"/>
+                <constraint firstItem="bnv-Or-mVM" firstAttribute="top" secondItem="1" secondAttribute="top" constant="15" id="kqW-Fe-fqz"/>
+                <constraint firstItem="MvL-YS-zAg" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="9" id="pMj-t4-ZRR"/>
+                <constraint firstAttribute="trailing" secondItem="das-Eb-XEB" secondAttribute="trailing" constant="-27" id="q2L-i0-UTR"/>
+                <constraint firstItem="das-Eb-XEB" firstAttribute="top" secondItem="bnv-Or-mVM" secondAttribute="bottom" constant="95" id="u6k-YP-29r"/>
+                <constraint firstAttribute="trailing" secondItem="bnv-Or-mVM" secondAttribute="trailing" constant="40" id="uhM-0i-dta"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="yXw-BN-X7g"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

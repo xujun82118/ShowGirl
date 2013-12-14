@@ -29,6 +29,9 @@
     BOOL isRemindedMission;
     
     NSInteger CurrentDay;
+    
+    ImageFilterProcessViewController *fitler;
+    
 }
 - (IBAction)setup:(id)sender;
 
