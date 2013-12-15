@@ -12,14 +12,6 @@
 		6B0C2EF7182F4BEF004FB994 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */; };
 		6B0C2EF9182F4C01004FB994 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */; };
 		6B0C2EFD182F4C20004FB994 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EFC182F4C20004FB994 /* libsqlite3.dylib */; };
-		6B0C2F0118323D07004FB994 /* 纯色长形底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F0018323D07004FB994 /* 纯色长形底图.png */; };
-		6B0C2F0F183254C2004FB994 /* 蓝玫瑰-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F0E183254C2004FB994 /* 蓝玫瑰-btn.png */; };
-		6B0C2F11183255BB004FB994 /* 蓝玫瑰-btn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F10183255BB004FB994 /* 蓝玫瑰-btn1.png */; };
-		6B0C2F1518339CAD004FB994 /* 两边-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F1418339CAD004FB994 /* 两边-btn.png */; };
-		6B0C2F171834E909004FB994 /* 纯黄底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F161834E909004FB994 /* 纯黄底图.png */; };
-		6B0C2F191834E927004FB994 /* 美丽任务主页-页眉.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F181834E927004FB994 /* 美丽任务主页-页眉.png */; };
-		6B0C2F1B1834EC36004FB994 /* 美丽任务底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F1A1834EC36004FB994 /* 美丽任务底图.png */; };
-		6B0C2F1F18370B6D004FB994 /* 圆底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C2F1E18370B6D004FB994 /* 圆底图.png */; };
 		6B201F4E18419DEF002EE4E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F4D18419DEF002EE4E3 /* Images.xcassets */; };
 		6B201F531841A5ED002EE4E3 /* 风车icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F521841A5ED002EE4E3 /* 风车icon-120.png */; };
 		6B201F551841A5FA002EE4E3 /* 风车icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F541841A5FA002EE4E3 /* 风车icon-57.png */; };
@@ -54,27 +46,14 @@
 		6B93D9A717D1DA420090933E /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9A617D1DA420090933E /* LogoView.xib */; };
 		6B93D9A917D1DA8C0090933E /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9A817D1DA8C0090933E /* StartView.xib */; };
 		6B93D9AD17D1DAA20090933E /* HoldBeautyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9AC17D1DAA20090933E /* HoldBeautyView.xib */; };
-		6B93D9B217D1DB7D0090933E /* Button每日宣言.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9AE17D1DB7D0090933E /* Button每日宣言.png */; };
-		6B93D9B317D1DB7D0090933E /* 天蓝底图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9AF17D1DB7D0090933E /* 天蓝底图.jpg */; };
 		6B93D9B717D1DC560090933E /* Button每日养颜.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9B617D1DC560090933E /* Button每日养颜.png */; };
 		6B93E31D17D1DCF20090933E /* Start底图-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B93E31C17D1DCF20090933E /* Start底图-7.png */; };
 		6BA29F851842F1150017D17F /* 清绿底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F841842F1150017D17F /* 清绿底图.png */; };
-		6BA29F871844D2870017D17F /* 枫叶绿.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F861844D2870017D17F /* 枫叶绿.png */; };
 		6BA29F891844D9DA0017D17F /* 红伞.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F881844D9DA0017D17F /* 红伞.png */; };
 		6BA29F8B1846100F0017D17F /* 风车icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F8A1846100F0017D17F /* 风车icon-114.png */; };
-		6BA29F8F184612F80017D17F /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F8E184612F80017D17F /* Default~iphone.png */; };
 		6BA29F931846193B0017D17F /* 半透明信息提示框.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F921846193B0017D17F /* 半透明信息提示框.png */; };
 		6BA29F95184621F30017D17F /* 聊天窗口小部件.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F94184621F30017D17F /* 聊天窗口小部件.png */; };
 		6BA29F971846260C0017D17F /* 朦胧图副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F961846260C0017D17F /* 朦胧图副本.png */; };
-		6BA29F99184864F50017D17F /* 半透明按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F98184864F50017D17F /* 半透明按钮.png */; };
-		6BA29F9B184867310017D17F /* 半透明按钮-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F9A184867310017D17F /* 半透明按钮-1.png */; };
-		6BA29F9D184868700017D17F /* 半透明按钮-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F9C184868700017D17F /* 半透明按钮-2.png */; };
-		6BA29F9F18486B8C0017D17F /* 半透明-圆图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F9E18486B8C0017D17F /* 半透明-圆图.png */; };
-		6BA29FA1184874F70017D17F /* 半透明-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FA0184874F70017D17F /* 半透明-3.png */; };
-		6BA29FAB184889C90017D17F /* 中心球.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FAA184889C90017D17F /* 中心球.png */; };
-		6BA29FAD18488A910017D17F /* 空长条-左左.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FAC18488A910017D17F /* 空长条-左左.png */; };
-		6BA29FAF1849AAC30017D17F /* 半透明按钮-蓝.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FAE1849AAC30017D17F /* 半透明按钮-蓝.png */; };
-		6BA29FB11849B92B0017D17F /* 发亮磨砂.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FB01849B92B0017D17F /* 发亮磨砂.png */; };
 		6BA29FB31849BB180017D17F /* 工作室.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FB21849BB180017D17F /* 工作室.png */; };
 		6BA29FB51849BC5E0017D17F /* 大标题.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FB41849BC5E0017D17F /* 大标题.png */; };
 		6BA29FB71849BE660017D17F /* 纪念.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FB61849BE660017D17F /* 纪念.png */; };
@@ -130,14 +109,6 @@
 		6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B0C2EFA182F4C13004FB994 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		6B0C2EFC182F4C20004FB994 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		6B0C2F0018323D07004FB994 /* 纯色长形底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "纯色长形底图.png"; sourceTree = "<group>"; };
-		6B0C2F0E183254C2004FB994 /* 蓝玫瑰-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蓝玫瑰-btn.png"; sourceTree = "<group>"; };
-		6B0C2F10183255BB004FB994 /* 蓝玫瑰-btn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蓝玫瑰-btn1.png"; sourceTree = "<group>"; };
-		6B0C2F1418339CAD004FB994 /* 两边-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "两边-btn.png"; sourceTree = "<group>"; };
-		6B0C2F161834E909004FB994 /* 纯黄底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "纯黄底图.png"; sourceTree = "<group>"; };
-		6B0C2F181834E927004FB994 /* 美丽任务主页-页眉.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "美丽任务主页-页眉.png"; sourceTree = "<group>"; };
-		6B0C2F1A1834EC36004FB994 /* 美丽任务底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "美丽任务底图.png"; sourceTree = "<group>"; };
-		6B0C2F1E18370B6D004FB994 /* 圆底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆底图.png"; sourceTree = "<group>"; };
 		6B201F4D18419DEF002EE4E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B201F521841A5ED002EE4E3 /* 风车icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-120.png"; sourceTree = "<group>"; };
 		6B201F541841A5FA002EE4E3 /* 风车icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-57.png"; sourceTree = "<group>"; };
@@ -188,27 +159,14 @@
 		6B93D9A617D1DA420090933E /* LogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
 		6B93D9A817D1DA8C0090933E /* StartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartView.xib; sourceTree = "<group>"; };
 		6B93D9AC17D1DAA20090933E /* HoldBeautyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldBeautyView.xib; sourceTree = "<group>"; };
-		6B93D9AE17D1DB7D0090933E /* Button每日宣言.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button每日宣言.png"; sourceTree = "<group>"; };
-		6B93D9AF17D1DB7D0090933E /* 天蓝底图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "天蓝底图.jpg"; sourceTree = "<group>"; };
 		6B93D9B617D1DC560090933E /* Button每日养颜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button每日养颜.png"; sourceTree = "<group>"; };
 		6B93E31C17D1DCF20090933E /* Start底图-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-7.png"; sourceTree = "<group>"; };
 		6BA29F841842F1150017D17F /* 清绿底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "清绿底图.png"; sourceTree = "<group>"; };
-		6BA29F861844D2870017D17F /* 枫叶绿.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "枫叶绿.png"; sourceTree = "<group>"; };
 		6BA29F881844D9DA0017D17F /* 红伞.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红伞.png"; sourceTree = "<group>"; };
 		6BA29F8A1846100F0017D17F /* 风车icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-114.png"; sourceTree = "<group>"; };
-		6BA29F8E184612F80017D17F /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		6BA29F921846193B0017D17F /* 半透明信息提示框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半透明信息提示框.png"; sourceTree = "<group>"; };
 		6BA29F94184621F30017D17F /* 聊天窗口小部件.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "聊天窗口小部件.png"; sourceTree = "<group>"; };
 		6BA29F961846260C0017D17F /* 朦胧图副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "朦胧图副本.png"; sourceTree = "<group>"; };
-		6BA29F98184864F50017D17F /* 半透明按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半透明按钮.png"; sourceTree = "<group>"; };
-		6BA29F9A184867310017D17F /* 半透明按钮-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半透明按钮-1.png"; sourceTree = "<group>"; };
-		6BA29F9C184868700017D17F /* 半透明按钮-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半透明按钮-2.png"; sourceTree = "<group>"; };
-		6BA29F9E18486B8C0017D17F /* 半透明-圆图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半透明-圆图.png"; sourceTree = "<group>"; };
-		6BA29FA0184874F70017D17F /* 半透明-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半透明-3.png"; sourceTree = "<group>"; };
-		6BA29FAA184889C90017D17F /* 中心球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中心球.png"; sourceTree = "<group>"; };
-		6BA29FAC18488A910017D17F /* 空长条-左左.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空长条-左左.png"; sourceTree = "<group>"; };
-		6BA29FAE1849AAC30017D17F /* 半透明按钮-蓝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半透明按钮-蓝.png"; sourceTree = "<group>"; };
-		6BA29FB01849B92B0017D17F /* 发亮磨砂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发亮磨砂.png"; sourceTree = "<group>"; };
 		6BA29FB21849BB180017D17F /* 工作室.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "工作室.png"; sourceTree = "<group>"; };
 		6BA29FB41849BC5E0017D17F /* 大标题.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大标题.png"; sourceTree = "<group>"; };
 		6BA29FB61849BE660017D17F /* 纪念.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "纪念.png"; sourceTree = "<group>"; };
@@ -422,33 +380,14 @@
 				6BA29FB61849BE660017D17F /* 纪念.png */,
 				6BA29FB41849BC5E0017D17F /* 大标题.png */,
 				6BA29FB21849BB180017D17F /* 工作室.png */,
-				6BA29FB01849B92B0017D17F /* 发亮磨砂.png */,
-				6BA29FAE1849AAC30017D17F /* 半透明按钮-蓝.png */,
-				6BA29FAC18488A910017D17F /* 空长条-左左.png */,
-				6BA29FAA184889C90017D17F /* 中心球.png */,
-				6BA29FA0184874F70017D17F /* 半透明-3.png */,
-				6BA29F9E18486B8C0017D17F /* 半透明-圆图.png */,
-				6BA29F9C184868700017D17F /* 半透明按钮-2.png */,
-				6BA29F9A184867310017D17F /* 半透明按钮-1.png */,
-				6BA29F98184864F50017D17F /* 半透明按钮.png */,
 				6BA29F961846260C0017D17F /* 朦胧图副本.png */,
 				6BA29F94184621F30017D17F /* 聊天窗口小部件.png */,
 				6BA29F921846193B0017D17F /* 半透明信息提示框.png */,
-				6BA29F8E184612F80017D17F /* Default~iphone.png */,
 				6BA29F8A1846100F0017D17F /* 风车icon-114.png */,
 				6BA29F881844D9DA0017D17F /* 红伞.png */,
-				6BA29F861844D2870017D17F /* 枫叶绿.png */,
 				6BA29F841842F1150017D17F /* 清绿底图.png */,
 				6B201F541841A5FA002EE4E3 /* 风车icon-57.png */,
 				6B201F521841A5ED002EE4E3 /* 风车icon-120.png */,
-				6B0C2F1E18370B6D004FB994 /* 圆底图.png */,
-				6B0C2F1A1834EC36004FB994 /* 美丽任务底图.png */,
-				6B0C2F181834E927004FB994 /* 美丽任务主页-页眉.png */,
-				6B0C2F161834E909004FB994 /* 纯黄底图.png */,
-				6B0C2F1418339CAD004FB994 /* 两边-btn.png */,
-				6B0C2F10183255BB004FB994 /* 蓝玫瑰-btn1.png */,
-				6B0C2F0E183254C2004FB994 /* 蓝玫瑰-btn.png */,
-				6B0C2F0018323D07004FB994 /* 纯色长形底图.png */,
 				6BE6FA83180CECC200411A52 /* btn_back.png */,
 				6BE6FA84180CECC200411A52 /* btn_back@2x.png */,
 				6BE6FA85180CECC200411A52 /* camera_album.png */,
@@ -461,8 +400,6 @@
 				6BE6FA8C180CECC200411A52 /* camera_cancel@2x.png */,
 				6BE6FA8D180CECC200411A52 /* camera_shoot.png */,
 				6BE6FA8E180CECC200411A52 /* camera_shoot@2x.png */,
-				6B93D9AE17D1DB7D0090933E /* Button每日宣言.png */,
-				6B93D9AF17D1DB7D0090933E /* 天蓝底图.jpg */,
 				6B937C8217B5E7FF00AAEDA6 /* ShowGirl美妆-Info.plist */,
 				6B937C8317B5E80000AAEDA6 /* InfoPlist.strings */,
 				6B937C8617B5E80000AAEDA6 /* main.m */,
@@ -552,6 +489,11 @@
 				CLASSPREFIX = MainWindow;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "徐 军";
+				TargetAttributes = {
+					6B937C7617B5E7FF00AAEDA6 = {
+						DevelopmentTeam = M76B97CS33;
+					};
+				};
 			};
 			buildConfigurationList = 6B937C7217B5E7FF00AAEDA6 /* Build configuration list for PBXProject "ShowGirl美妆" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -576,28 +518,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BA29FB51849BC5E0017D17F /* 大标题.png in Resources */,
-				6B0C2F1F18370B6D004FB994 /* 圆底图.png in Resources */,
 				6B201F4E18419DEF002EE4E3 /* Images.xcassets in Resources */,
 				6BD5DF11181147A900A99F0C /* SetupViewController.xib in Resources */,
 				6BE6FA97180CECC200411A52 /* camera_cancel.png in Resources */,
-				6BA29FAB184889C90017D17F /* 中心球.png in Resources */,
-				6BA29F8F184612F80017D17F /* Default~iphone.png in Resources */,
 				6B201F531841A5ED002EE4E3 /* 风车icon-120.png in Resources */,
 				6B213668184B03A300C0EE4B /* 云LOG.png in Resources */,
 				6BE6FA90180CECC200411A52 /* btn_back@2x.png in Resources */,
-				6BA29FB11849B92B0017D17F /* 发亮磨砂.png in Resources */,
 				6BE6FA92180CECC200411A52 /* camera_album@2x.png in Resources */,
 				6BE6FA91180CECC200411A52 /* camera_album.png in Resources */,
 				6B213655184A26C300C0EE4B /* 横条.png in Resources */,
 				6BDE6D3D17D1CBD40097AA27 /* Default-568h@2x.png in Resources */,
-				6BA29FAF1849AAC30017D17F /* 半透明按钮-蓝.png in Resources */,
 				6BE6FA8F180CECC200411A52 /* btn_back.png in Resources */,
 				6B213663184A3DC500C0EE4B /* load.png in Resources */,
 				6B8076EE18530E6400D35A14 /* 应用推荐.png in Resources */,
 				6BA29FBD184A1D330017D17F /* 完成-圆-btn.png in Resources */,
 				6B93D9A517D1D9A50090933E /* MainWindowViewController.xib in Resources */,
 				6B21366A184B05B800C0EE4B /* Start底图-6.png in Resources */,
-				6BA29F9B184867310017D17F /* 半透明按钮-1.png in Resources */,
 				6BE6FA98180CECC200411A52 /* camera_cancel@2x.png in Resources */,
 				6BA29F851842F1150017D17F /* 清绿底图.png in Resources */,
 				6BA29FB71849BE660017D17F /* 纪念.png in Resources */,
@@ -607,12 +543,9 @@
 				6B93D9A917D1DA8C0090933E /* StartView.xib in Resources */,
 				6B21365C184A316300C0EE4B /* 开始-圆-2.png in Resources */,
 				6BE6FA95180CECC200411A52 /* camera_button_switch_camera.png in Resources */,
-				6BA29F9D184868700017D17F /* 半透明按钮-2.png in Resources */,
 				6BAF4AFB182BA0E700484176 /* Localizable.strings in Resources */,
 				6BA29FBB184A122E0017D17F /* 设置-btn-2.png in Resources */,
 				6BE6FA96180CECC200411A52 /* camera_button_switch_camera@2x.png in Resources */,
-				6BA29FA1184874F70017D17F /* 半透明-3.png in Resources */,
-				6B0C2F0118323D07004FB994 /* 纯色长形底图.png in Resources */,
 				6BA29F971846260C0017D17F /* 朦胧图副本.png in Resources */,
 				6B93D9AD17D1DAA20090933E /* HoldBeautyView.xib in Resources */,
 				6B213661184A36EF00C0EE4B /* 外圆.png in Resources */,
@@ -621,32 +554,20 @@
 				6B21366C184B0E5300C0EE4B /* delete.png in Resources */,
 				6BA29F891844D9DA0017D17F /* 红伞.png in Resources */,
 				6BA29F931846193B0017D17F /* 半透明信息提示框.png in Resources */,
-				6B0C2F0F183254C2004FB994 /* 蓝玫瑰-btn.png in Resources */,
 				6B213671184F70D600C0EE4B /* save-yellow.png in Resources */,
-				6BA29FAD18488A910017D17F /* 空长条-左左.png in Resources */,
-				6B0C2F171834E909004FB994 /* 纯黄底图.png in Resources */,
 				6BA29F95184621F30017D17F /* 聊天窗口小部件.png in Resources */,
 				6B436FC818082F1F00AF4498 /* ImageEditingView.xib in Resources */,
 				6B201F551841A5FA002EE4E3 /* 风车icon-57.png in Resources */,
 				6B213657184A2FE400C0EE4B /* 红伞-圆.png in Resources */,
-				6B0C2F11183255BB004FB994 /* 蓝玫瑰-btn1.png in Resources */,
 				6B21365B184A316300C0EE4B /* 开始-圆-1.png in Resources */,
-				6B93D9B217D1DB7D0090933E /* Button每日宣言.png in Resources */,
-				6B0C2F1B1834EC36004FB994 /* 美丽任务底图.png in Resources */,
 				6BA29FB31849BB180017D17F /* 工作室.png in Resources */,
 				6BA29F8B1846100F0017D17F /* 风车icon-114.png in Resources */,
 				6B21365D184A316300C0EE4B /* 开始-圆-3.png in Resources */,
-				6BA29F99184864F50017D17F /* 半透明按钮.png in Resources */,
 				6B21366F184E1C0100C0EE4B /* 保存.png in Resources */,
-				6B0C2F1518339CAD004FB994 /* 两边-btn.png in Resources */,
-				6B93D9B317D1DB7D0090933E /* 天蓝底图.jpg in Resources */,
-				6BA29F9F18486B8C0017D17F /* 半透明-圆图.png in Resources */,
 				6B93D9B717D1DC560090933E /* Button每日养颜.png in Resources */,
-				6B0C2F191834E927004FB994 /* 美丽任务主页-页眉.png in Resources */,
 				6B213673184F79E500C0EE4B /* 选择.png in Resources */,
 				6BE6FA9A180CECC200411A52 /* camera_shoot@2x.png in Resources */,
 				6BE6FA99180CECC200411A52 /* camera_shoot.png in Resources */,
-				6BA29F871844D2870017D17F /* 枫叶绿.png in Resources */,
 				6B93E31D17D1DCF20090933E /* Start底图-7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,8 +694,9 @@
 		6B937C9B17B5E80000AAEDA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: xu jun (9ZRCP5QB93)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShowGirl美妆/ShowGirl美妆-Prefix.pch";
 				INFOPLIST_FILE = "ShowGirl美妆/ShowGirl美妆-Info.plist";
@@ -786,6 +708,7 @@
 					"/Users/xujun/Desktop/AppWorkplace/iphoneProject/ShowGirl美妆",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2546D526-F0A0-4A67-86D4-58ECDA849FC8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -794,7 +717,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xu jun (9ZRCP5QB93)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShowGirl美妆/ShowGirl美妆-Prefix.pch";
 				INFOPLIST_FILE = "ShowGirl美妆/ShowGirl美妆-Info.plist";
@@ -805,7 +728,9 @@
 					"/Users/xujun/Desktop/AppWorkplace/iphoneProject/ShowGirl美妆/ShowGirl美妆/libWeiboSDK",
 					"/Users/xujun/Desktop/AppWorkplace/iphoneProject/ShowGirl美妆",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2546D526-F0A0-4A67-86D4-58ECDA849FC8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
