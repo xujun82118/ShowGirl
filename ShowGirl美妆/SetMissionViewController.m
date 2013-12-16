@@ -257,8 +257,15 @@
         return;
     }
     
-    [self.dataSourceArray addObject:
-     [NSDictionary dictionaryWithObjectsAndKeys: self.addMissionString.text, @"kMissionStringKey",nil]];  
+    
+    NSMutableArray *mutaArray = [[NSMutableArray alloc] init];
+    [mutaArray addObjectsFromArray:self.dataSourceArray];
+    
+    [mutaArray addObject:[NSDictionary dictionaryWithObjectsAndKeys: self.addMissionString.text, @"kMissionStringKey",nil]];
+    self.dataSourceArray =mutaArray;
+    
+    //[self.dataSourceArray addObject:
+     //[NSDictionary dictionaryWithObjectsAndKeys: self.addMissionString.text, @"kMissionStringKey",nil]];
 
     //存储自定认任务
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];

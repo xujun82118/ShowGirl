@@ -148,6 +148,7 @@
         NSDate *fireDate = [calendar dateFromComponents:components];
         [defaults setObject:fireDate forKey:DEFAULT_DECLARE_TIME];
         [defaults synchronize];
+     
         
         [components setHour:21];
         [components setMinute:0];
@@ -177,8 +178,8 @@
             declareNotification.timeZone=[NSTimeZone defaultTimeZone];
             declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
             
-            //NSDictionary* info = [NSDictionary dictionaryWithObject:@"test1" forKey:@"testkey"];
-            //declareNotification.userInfo = info;
+            NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsDeclareTime" forKey:@"DeclareOrMissionTime"];
+            declareNotification.userInfo = info;
             
             [[UIApplication sharedApplication] scheduleLocalNotification:declareNotification];
             
@@ -196,6 +197,9 @@
             missionNotification.repeatInterval = kCFCalendarUnitDay;
             missionNotification.timeZone=[NSTimeZone defaultTimeZone];
             missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+            
+            NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsMissionTime" forKey:@"DeclareOrMissionTime"];
+            missionNotification.userInfo = info;
             
             [[UIApplication sharedApplication] scheduleLocalNotification:missionNotification];
             
@@ -311,8 +315,8 @@
     
 
     //调用自定义的图片处理控制器
-    if (!_picker) {
-        _picker = [[CustomImagePickerController alloc] init];
+    
+       CustomImagePickerController* _picker =[[CustomImagePickerController alloc] init];
         //判断是否有相机
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
             [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
@@ -324,7 +328,7 @@
         }
         //指向他的委托函数？？
         [_picker setCustomDelegate:self];
-    }
+ 
 
      
     
@@ -337,10 +341,9 @@
 - (void)cameraPhoto:(UIImage *)image  //选择完图片
 {
     
-    if (!fitler) {
-        fitler = [[ImageFilterProcessViewController alloc] init];
+ 
+      ImageFilterProcessViewController*  fitler = [[ImageFilterProcessViewController alloc] init];
         [fitler setDelegate:self];
-    }
     fitler.currentImage = image;
     [self presentViewController:fitler animated:YES completion:NULL];
     

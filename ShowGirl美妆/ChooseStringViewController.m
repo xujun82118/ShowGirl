@@ -77,8 +77,18 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     addString.hidden = YES;
     addStringBackGround.hidden = YES;
     
+    NSInteger s = [self.declareTableView numberOfSections];
+    if (s<1) return;
+    NSInteger r = [self.declareTableView numberOfRowsInSection:s-1];
+    if (r<1) return;
+    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSInteger selected = [defaults integerForKey:@"current"];
+    
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:selected inSection:s-1];
+    [declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 
-
+   // [declareTableView reloadData];
     
 }
 
@@ -171,10 +181,18 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     currentSelect = [defaults integerForKey:@"current"];
     
+    NSLog(@"---current = %d",currentSelect);
+    
     if (indexPath.row == currentSelect) {
-        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewRowAnimationMiddle];
         cell.imageView.image = [UIImage imageNamed:@"选择.png"];
         
+        /*
+        NSInteger s = [self.declareTableView numberOfSections];
+        
+        NSIndexPath *ip = [NSIndexPath indexPathForRow:currentSelect inSection:s-1];
+        [declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        */
 
     }else
     {
@@ -330,7 +348,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
         NSInteger selected = [defaults integerForKey:@"current"];
         
         NSIndexPath *ip = [NSIndexPath indexPathForRow:selected inSection:s-1];
-        [declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        [declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 
     }
 
@@ -368,8 +386,14 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
         return;
     }
     
-    [self.dataSourceArray addObject:
-     [NSDictionary dictionaryWithObjectsAndKeys: self.addDeclareString.text, @"kDeclareStringKey",nil]];
+    NSMutableArray *mutaArray = [[NSMutableArray alloc] init];
+    [mutaArray addObjectsFromArray:self.dataSourceArray];
+    
+    [mutaArray addObject:[NSDictionary dictionaryWithObjectsAndKeys: self.addDeclareString.text, @"kDeclareStringKey",nil]];
+    self.dataSourceArray =mutaArray;
+    
+    //[self.dataSourceArray addObject:
+    // [NSDictionary dictionaryWithObjectsAndKeys: self.addDeclareString.text, @"kDeclareStringKey",nil]];
     
     //存储自定认任务
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];

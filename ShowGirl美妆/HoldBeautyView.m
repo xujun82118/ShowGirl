@@ -188,9 +188,7 @@
 - (IBAction)insertPhoto:(id)sender {
     
     //调用自定义的图片处理控制器
-    
-    if (!picker) {
-        picker = [[CustomImagePickerController alloc] init];
+      CustomImagePickerController*  picker = [[CustomImagePickerController alloc] init];
         //判断是否有相机
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
             [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
@@ -200,7 +198,6 @@
             [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
         }
         [picker setCustomDelegate:self];
-    }
 
     //调起pick处理器，及其view
     [self presentViewController:picker animated:YES completion:NULL];
@@ -210,10 +207,10 @@
 
 - (void)cameraPhoto:(UIImage *)image  //选择完图片
 {
-    if (!fitler) {
-        fitler = [[ImageFilterProcessViewController alloc] init];
+
+      ImageFilterProcessViewController*  fitler = [[ImageFilterProcessViewController alloc] init];
         [fitler setDelegate:self];
-    }
+
     fitler.currentImage = image;
     [self presentViewController:fitler animated:YES completion:NULL];
     

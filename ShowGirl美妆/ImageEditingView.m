@@ -15,7 +15,7 @@
 
 @implementation ImageEditingView
 
-@synthesize editImage, imageEditingDelegate = imageEditingDelegate,picker,saveImageBtn;
+@synthesize editImage, imageEditingDelegate = imageEditingDelegate,saveImageBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -170,8 +170,7 @@
     
     
     //调用自定义的图片处理控制器
-    if (!picker) {
-        picker = [[CustomImagePickerController alloc] init];
+       CustomImagePickerController* picker = [[CustomImagePickerController alloc] init];
         //判断是否有相机
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
             [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
@@ -181,7 +180,6 @@
             [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
         }
         [picker setCustomDelegate:self];
-    }
 
     //调起pick处理器，及其view
     [self presentViewController:picker animated:YES completion:NULL];

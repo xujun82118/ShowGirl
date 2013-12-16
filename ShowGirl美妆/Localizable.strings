@@ -7,15 +7,15 @@
 */
 
 
-"Mission_1" = "做了一次面膜！";
-"Mission_2" = "做了十分钟的瑜伽！";
-"Mission_3" = "有氧运动十分钟！";
+"Mission_1" = "吃了一个香甜的苹果~";
+"Mission_2" = "散步10分钟~";
+"Mission_3" = "做了15分钟的水润面膜~";
 
 "DeclareString_1" = "美丽的早晨，美丽的我！";
-"DeclareString_2" = "美丽，自信的我！";
+"DeclareString_2" = "新的一天，自信的我！";
 "DeclareString_3" = "努力，我最棒！";
 
-"Declare time is on" = "到时间做美丽宣言了！";
-"Mission time is on" = "到时间做美丽任务了！";
+"Declare time is on" = "是时候来一次美丽宣言了~";
+"Mission time is on" = "是时候做一件简单美丽任务了~";
 
 "FromUri" = "（APP:天天更美丽）";

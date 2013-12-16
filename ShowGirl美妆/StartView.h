@@ -30,7 +30,7 @@
     
     NSInteger CurrentDay;
     
-    ImageFilterProcessViewController *fitler;
+    //ImageFilterProcessViewController *fitler;
     
 }
 - (IBAction)setup:(id)sender;
@@ -50,7 +50,7 @@
 - (NSInteger)getCurrentHour;
 - (NSInteger)getCurrentDay;
 
-@property (retain, nonatomic) CustomImagePickerController *picker;
+//@property (retain, nonatomic) CustomImagePickerController *picker;
 @property (retain, nonatomic) HoldBeautyView*  holdBeautyVeiwController; 
 @property (retain, nonatomic) SetupViewController* setupViewController;
 

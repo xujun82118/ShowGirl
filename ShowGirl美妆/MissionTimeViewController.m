@@ -75,6 +75,7 @@
     [components setSecond:0];
     NSDate *fireDate = [calendar dateFromComponents:components];//目标时间
     
+
     //存用户选择的时间
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     [defaults setObject:fireDate forKey:DEFAULT_MISSION_TIME];

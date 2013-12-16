@@ -35,7 +35,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *saveImageBtn;
 @property (nonatomic, retain) UIImage *editImage;
-@property (nonatomic, retain) CustomImagePickerController *picker;
+//@property (nonatomic, retain) CustomImagePickerController *picker;
 @property(nonatomic) id<ImageEditingProcessDelegate> imageEditingDelegate;
 @end
 

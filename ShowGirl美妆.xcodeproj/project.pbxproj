@@ -29,6 +29,8 @@
 		6B21366F184E1C0100C0EE4B /* 保存.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B21366E184E1C0100C0EE4B /* 保存.png */; };
 		6B213671184F70D600C0EE4B /* save-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213670184F70D600C0EE4B /* save-yellow.png */; };
 		6B213673184F79E500C0EE4B /* 选择.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213672184F79E500C0EE4B /* 选择.png */; };
+		6B260B96185F2D6C0091EE3D /* Start底图-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */; };
+		6B260B97185F2D6C0091EE3D /* Start底图-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */; };
 		6B436FC718082F1F00AF4498 /* ImageEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436FC518082F1F00AF4498 /* ImageEditingView.m */; };
 		6B436FC818082F1F00AF4498 /* ImageEditingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B436FC618082F1F00AF4498 /* ImageEditingView.xib */; };
 		6B7B6ECA17F6804000483672 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B6EC717F6804000483672 /* WeiboSDK.bundle */; };
@@ -127,6 +129,8 @@
 		6B21366E184E1C0100C0EE4B /* 保存.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保存.png"; sourceTree = "<group>"; };
 		6B213670184F70D600C0EE4B /* save-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save-yellow.png"; sourceTree = "<group>"; };
 		6B213672184F79E500C0EE4B /* 选择.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择.png"; sourceTree = "<group>"; };
+		6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-640-960.png"; sourceTree = "<group>"; };
+		6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-640-1136.png"; sourceTree = "<group>"; };
 		6B436FC418082F1F00AF4498 /* ImageEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditingView.h; sourceTree = "<group>"; };
 		6B436FC518082F1F00AF4498 /* ImageEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditingView.m; sourceTree = "<group>"; };
 		6B436FC618082F1F00AF4498 /* ImageEditingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageEditingView.xib; sourceTree = "<group>"; };
@@ -359,6 +363,8 @@
 		6B937C8117B5E7FF00AAEDA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */,
+				6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */,
 				6B8076ED18530E6400D35A14 /* 应用推荐.png */,
 				6B213672184F79E500C0EE4B /* 选择.png */,
 				6B213670184F70D600C0EE4B /* save-yellow.png */,
@@ -531,6 +537,7 @@
 				6BE6FA8F180CECC200411A52 /* btn_back.png in Resources */,
 				6B213663184A3DC500C0EE4B /* load.png in Resources */,
 				6B8076EE18530E6400D35A14 /* 应用推荐.png in Resources */,
+				6B260B96185F2D6C0091EE3D /* Start底图-640-960.png in Resources */,
 				6BA29FBD184A1D330017D17F /* 完成-圆-btn.png in Resources */,
 				6B93D9A517D1D9A50090933E /* MainWindowViewController.xib in Resources */,
 				6B21366A184B05B800C0EE4B /* Start底图-6.png in Resources */,
@@ -553,6 +560,7 @@
 				6BA29FBA184A122E0017D17F /* 设置-btn-1.png in Resources */,
 				6B21366C184B0E5300C0EE4B /* delete.png in Resources */,
 				6BA29F891844D9DA0017D17F /* 红伞.png in Resources */,
+				6B260B97185F2D6C0091EE3D /* Start底图-640-1136.png in Resources */,
 				6BA29F931846193B0017D17F /* 半透明信息提示框.png in Resources */,
 				6B213671184F70D600C0EE4B /* save-yellow.png in Resources */,
 				6BA29F95184621F30017D17F /* 聊天窗口小部件.png in Resources */,
@@ -700,7 +708,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShowGirl美妆/ShowGirl美妆-Prefix.pch";
 				INFOPLIST_FILE = "ShowGirl美妆/ShowGirl美妆-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/xujun/Desktop/App\\ Workplace/iphone\\ project/ShowGirl美妆/ShowGirl美妆/libWeiboSDK",
@@ -709,6 +717,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "2546D526-F0A0-4A67-86D4-58ECDA849FC8";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -721,7 +730,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShowGirl美妆/ShowGirl美妆-Prefix.pch";
 				INFOPLIST_FILE = "ShowGirl美妆/ShowGirl美妆-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/xujun/Desktop/App\\ Workplace/iphone\\ project/ShowGirl美妆/ShowGirl美妆/libWeiboSDK",
@@ -731,6 +740,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "2546D526-F0A0-4A67-86D4-58ECDA849FC8";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

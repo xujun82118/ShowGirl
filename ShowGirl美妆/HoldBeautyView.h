@@ -18,8 +18,8 @@
     
     UIActionSheet *actionSheetSaveImage;
     UIActionSheet *actionSheetShare;
-    CustomImagePickerController *picker;
-    ImageFilterProcessViewController *fitler;
+    //CustomImagePickerController *picker;
+    //ImageFilterProcessViewController *fitler;
     
 }
 
