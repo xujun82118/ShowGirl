@@ -85,6 +85,10 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     NSInteger selected = [defaults integerForKey:@"current"];
     
+    if (selected>r) {
+        return;
+    }
+    
     NSIndexPath *ip = [NSIndexPath indexPathForRow:selected inSection:s-1];
     [declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 
@@ -187,12 +191,6 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
         [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewRowAnimationMiddle];
         cell.imageView.image = [UIImage imageNamed:@"选择.png"];
         
-        /*
-        NSInteger s = [self.declareTableView numberOfSections];
-        
-        NSIndexPath *ip = [NSIndexPath indexPathForRow:currentSelect inSection:s-1];
-        [declareTableView scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-        */
 
     }else
     {
@@ -232,7 +230,28 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 //继承该方法时,左右滑动会出现删除按钮(自定义按钮),点击按钮时的操作
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.dataSourceArray removeObjectAtIndex:indexPath.row];
+    
+    if ([self.dataSourceArray count] == 1) {
+        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:nil
+                              message:@"请留一条宣言哦~"
+                              delegate:nil
+                              cancelButtonTitle:@"Yes"
+                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    
+    
+    NSMutableArray *mutaArray = [[NSMutableArray alloc] init];
+    [mutaArray addObjectsFromArray:self.dataSourceArray];
+    
+    [mutaArray removeObjectAtIndex:indexPath.row];
+    self.dataSourceArray = mutaArray;
+    //[self.dataSourceArray removeObjectAtIndex:indexPath.row];
+    
     NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
     
@@ -339,6 +358,13 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
         [editeString setTitle:@"编辑" forState:UIControlStateNormal];
         addDeclareString.text = nil;
         
+        //判读已选择列已被删了
+        NSIndexPath *indexPath = [declareTableView indexPathForSelectedRow];
+        if (!indexPath) {
+            [declareTableView reloadData];//此时焦点需重加载
+            return;
+        }
+        
         NSInteger s = [self.declareTableView numberOfSections];
         if (s<1) return;
         NSInteger r = [self.declareTableView numberOfRowsInSection:s-1];
@@ -355,6 +381,32 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 }
 
 - (IBAction)finishReturn:(id)sender {
+    
+    
+    //判读已选择列已被删了
+    NSIndexPath *indexPath = [declareTableView indexPathForSelectedRow];
+    if (!indexPath) {
+        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:nil
+                              message:@"请选择一条宣言哦~"
+                              delegate:nil
+                              cancelButtonTitle:@"Yes"
+                              otherButtonTitles:nil];
+        [alert show];
+        
+        return;
+    }
+    
+    /*
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSInteger selected = [defaults integerForKey:@"current"];
+    
+    if (selected > [self.dataSourceArray count]) {
+        [defaults setInteger:0 forKey:@"current"];
+        [defaults synchronize];
+    }
+*/
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }

@@ -157,6 +157,7 @@
         [defaults setObject:fireDate1 forKey:DEFAULT_MISSION_TIME];
         [defaults synchronize];
 
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
         
         //设置不是第一次起动
         [defaults setObject:@"Not New" forKey:@"isNewApp"];

@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/SetMissionViewController.m"
-            timestampString = "408699029.420237"
+            timestampString = "408984455.563633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "-addNewMission:"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/SetMissionViewController.m"
-            timestampString = "408699029.420237"
+            timestampString = "408984455.563633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "-addNewMission:"
             landmarkType = "5">
          </BreakpointContent>
@@ -214,31 +214,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/DeclareTimePickerViewController.m"
-            timestampString = "408698251.490319"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-doSelect:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/SetMissionViewController.m"
-            timestampString = "408899341.567515"
+            timestampString = "408984455.563633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
             landmarkName = "-editString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -281,22 +265,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/MainWindowAppDelegate.m"
-            timestampString = "407158918.705562"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/ImageEditingView.m"
             timestampString = "408703312.036527"
             startingColumnNumber = "9223372036854775807"
@@ -330,28 +298,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/SetMissionViewController.m"
-            timestampString = "408699029.420237"
+            timestampString = "408984455.563633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
             landmarkName = "-addNewMission:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/StartView.m"
-            timestampString = "408892492.790864"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
-            landmarkName = "-doTakePhoto:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -630,11 +582,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/StartView.m"
-            timestampString = "408894388.352443"
+            timestampString = "409066583.758481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "354"
-            endingLineNumber = "354"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
             landmarkName = "-imageFitlerProcessDone:"
             landmarkType = "5">
          </BreakpointContent>
@@ -690,22 +642,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/StartView.m"
-            timestampString = "408696953.832968"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -716,22 +652,6 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "-viewWillAppear:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
-            timestampString = "408897598.816853"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
-            landmarkName = "-editString:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -853,7 +773,7 @@
                   symbolName = "-[SetupViewController viewWillAppear:]"
                   moduleName = "ShowGirl&#32654;&#22918;"
                   urlString = "file:///Users/xujun/Documents/ShowGirl/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
-                  timestampString = "408899230.834466"
+                  timestampString = "409067011.919738"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "64"
@@ -867,7 +787,7 @@
                   symbolName = "-[SetupViewController viewWillAppear:]"
                   moduleName = "ShowGirl&#32654;&#22918;"
                   urlString = "file:///Users/xujun/Documents/ShowGirl/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
-                  timestampString = "408899230.834778"
+                  timestampString = "409067011.920109"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "64"
@@ -883,44 +803,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/DeclareTimePickerViewController.m"
-            timestampString = "408893373.780348"
+            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
+            timestampString = "408983978.588667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-doSelect:"
+            startingLineNumber = "446"
+            endingLineNumber = "446"
+            landmarkName = "-addNewDeclare:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DeclareTimePickerViewController doSelect:]"
-                  moduleName = "ShowGirl&#32654;&#22918;"
-                  urlString = "file:///Users/xujun/Documents/ShowGirl/ShowGirl%E7%BE%8E%E5%A6%86/DeclareTimePickerViewController.m"
-                  timestampString = "408899230.835417"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "819">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DeclareTimePickerViewController doSelect:]"
-                  moduleName = "ShowGirl&#32654;&#22918;"
-                  urlString = "file:///Users/xujun/Documents/ShowGirl/ShowGirl%E7%BE%8E%E5%A6%86/DeclareTimePickerViewController.m"
-                  timestampString = "408899230.835887"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "1170">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -929,13 +819,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/StartView.m"
-            timestampString = "408893934.027757"
+            filePath = "CustomImagePickerController.m"
+            timestampString = "408977495.637386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
-            landmarkName = "-doTakePhoto:"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-navigationController:willShowViewController:animated:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
+            timestampString = "408983389.035314"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "-editString:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
+            timestampString = "408982817.333295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
+            timestampString = "408983749.643351"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
+            landmarkName = "-editString:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -945,13 +883,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
-            timestampString = "408897598.816853"
+            filePath = "ShowGirl&#32654;&#22918;/MainWindowViewController.m"
+            timestampString = "409065148.876972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-startView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -961,45 +899,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
-            timestampString = "408897598.816853"
+            filePath = "ShowGirl&#32654;&#22918;/StartView.m"
+            timestampString = "409066571.375003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
-            timestampString = "408897598.816853"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
-            landmarkName = "-addNewDeclare:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/ChooseStringViewController.m"
-            timestampString = "408899215.700861"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
-            landmarkName = "-addNewDeclare:"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -81,7 +81,7 @@
     //设置定时每天通知
 
     NSArray *myArray=[[UIApplication sharedApplication] scheduledLocalNotifications];
-    NSLog(@"local notify is %d", [myArray count]);
+    //NSLog(@"local notify is %d", [myArray count]);
     for (int i=0; i<[myArray count]; i++)
     {
         UILocalNotification *myUILocalNotification=[myArray objectAtIndex:i];

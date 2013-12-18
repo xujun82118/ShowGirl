@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-
+//
 @class MainWindowViewController;
 
 @interface MainWindowAppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate>

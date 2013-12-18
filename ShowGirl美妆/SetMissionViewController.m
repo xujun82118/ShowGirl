@@ -200,7 +200,14 @@
 //继承该方法时,左右滑动会出现删除按钮(自定义按钮),点击按钮时的操作
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.dataSourceArray removeObjectAtIndex:indexPath.row];
+    
+    NSMutableArray *mutaArray = [[NSMutableArray alloc] init];
+    [mutaArray addObjectsFromArray:self.dataSourceArray];
+    
+    [mutaArray removeObjectAtIndex:indexPath.row];
+    self.dataSourceArray = mutaArray;
+    
+    //[self.dataSourceArray removeObjectAtIndex:indexPath.row];
     NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
     
@@ -309,6 +316,7 @@
 }
 
 - (IBAction)finishReturn:(id)sender {
+    
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
