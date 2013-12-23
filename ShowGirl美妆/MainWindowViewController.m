@@ -7,7 +7,6 @@
 //
 
 #import "MainWindowViewController.h"
-#import "LogoViewController.h"
 #import "StartView.h"
 #import "ChooseStringViewController.h"
 #import "SetMissionViewController.h"
@@ -26,15 +25,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //加载Logo界面
-    NSLog(@"Start main viewDidLoad.....");
-    self.logoViewController = [[LogoViewController alloc] initWithNibName:@"LogoView" bundle:nil];
-    
-    if (self.logoViewController == nil) {
-        NSLog(@"logoViewController == nil");
-    }
-    
-   // [self.view insertSubview:self.logoViewController.view  atIndex:0];
     
   
     //初始化start界面

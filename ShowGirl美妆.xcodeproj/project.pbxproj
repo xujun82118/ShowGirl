@@ -42,10 +42,8 @@
 		6B937C8717B5E80000AAEDA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937C8617B5E80000AAEDA6 /* main.m */; };
 		6B937C8B17B5E80000AAEDA6 /* MainWindowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937C8A17B5E80000AAEDA6 /* MainWindowAppDelegate.m */; };
 		6B937C9417B5E80000AAEDA6 /* MainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937C9317B5E80000AAEDA6 /* MainWindowViewController.m */; };
-		6B937CB117B5EB2900AAEDA6 /* LogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937CB017B5EB2900AAEDA6 /* LogoViewController.m */; };
 		6B937CBE17B5F66E00AAEDA6 /* StartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937CBC17B5F66E00AAEDA6 /* StartView.m */; };
 		6B93D9A517D1D9A50090933E /* MainWindowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9A317D1D9A50090933E /* MainWindowViewController.xib */; };
-		6B93D9A717D1DA420090933E /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9A617D1DA420090933E /* LogoView.xib */; };
 		6B93D9AD17D1DAA20090933E /* HoldBeautyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9AC17D1DAA20090933E /* HoldBeautyView.xib */; };
 		6B93E31D17D1DCF20090933E /* Start底图-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B93E31C17D1DCF20090933E /* Start底图-7.png */; };
 		6BA29F851842F1150017D17F /* 清绿底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F841842F1150017D17F /* 清绿底图.png */; };
@@ -154,11 +152,8 @@
 		6B937C9017B5E80000AAEDA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6B937C9217B5E80000AAEDA6 /* MainWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowViewController.h; sourceTree = "<group>"; };
 		6B937C9317B5E80000AAEDA6 /* MainWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowViewController.m; sourceTree = "<group>"; };
-		6B937CAF17B5EB2900AAEDA6 /* LogoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoViewController.h; sourceTree = "<group>"; };
-		6B937CB017B5EB2900AAEDA6 /* LogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoViewController.m; sourceTree = "<group>"; };
 		6B937CBB17B5F66D00AAEDA6 /* StartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartView.h; sourceTree = "<group>"; };
 		6B937CBC17B5F66E00AAEDA6 /* StartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartView.m; sourceTree = "<group>"; };
-		6B93D9A617D1DA420090933E /* LogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
 		6B93D9AC17D1DAA20090933E /* HoldBeautyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldBeautyView.xib; sourceTree = "<group>"; };
 		6B93E31C17D1DCF20090933E /* Start底图-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-7.png"; sourceTree = "<group>"; };
 		6BA29F841842F1150017D17F /* 清绿底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "清绿底图.png"; sourceTree = "<group>"; };
@@ -328,9 +323,6 @@
 				6B93D9A317D1D9A50090933E /* MainWindowViewController.xib */,
 				6B937C9217B5E80000AAEDA6 /* MainWindowViewController.h */,
 				6B937C9317B5E80000AAEDA6 /* MainWindowViewController.m */,
-				6B937CAF17B5EB2900AAEDA6 /* LogoViewController.h */,
-				6B937CB017B5EB2900AAEDA6 /* LogoViewController.m */,
-				6B93D9A617D1DA420090933E /* LogoView.xib */,
 				6B937CBB17B5F66D00AAEDA6 /* StartView.h */,
 				6B937CBC17B5F66E00AAEDA6 /* StartView.m */,
 				6BFBFE591861D3130037375D /* StartView.xib */,
@@ -545,7 +537,6 @@
 				6BA29F851842F1150017D17F /* 清绿底图.png in Resources */,
 				6BA29FB71849BE660017D17F /* 纪念.png in Resources */,
 				6B7B6ECA17F6804000483672 /* WeiboSDK.bundle in Resources */,
-				6B93D9A717D1DA420090933E /* LogoView.xib in Resources */,
 				6BE6FA93180CECC200411A52 /* camera_btn_ok.png in Resources */,
 				6BFBFE571861D3130037375D /* StartView.xib in Resources */,
 				6B21365C184A316300C0EE4B /* 开始-圆-2.png in Resources */,
@@ -600,7 +591,6 @@
 				6B937C9417B5E80000AAEDA6 /* MainWindowViewController.m in Sources */,
 				6BF8935A180A9EEB00238FF5 /* UIImage+SplitImageIntoTwoParts.m in Sources */,
 				6BD5DF1418115BE500A99F0C /* DeclareTimePickerViewController.m in Sources */,
-				6B937CB117B5EB2900AAEDA6 /* LogoViewController.m in Sources */,
 				6BF8934A180A9BD600238FF5 /* CustomImagePickerController.m in Sources */,
 				6BF89358180A9EEB00238FF5 /* UIImage+Resize.m in Sources */,
 				6BF89357180A9EEB00238FF5 /* UIImage+Cut.m in Sources */,
