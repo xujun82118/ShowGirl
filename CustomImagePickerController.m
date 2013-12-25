@@ -56,46 +56,26 @@
         [navigationController.navigationBar insertSubview:[[UIImageView alloc] initWithImage:backgroundImage] atIndex:1];
     }
     
+
+    
     if(self.sourceType == UIImagePickerControllerSourceTypeCamera){
         
         
+
+    
         UIImage *deviceImage = [UIImage imageNamed:@"camera_button_switch_camera.png"];
         UIButton *deviceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [deviceBtn setBackgroundImage:deviceImage forState:UIControlStateNormal];
         [deviceBtn addTarget:self action:@selector(swapFrontAndBackCameras:) forControlEvents:UIControlEventTouchUpInside];
         self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
         
-        [deviceBtn setFrame:CGRectMake(250, 20, deviceImage.size.width, deviceImage.size.height)];
+        [deviceBtn setFrame:CGRectMake(250, 30, deviceImage.size.width, deviceImage.size.height)];
         
         UIView *PLCameraView=[self findView:viewController.view withName:@"PLCameraView"];
         [PLCameraView addSubview:deviceBtn];
         
         [self setShowsCameraControls:NO];
         
-        
-        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - 70, 320, 44)];
-        [overlyView setBackgroundColor:[UIColor clearColor]];
-        
-        
-        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *backImage = [UIImage imageNamed:@"camera_cancel.png"];
-        [backBtn setImage: backImage forState:UIControlStateNormal];
-        [backBtn addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-        [backBtn setFrame:CGRectMake(8, 5, backImage.size.width, backImage.size.height)];
-        [overlyView addSubview:backBtn];
-        
-        UIImage *camerImage = [UIImage imageNamed:@"camera_shoot.png"];
-        UIButton *cameraBtn = [[UIButton alloc] initWithFrame:
-                               CGRectMake(110, 5, camerImage.size.width, camerImage.size.height)];
-        [cameraBtn setImage:camerImage forState:UIControlStateNormal];
-        [cameraBtn addTarget:self action:@selector(takePicture) forControlEvents:UIControlEventTouchUpInside];
-        [overlyView addSubview:cameraBtn];
-        
-        UIImage *photoImage = [UIImage imageNamed:@"camera_album.png"];
-        UIButton *photoBtn = [[UIButton alloc] initWithFrame:CGRectMake(260, 5, 70, 40)];
-        [photoBtn setImage:photoImage forState:UIControlStateNormal];
-        [photoBtn addTarget:self action:@selector(showPhoto) forControlEvents:UIControlEventTouchUpInside];
-        [overlyView addSubview:photoBtn];
         
         
         if (_isDeclare) {
@@ -104,7 +84,8 @@
             NSInteger currentSelect = [defaults integerForKey:@"current"];
             
             
-            UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(30, -80, 280, 80)];
+            UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(30, ScreenHeight-70-80, 280, 80)];
+            
             //设置背景色
             //label1.backgroundColor = [UIColor grayColor];
             label1.tag = 91;
@@ -123,12 +104,44 @@
             label1.adjustsFontSizeToFitWidth = YES;
             label1.numberOfLines = 3;
             
-            //[self.cameraOverlayView addSubview:label1];
-            [overlyView addSubview:label1];
+            UITapGestureRecognizer *recognizer1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(chooseDeclarePicker:)];
+            
+            recognizer1.numberOfTouchesRequired = 1;
+            recognizer1.numberOfTapsRequired = 1;
+            recognizer1.delegate = self;
+            [label1 setUserInteractionEnabled:YES];
+            [label1 addGestureRecognizer:recognizer1];
+            [PLCameraView addSubview:label1];
+            
         }
         
-
+    
+        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - 70, 320, 44)];
+        [overlyView setBackgroundColor:[UIColor clearColor]];
         
+        
+        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIImage *backImage = [UIImage imageNamed:@"camera_cancel.png"];
+        [backBtn setImage: backImage forState:UIControlStateNormal];
+        [backBtn addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
+        [backBtn setFrame:CGRectMake(8, 5, backImage.size.width, backImage.size.height)];
+        [overlyView addSubview:backBtn];
+        
+        UIImage *camerImage = [UIImage imageNamed:@"camera_shoot.png"];
+        UIButton *cameraBtn = [[UIButton alloc] initWithFrame:
+                               CGRectMake(110, 5, camerImage.size.width, camerImage.size.height)];
+        [cameraBtn setImage:camerImage forState:UIControlStateNormal];
+        [cameraBtn addTarget:self action:@selector(takePicture) forControlEvents:UIControlEventTouchUpInside];
+        [overlyView addSubview:cameraBtn];
+        
+        
+        UIImage *photoImage = [UIImage imageNamed:@"camera_album.png"];
+        UIButton *photoBtn = [[UIButton alloc] initWithFrame:CGRectMake(260, 5, 70, 40)];
+        [photoBtn setImage:photoImage forState:UIControlStateNormal];
+        [photoBtn addTarget:self action:@selector(showPhoto) forControlEvents:UIControlEventTouchUpInside];
+        
+        [overlyView addSubview:photoBtn];
+         
         self.cameraOverlayView = overlyView;
     }
 }
@@ -152,7 +165,6 @@
         [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
     }
     
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -164,6 +176,30 @@
 {
     //[super dealloc];
 }
+
+
+#pragma mark - chooseDeclare
+- (IBAction)chooseDeclarePicker:(UITapGestureRecognizer *)sender
+{
+
+    
+    if (defaultPickerView == nil) {
+        defaultPickerView = [[AFPickerView alloc] initWithFrame:CGRectMake(0,ScreenHeight-216,320,216) backgroundImage:@"PickerBG.png" shadowImage:@"PickerShadow.png" glassImage:@"pickerGlass.png" title:@"选择美丽宣言"];
+        defaultPickerView.dataSource = self;
+        defaultPickerView.delegate = self;
+        [self.view addSubview:defaultPickerView];
+    }
+    [defaultPickerView showPicker];
+    [defaultPickerView reloadData];
+    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSInteger currentSelect = [defaults integerForKey:@"current"];
+    defaultPickerView.selectedRow = currentSelect;
+    
+    
+}
+
+
 #pragma mark - ButtonAction Methods
 
 - (IBAction)swapFrontAndBackCameras:(id)sender {
@@ -182,6 +218,7 @@
 }
 - (void)takePicture
 {
+
     [super takePicture];
 }
 
@@ -219,4 +256,47 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }
 }
 
+
+
+#pragma mark - AFPickerViewDataSource
+
+- (NSInteger)numberOfRowsInPickerView:(AFPickerView *)pickerView {
+    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
+    return [dataSourceArray count];
+    
+}
+
+
+- (NSString *)pickerView:(AFPickerView *)pickerView titleForRow:(NSInteger)row {
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
+    
+    NSString *now = [[dataSourceArray objectAtIndex:row]objectForKey:@"kDeclareStringKey"];
+    
+    return now;
+}
+
+
+#pragma mark - AFPickerViewDelegate
+
+- (void)pickerView:(AFPickerView *)pickerView didSelectRow:(NSInteger)row {
+
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
+    [defaults setInteger:row forKey:@"current"];
+    [defaults synchronize];
+    
+    UIView *PLCameraView=[self findView:self.view
+                               withName:@"PLCameraView"];
+    
+    UILabel *label = (UILabel*)[PLCameraView viewWithTag:91];
+    
+    NSString *preString = @"大声说：\n";
+    
+    label.text = [preString stringByAppendingString:[[dataSourceArray objectAtIndex:row] objectForKey:@"kDeclareStringKey"]];
+
+    
+}
 @end

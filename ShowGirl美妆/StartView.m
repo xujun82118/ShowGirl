@@ -13,6 +13,7 @@
 #import "SetupViewController.h"
 #import "DeclareTimePickerViewController.h"
 #import "DeclareTimePickerViewController.h"
+#import "IphoneScreen.h"
 
 #import "YouMiWall.h"
 
@@ -51,10 +52,6 @@
         
         isDeclare = NO;
         
-        
-
-        
-
         
     }
     return self;
@@ -228,7 +225,12 @@
     }
     
     
+
+    
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -253,6 +255,7 @@
         staticLabel3.hidden = YES;
         
     }
+
 
     
 }

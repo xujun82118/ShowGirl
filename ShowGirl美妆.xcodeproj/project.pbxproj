@@ -22,7 +22,6 @@
 		6B21365D184A316300C0EE4B /* 开始-圆-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B21365A184A316300C0EE4B /* 开始-圆-3.png */; };
 		6B213661184A36EF00C0EE4B /* 外圆.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213660184A36EF00C0EE4B /* 外圆.png */; };
 		6B213663184A3DC500C0EE4B /* load.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213662184A3DC500C0EE4B /* load.png */; };
-		6B213666184ABC8600C0EE4B /* CustomImagePickerController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B213665184ABC8600C0EE4B /* CustomImagePickerController1.m */; };
 		6B213668184B03A300C0EE4B /* 云LOG.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213667184B03A300C0EE4B /* 云LOG.png */; };
 		6B21366A184B05B800C0EE4B /* Start底图-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213669184B05B800C0EE4B /* Start底图-6.png */; };
 		6B21366C184B0E5300C0EE4B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B21366B184B0E5300C0EE4B /* delete.png */; };
@@ -42,12 +41,17 @@
 		6B937C8717B5E80000AAEDA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937C8617B5E80000AAEDA6 /* main.m */; };
 		6B937C8B17B5E80000AAEDA6 /* MainWindowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937C8A17B5E80000AAEDA6 /* MainWindowAppDelegate.m */; };
 		6B937C9417B5E80000AAEDA6 /* MainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937C9317B5E80000AAEDA6 /* MainWindowViewController.m */; };
-		6B937CB117B5EB2900AAEDA6 /* LogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937CB017B5EB2900AAEDA6 /* LogoViewController.m */; };
 		6B937CBE17B5F66E00AAEDA6 /* StartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B937CBC17B5F66E00AAEDA6 /* StartView.m */; };
 		6B93D9A517D1D9A50090933E /* MainWindowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9A317D1D9A50090933E /* MainWindowViewController.xib */; };
-		6B93D9A717D1DA420090933E /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9A617D1DA420090933E /* LogoView.xib */; };
 		6B93D9AD17D1DAA20090933E /* HoldBeautyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B93D9AC17D1DAA20090933E /* HoldBeautyView.xib */; };
 		6B93E31D17D1DCF20090933E /* Start底图-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B93E31C17D1DCF20090933E /* Start底图-7.png */; };
+		6BA175281868826D008C39EE /* AFPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA175271868826D008C39EE /* AFPickerView.m */; };
+		6BA1752F186882FC008C39EE /* PickerBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA17529186882FC008C39EE /* PickerBG.png */; };
+		6BA17530186882FC008C39EE /* PickerBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA1752A186882FC008C39EE /* PickerBG@2x.png */; };
+		6BA17533186882FC008C39EE /* PickerShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA1752D186882FC008C39EE /* PickerShadow.png */; };
+		6BA17534186882FC008C39EE /* PickerShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA1752E186882FC008C39EE /* PickerShadow@2x.png */; };
+		6BA175371869D805008C39EE /* pickerGlass.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA175351869D805008C39EE /* pickerGlass.png */; };
+		6BA175381869D805008C39EE /* pickerGlass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA175361869D805008C39EE /* pickerGlass@2x.png */; };
 		6BA29F851842F1150017D17F /* 清绿底图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F841842F1150017D17F /* 清绿底图.png */; };
 		6BA29F891844D9DA0017D17F /* 红伞.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F881844D9DA0017D17F /* 红伞.png */; };
 		6BA29F8B1846100F0017D17F /* 风车icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29F8A1846100F0017D17F /* 风车icon-114.png */; };
@@ -121,8 +125,6 @@
 		6B21365A184A316300C0EE4B /* 开始-圆-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始-圆-3.png"; sourceTree = "<group>"; };
 		6B213660184A36EF00C0EE4B /* 外圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "外圆.png"; sourceTree = "<group>"; };
 		6B213662184A3DC500C0EE4B /* load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load.png; sourceTree = "<group>"; };
-		6B213664184ABC8600C0EE4B /* CustomImagePickerController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomImagePickerController1.h; path = "UIImage-Extensions/CustomImagePickerController1.h"; sourceTree = "<group>"; };
-		6B213665184ABC8600C0EE4B /* CustomImagePickerController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomImagePickerController1.m; path = "UIImage-Extensions/CustomImagePickerController1.m"; sourceTree = "<group>"; };
 		6B213667184B03A300C0EE4B /* 云LOG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "云LOG.png"; sourceTree = "<group>"; };
 		6B213669184B05B800C0EE4B /* Start底图-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-6.png"; sourceTree = "<group>"; };
 		6B21366B184B0E5300C0EE4B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
@@ -154,13 +156,18 @@
 		6B937C9017B5E80000AAEDA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6B937C9217B5E80000AAEDA6 /* MainWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowViewController.h; sourceTree = "<group>"; };
 		6B937C9317B5E80000AAEDA6 /* MainWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowViewController.m; sourceTree = "<group>"; };
-		6B937CAF17B5EB2900AAEDA6 /* LogoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoViewController.h; sourceTree = "<group>"; };
-		6B937CB017B5EB2900AAEDA6 /* LogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoViewController.m; sourceTree = "<group>"; };
 		6B937CBB17B5F66D00AAEDA6 /* StartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartView.h; sourceTree = "<group>"; };
 		6B937CBC17B5F66E00AAEDA6 /* StartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartView.m; sourceTree = "<group>"; };
-		6B93D9A617D1DA420090933E /* LogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
 		6B93D9AC17D1DAA20090933E /* HoldBeautyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldBeautyView.xib; sourceTree = "<group>"; };
 		6B93E31C17D1DCF20090933E /* Start底图-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-7.png"; sourceTree = "<group>"; };
+		6BA175261868826D008C39EE /* AFPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPickerView.h; sourceTree = "<group>"; };
+		6BA175271868826D008C39EE /* AFPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPickerView.m; sourceTree = "<group>"; };
+		6BA17529186882FC008C39EE /* PickerBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PickerBG.png; sourceTree = "<group>"; };
+		6BA1752A186882FC008C39EE /* PickerBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PickerBG@2x.png"; sourceTree = "<group>"; };
+		6BA1752D186882FC008C39EE /* PickerShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PickerShadow.png; sourceTree = "<group>"; };
+		6BA1752E186882FC008C39EE /* PickerShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PickerShadow@2x.png"; sourceTree = "<group>"; };
+		6BA175351869D805008C39EE /* pickerGlass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerGlass.png; sourceTree = "<group>"; };
+		6BA175361869D805008C39EE /* pickerGlass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pickerGlass@2x.png"; sourceTree = "<group>"; };
 		6BA29F841842F1150017D17F /* 清绿底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "清绿底图.png"; sourceTree = "<group>"; };
 		6BA29F881844D9DA0017D17F /* 红伞.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红伞.png"; sourceTree = "<group>"; };
 		6BA29F8A1846100F0017D17F /* 风车icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-114.png"; sourceTree = "<group>"; };
@@ -285,6 +292,7 @@
 		6B937C6E17B5E7FF00AAEDA6 = {
 			isa = PBXGroup;
 			children = (
+				6BA1752518688220008C39EE /* AFpicker */,
 				6B0C2EE8182F4A75004FB994 /* YouMi */,
 				6BF8933D180A9AEB00238FF5 /* CustomImage */,
 				6B7B6EC517F6804000483672 /* libWeiboSDK */,
@@ -328,9 +336,6 @@
 				6B93D9A317D1D9A50090933E /* MainWindowViewController.xib */,
 				6B937C9217B5E80000AAEDA6 /* MainWindowViewController.h */,
 				6B937C9317B5E80000AAEDA6 /* MainWindowViewController.m */,
-				6B937CAF17B5EB2900AAEDA6 /* LogoViewController.h */,
-				6B937CB017B5EB2900AAEDA6 /* LogoViewController.m */,
-				6B93D9A617D1DA420090933E /* LogoView.xib */,
 				6B937CBB17B5F66D00AAEDA6 /* StartView.h */,
 				6B937CBC17B5F66E00AAEDA6 /* StartView.m */,
 				6BFBFE591861D3130037375D /* StartView.xib */,
@@ -362,6 +367,12 @@
 		6B937C8117B5E7FF00AAEDA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6BA175351869D805008C39EE /* pickerGlass.png */,
+				6BA175361869D805008C39EE /* pickerGlass@2x.png */,
+				6BA17529186882FC008C39EE /* PickerBG.png */,
+				6BA1752A186882FC008C39EE /* PickerBG@2x.png */,
+				6BA1752D186882FC008C39EE /* PickerShadow.png */,
+				6BA1752E186882FC008C39EE /* PickerShadow@2x.png */,
 				6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */,
 				6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */,
 				6B8076ED18530E6400D35A14 /* 应用推荐.png */,
@@ -417,6 +428,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6BA1752518688220008C39EE /* AFpicker */ = {
+			isa = PBXGroup;
+			children = (
+				6BA175261868826D008C39EE /* AFPickerView.h */,
+				6BA175271868826D008C39EE /* AFPickerView.m */,
+			);
+			name = AFpicker;
+			sourceTree = "<group>";
+		};
 		6BF892E6180A821F00238FF5 /* libWeiboSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,8 +454,6 @@
 				6BF8934B180A9EEB00238FF5 /* UIImage-Extensions */,
 				6BF89348180A9BD600238FF5 /* CustomImagePickerController.h */,
 				6BF89349180A9BD600238FF5 /* CustomImagePickerController.m */,
-				6B213664184ABC8600C0EE4B /* CustomImagePickerController1.h */,
-				6B213665184ABC8600C0EE4B /* CustomImagePickerController1.m */,
 				6BF89345180A9B8700238FF5 /* IphoneScreen.h */,
 				6BF89346180A9B8700238FF5 /* IphoneScreen.m */,
 				6BF89341180A9B6F00238FF5 /* ColorMatrix.h */,
@@ -524,6 +542,7 @@
 			files = (
 				6BA29FB51849BC5E0017D17F /* 大标题.png in Resources */,
 				6B201F4E18419DEF002EE4E3 /* Images.xcassets in Resources */,
+				6BA175371869D805008C39EE /* pickerGlass.png in Resources */,
 				6BD5DF11181147A900A99F0C /* SetupViewController.xib in Resources */,
 				6BE6FA97180CECC200411A52 /* camera_cancel.png in Resources */,
 				6B201F531841A5ED002EE4E3 /* 风车icon-120.png in Resources */,
@@ -541,14 +560,16 @@
 				6BA29FBD184A1D330017D17F /* 完成-圆-btn.png in Resources */,
 				6B93D9A517D1D9A50090933E /* MainWindowViewController.xib in Resources */,
 				6B21366A184B05B800C0EE4B /* Start底图-6.png in Resources */,
+				6BA17530186882FC008C39EE /* PickerBG@2x.png in Resources */,
 				6BE6FA98180CECC200411A52 /* camera_cancel@2x.png in Resources */,
 				6BA29F851842F1150017D17F /* 清绿底图.png in Resources */,
+				6BA17533186882FC008C39EE /* PickerShadow.png in Resources */,
 				6BA29FB71849BE660017D17F /* 纪念.png in Resources */,
 				6B7B6ECA17F6804000483672 /* WeiboSDK.bundle in Resources */,
-				6B93D9A717D1DA420090933E /* LogoView.xib in Resources */,
 				6BE6FA93180CECC200411A52 /* camera_btn_ok.png in Resources */,
 				6BFBFE571861D3130037375D /* StartView.xib in Resources */,
 				6B21365C184A316300C0EE4B /* 开始-圆-2.png in Resources */,
+				6BA1752F186882FC008C39EE /* PickerBG.png in Resources */,
 				6BE6FA95180CECC200411A52 /* camera_button_switch_camera.png in Resources */,
 				6BFBFE4D1861C4CD0037375D /* Localizable.strings in Resources */,
 				6BA29FBB184A122E0017D17F /* 设置-btn-2.png in Resources */,
@@ -562,9 +583,11 @@
 				6BA29F891844D9DA0017D17F /* 红伞.png in Resources */,
 				6B260B97185F2D6C0091EE3D /* Start底图-640-1136.png in Resources */,
 				6BA29F931846193B0017D17F /* 半透明信息提示框.png in Resources */,
+				6BA175381869D805008C39EE /* pickerGlass@2x.png in Resources */,
 				6B213671184F70D600C0EE4B /* save-yellow.png in Resources */,
 				6BA29F95184621F30017D17F /* 聊天窗口小部件.png in Resources */,
 				6B436FC818082F1F00AF4498 /* ImageEditingView.xib in Resources */,
+				6BA17534186882FC008C39EE /* PickerShadow@2x.png in Resources */,
 				6B201F551841A5FA002EE4E3 /* 风车icon-57.png in Resources */,
 				6B213657184A2FE400C0EE4B /* 红伞-圆.png in Resources */,
 				6B21365B184A316300C0EE4B /* 开始-圆-1.png in Resources */,
@@ -587,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB64D4E1825DE6800156FAA /* SetMissionViewController.m in Sources */,
+				6BA175281868826D008C39EE /* AFPickerView.m in Sources */,
 				6BF89344180A9B6F00238FF5 /* ImageUtil.m in Sources */,
 				6B937C8717B5E80000AAEDA6 /* main.m in Sources */,
 				6BD5DF201813C27000A99F0C /* CustomCell.m in Sources */,
@@ -596,11 +620,9 @@
 				6BF89340180A9B2A00238FF5 /* ImageFilterProcessViewController.m in Sources */,
 				6BF89356180A9EEB00238FF5 /* UIImage+Alpha.m in Sources */,
 				6BF89347180A9B8700238FF5 /* IphoneScreen.m in Sources */,
-				6B213666184ABC8600C0EE4B /* CustomImagePickerController1.m in Sources */,
 				6B937C9417B5E80000AAEDA6 /* MainWindowViewController.m in Sources */,
 				6BF8935A180A9EEB00238FF5 /* UIImage+SplitImageIntoTwoParts.m in Sources */,
 				6BD5DF1418115BE500A99F0C /* DeclareTimePickerViewController.m in Sources */,
-				6B937CB117B5EB2900AAEDA6 /* LogoViewController.m in Sources */,
 				6BF8934A180A9BD600238FF5 /* CustomImagePickerController.m in Sources */,
 				6BF89358180A9EEB00238FF5 /* UIImage+Resize.m in Sources */,
 				6BF89357180A9EEB00238FF5 /* UIImage+Cut.m in Sources */,

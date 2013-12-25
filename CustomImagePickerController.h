@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFPickerView.h"
 @protocol CustomImagePickerControllerDelegate;
 
 @interface CustomImagePickerController : UIImagePickerController
-<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+<UINavigationControllerDelegate,UIImagePickerControllerDelegate,AFPickerViewDataSource, AFPickerViewDelegate>
 {
     id<CustomImagePickerControllerDelegate> _customDelegate;
+     AFPickerView *defaultPickerView;
 }
 @property(nonatomic)BOOL isSingle;
 @property (nonatomic)BOOL isDeclare;
