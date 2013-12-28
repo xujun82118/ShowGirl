@@ -8,6 +8,8 @@
 
 #import "ImageEditingView.h"
 #import "ChooseStringViewController.h"
+#import <ShareSDK/ShareSDK.h>
+
 
 @interface ImageEditingView ()
 
@@ -104,7 +106,7 @@
 
 - (IBAction)doShare:(id)sender {
     
-    
+    /*
     actionSheetShare = [[UIActionSheet alloc]
                                   initWithTitle:nil
                                   delegate:self
@@ -113,18 +115,54 @@
                                   otherButtonTitles:@"分享到新浪微博", nil];//define other button with buttongIndex
     actionSheetShare.actionSheetStyle =UIActionSheetStyleBlackOpaque;//Define the actionsheet show style.
     [actionSheetShare showInView:self.view];//show actionsheet in the self view.
+    */
+    
+    NSString* shareMsg;
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSMutableArray *dataSourceArray=[defaults objectForKey:DEFAULT_CHOOSE_STRING_KEY];
+    NSInteger currentSelect = [defaults integerForKey:@"current"];
+    
+    NSString * preString = NSLocalizedString(@"FromUri", @"");
+    shareMsg = [[[dataSourceArray objectAtIndex:currentSelect] objectForKey:@"kDeclareStringKey"] stringByAppendingString:preString];
     
     
-    /*
-    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]];
-    request.userInfo = @{@"ShareMessageFrom": @"SendMessageToWeiboViewController",
-                         @"Other_Info_1": [NSNumber numberWithInt:123],
-                         @"Other_Info_2": @[@"obj1", @"obj2"],
-                         @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
-    //    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
+    NSInteger contentType;
+    if (editImage && shareMsg) {
+        contentType = SSPublishContentMediaTypeNews;
+    }else{
+        contentType = SSPublishContentMediaTypeText;
+    }
     
-    [WeiboSDK sendRequest:request];
-     */
+    //构造分享内容
+    id<ISSContent> publishContent = [ShareSDK content:shareMsg
+                                       defaultContent:@"没有分享内容"
+                                                image:[ShareSDK jpegImageWithImage:editImage
+                                               quality:CGFLOAT_DEFINED]
+                                                title:@"天天更美丽"
+                                                  url:@"null"
+                                          description:nil
+                                            mediaType:contentType];
+    
+    [ShareSDK showShareActionSheet:nil
+                         shareList:nil
+                           content:publishContent
+                     statusBarTips:YES
+                       authOptions:nil
+                      shareOptions: nil
+                            result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+                                if (state == SSResponseStateSuccess)
+                                {
+                                    NSLog(@"分享成功");
+                                }
+                                else if (state == SSResponseStateFail)
+                                {
+                                    NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
+                                }
+                            }];
+    
+    //**********
+
+
 }
 
 //填充微博信息

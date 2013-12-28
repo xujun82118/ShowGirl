@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-//
+
 @class MainWindowViewController;
 
-@interface MainWindowAppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate>
+@interface MainWindowAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

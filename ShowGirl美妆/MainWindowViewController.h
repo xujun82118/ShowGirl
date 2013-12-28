@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@class LogoViewController;
 @class StartView;
 
 @interface MainWindowViewController : UIViewController
@@ -16,6 +15,5 @@
 -(void)targetMethodStartView:(NSTimer*)theTimer;
 - (NSDictionary *)userInfo;
 
-@property (retain, nonatomic) LogoViewController* logoViewController;
 @property (retain, nonatomic) StartView* startViewController;
 @end

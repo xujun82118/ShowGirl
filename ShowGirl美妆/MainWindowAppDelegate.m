@@ -15,7 +15,12 @@
 #import "YouMiConfig.h"
 #import "YouMiWall.h"
 
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
 
+/*
 @interface WBBaseRequest ()
 - (void)debugPrint;
 @end
@@ -23,15 +28,15 @@
 @interface WBBaseResponse ()
 - (void)debugPrint;
 @end
-
+*/
 
 @implementation MainWindowAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [WeiboSDK enableDebugMode:YES];
-    [WeiboSDK registerApp:kAppKey];
+    //[WeiboSDK enableDebugMode:YES];
+    //[WeiboSDK registerApp:kAppKey];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -49,6 +54,29 @@
     [YouMiWall enable];
     
     
+    //ShareSDK 设置
+    [ShareSDK registerApp:@"fe35485ae4a"];
+    
+    //添加新浪微博应用
+    [ShareSDK connectSinaWeiboWithAppKey:@"3318551146" appSecret:@"88fd372af9e86ae0c8fa25df1fd6b61d" redirectUri:@"http://com.weibo"];
+    
+    //添加微信应用
+    [ShareSDK connectWeChatWithAppId:@"wx4e89a3a1551f87e9" wechatCls:[WXApi class]];
+    
+    //添加QQ应用
+    [ShareSDK connectQQWithQZoneAppKey:@"100586310"
+                     qqApiInterfaceCls:[QQApiInterface class]
+                       tencentOAuthCls:[TencentOAuth class]];
+    /*
+    //添加腾讯微博应用
+    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
+                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
+                                redirectUri:@"http://www.sharesdk.cn"];
+    
+    //添加QQ空间应用
+    [ShareSDK connectQZoneWithAppKey:@"100371282"
+                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"];
+    */
     return YES;
 }
 
@@ -114,16 +142,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+/*
 - (void)didReceiveWeiboRequest:(WBBaseRequest *)request
 {
-    /*
+ 
     if ([request isKindOfClass:WBProvideMessageForWeiboRequest.class])
     {
         ProvideMessageForWeiboViewController *controller = [[[ProvideMessageForWeiboViewController alloc] init] autorelease];
         [self.viewController presentModalViewController:controller animated:YES];
     }
-     */
+ 
 }
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
@@ -180,5 +208,25 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
+*/
+
+
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+}
 
 @end

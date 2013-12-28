@@ -17,7 +17,6 @@
 
 @implementation MainWindowViewController
 
-@synthesize logoViewController;
 @synthesize startViewController;
 
 - (void)viewDidLoad
