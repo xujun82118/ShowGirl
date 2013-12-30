@@ -13,6 +13,10 @@
 		6B0C2EF9182F4C01004FB994 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */; };
 		6B0C2EFD182F4C20004FB994 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EFC182F4C20004FB994 /* libsqlite3.dylib */; };
 		6B159025186EAEB500FE69D6 /* ShowGirl美妆-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B937C8217B5E7FF00AAEDA6 /* ShowGirl美妆-Info.plist */; };
+		6B15902B186FBC8E00FE69D6 /* 人物卡通-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B15902A186FBC8E00FE69D6 /* 人物卡通-1.png */; };
+		6B15902D186FBE5A00FE69D6 /* 瑜伽.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B15902C186FBE5A00FE69D6 /* 瑜伽.png */; };
+		6B15902F186FC56000FE69D6 /* style.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B15902E186FC56000FE69D6 /* style.png */; };
+		6B159031186FC81700FE69D6 /* redstar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B159030186FC81700FE69D6 /* redstar.png */; };
 		6B201F4E18419DEF002EE4E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F4D18419DEF002EE4E3 /* Images.xcassets */; };
 		6B201F531841A5ED002EE4E3 /* 风车icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F521841A5ED002EE4E3 /* 风车icon-120.png */; };
 		6B201F551841A5FA002EE4E3 /* 风车icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F541841A5FA002EE4E3 /* 风车icon-57.png */; };
@@ -31,6 +35,11 @@
 		6B213673184F79E500C0EE4B /* 选择.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213672184F79E500C0EE4B /* 选择.png */; };
 		6B260B96185F2D6C0091EE3D /* Start底图-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */; };
 		6B260B97185F2D6C0091EE3D /* Start底图-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */; };
+		6B3EAB50186FCF86001E240E /* littlegirl.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB4F186FCF86001E240E /* littlegirl.png */; };
+		6B3EAB52186FF028001E240E /* fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB51186FF028001E240E /* fighting.png */; };
+		6B3EAB54186FF4FA001E240E /* run.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB53186FF4FA001E240E /* run.png */; };
+		6B3EAB571871AEB4001E240E /* launch-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB551871AEB4001E240E /* launch-640-960.png */; };
+		6B3EAB581871AEB4001E240E /* launch-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB561871AEB4001E240E /* launch-640-1136.png */; };
 		6B436FC718082F1F00AF4498 /* ImageEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436FC518082F1F00AF4498 /* ImageEditingView.m */; };
 		6B436FC818082F1F00AF4498 /* ImageEditingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B436FC618082F1F00AF4498 /* ImageEditingView.xib */; };
 		6B8076EE18530E6400D35A14 /* 应用推荐.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8076ED18530E6400D35A14 /* 应用推荐.png */; };
@@ -184,6 +193,14 @@
 		6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B0C2EFC182F4C20004FB994 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6B159026186F1F8900FE69D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StartView.xib; sourceTree = "<group>"; };
+		6B159027186F1F8900FE69D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B159028186F1F8900FE69D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6B159029186F1F8900FE69D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ShareSDKLocalizable.strings; sourceTree = "<group>"; };
+		6B15902A186FBC8E00FE69D6 /* 人物卡通-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物卡通-1.png"; sourceTree = "<group>"; };
+		6B15902C186FBE5A00FE69D6 /* 瑜伽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "瑜伽.png"; sourceTree = "<group>"; };
+		6B15902E186FC56000FE69D6 /* style.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style.png; sourceTree = "<group>"; };
+		6B159030186FC81700FE69D6 /* redstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redstar.png; sourceTree = "<group>"; };
 		6B201F4D18419DEF002EE4E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B201F521841A5ED002EE4E3 /* 风车icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-120.png"; sourceTree = "<group>"; };
 		6B201F541841A5FA002EE4E3 /* 风车icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-57.png"; sourceTree = "<group>"; };
@@ -202,6 +219,11 @@
 		6B213672184F79E500C0EE4B /* 选择.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择.png"; sourceTree = "<group>"; };
 		6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-640-960.png"; sourceTree = "<group>"; };
 		6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-640-1136.png"; sourceTree = "<group>"; };
+		6B3EAB4F186FCF86001E240E /* littlegirl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = littlegirl.png; sourceTree = "<group>"; };
+		6B3EAB51186FF028001E240E /* fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fighting.png; sourceTree = "<group>"; };
+		6B3EAB53186FF4FA001E240E /* run.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run.png; sourceTree = "<group>"; };
+		6B3EAB551871AEB4001E240E /* launch-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-640-960.png"; sourceTree = "<group>"; };
+		6B3EAB561871AEB4001E240E /* launch-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-640-1136.png"; sourceTree = "<group>"; };
 		6B436FC418082F1F00AF4498 /* ImageEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditingView.h; sourceTree = "<group>"; };
 		6B436FC518082F1F00AF4498 /* ImageEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditingView.m; sourceTree = "<group>"; };
 		6B436FC618082F1F00AF4498 /* ImageEditingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageEditingView.xib; sourceTree = "<group>"; };
@@ -564,6 +586,15 @@
 		6B937C8117B5E7FF00AAEDA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B3EAB551871AEB4001E240E /* launch-640-960.png */,
+				6B3EAB561871AEB4001E240E /* launch-640-1136.png */,
+				6B3EAB53186FF4FA001E240E /* run.png */,
+				6B3EAB51186FF028001E240E /* fighting.png */,
+				6B3EAB4F186FCF86001E240E /* littlegirl.png */,
+				6B159030186FC81700FE69D6 /* redstar.png */,
+				6B15902E186FC56000FE69D6 /* style.png */,
+				6B15902C186FBE5A00FE69D6 /* 瑜伽.png */,
+				6B15902A186FBC8E00FE69D6 /* 人物卡通-1.png */,
 				6BA175351869D805008C39EE /* pickerGlass.png */,
 				6BA175361869D805008C39EE /* pickerGlass@2x.png */,
 				6BA17529186882FC008C39EE /* PickerBG.png */,
@@ -917,8 +948,10 @@
 				6BE6FA92180CECC200411A52 /* camera_album@2x.png in Resources */,
 				6BE02D40186B1527009622C8 /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,
 				6BE6FA91180CECC200411A52 /* camera_album.png in Resources */,
+				6B3EAB52186FF028001E240E /* fighting.png in Resources */,
 				6BFBFE5C1861D48F0037375D /* InfoPlist.strings in Resources */,
 				6B213655184A26C300C0EE4B /* 横条.png in Resources */,
+				6B15902B186FBC8E00FE69D6 /* 人物卡通-1.png in Resources */,
 				6BDE6D3D17D1CBD40097AA27 /* Default-568h@2x.png in Resources */,
 				6BE6FA8F180CECC200411A52 /* btn_back.png in Resources */,
 				6B213663184A3DC500C0EE4B /* load.png in Resources */,
@@ -931,6 +964,7 @@
 				6B21366A184B05B800C0EE4B /* Start底图-6.png in Resources */,
 				6BA17530186882FC008C39EE /* PickerBG@2x.png in Resources */,
 				6BE02D47186B1527009622C8 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
+				6B3EAB54186FF4FA001E240E /* run.png in Resources */,
 				6BE6FA98180CECC200411A52 /* camera_cancel@2x.png in Resources */,
 				6BA29F851842F1150017D17F /* 清绿底图.png in Resources */,
 				6BA17533186882FC008C39EE /* PickerShadow.png in Resources */,
@@ -938,9 +972,12 @@
 				6BE6FA93180CECC200411A52 /* camera_btn_ok.png in Resources */,
 				6BFBFE571861D3130037375D /* StartView.xib in Resources */,
 				6BE02D35186B1526009622C8 /* PinterestSDKResources.bundle in Resources */,
+				6B3EAB50186FCF86001E240E /* littlegirl.png in Resources */,
+				6B15902F186FC56000FE69D6 /* style.png in Resources */,
 				6B21365C184A316300C0EE4B /* 开始-圆-2.png in Resources */,
 				6BA1752F186882FC008C39EE /* PickerBG.png in Resources */,
 				6BE6FA95180CECC200411A52 /* camera_button_switch_camera.png in Resources */,
+				6B3EAB571871AEB4001E240E /* launch-640-960.png in Resources */,
 				6BFBFE4D1861C4CD0037375D /* Localizable.strings in Resources */,
 				6BE02D17186B1526009622C8 /* InstapaperResource.bundle in Resources */,
 				6BA29FBB184A122E0017D17F /* 设置-btn-2.png in Resources */,
@@ -960,6 +997,8 @@
 				6B213671184F70D600C0EE4B /* save-yellow.png in Resources */,
 				6BA29F95184621F30017D17F /* 聊天窗口小部件.png in Resources */,
 				6B436FC818082F1F00AF4498 /* ImageEditingView.xib in Resources */,
+				6B3EAB581871AEB4001E240E /* launch-640-1136.png in Resources */,
+				6B159031186FC81700FE69D6 /* redstar.png in Resources */,
 				6BA17534186882FC008C39EE /* PickerShadow@2x.png in Resources */,
 				6B201F551841A5FA002EE4E3 /* 风车icon-57.png in Resources */,
 				6B213657184A2FE400C0EE4B /* 红伞-圆.png in Resources */,
@@ -970,6 +1009,7 @@
 				6B21366F184E1C0100C0EE4B /* 保存.png in Resources */,
 				6B213673184F79E500C0EE4B /* 选择.png in Resources */,
 				6BE02D3B186B1526009622C8 /* WeiboSDK.bundle in Resources */,
+				6B15902D186FBE5A00FE69D6 /* 瑜伽.png in Resources */,
 				6BE6FA9A180CECC200411A52 /* camera_shoot@2x.png in Resources */,
 				6BE6FA99180CECC200411A52 /* camera_shoot.png in Resources */,
 				6B93E31D17D1DCF20090933E /* Start底图-7.png in Resources */,
@@ -1015,6 +1055,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BFBFE551861CA8D0037375D /* zh-Hans */,
+				6B159027186F1F8900FE69D6 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1031,6 +1072,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BE02CE4186B1526009622C8 /* zh-Hans */,
+				6B159029186F1F8900FE69D6 /* en */,
 			);
 			name = ShareSDKLocalizable.strings;
 			sourceTree = "<group>";
@@ -1039,6 +1081,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BFBFE561861CA8D0037375D /* zh-Hans */,
+				6B159028186F1F8900FE69D6 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1047,6 +1090,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BFBFE5A1861D31B0037375D /* zh-Hans */,
+				6B159026186F1F8900FE69D6 /* en */,
 			);
 			name = StartView.xib;
 			sourceTree = "<group>";

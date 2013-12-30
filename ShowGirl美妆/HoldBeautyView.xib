@@ -25,14 +25,13 @@
                 <userLayoutGuide location="141" affinity="minY"/>
             </userGuides>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="朦胧图副本.png" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-oy-fWS">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run.png" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-oy-fWS">
                     <rect key="frame" x="0.0" y="0.0" width="324" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <tableView alpha="0.69999999999999973" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VsT-Va-d4w">
                     <rect key="frame" x="0.0" y="76" width="320" height="180"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="sectionIndexColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="c7X-3g-R3M"/>
                         <outlet property="delegate" destination="-1" id="hkZ-gu-nL6"/>
@@ -116,7 +115,7 @@
                         <constraint firstAttribute="width" constant="60" id="9bc-X5-tHT"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qt-0u-1Nk">
+                <textField opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qt-0u-1Nk">
                     <rect key="frame" x="120" y="293" width="180" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -209,9 +208,9 @@
     </objects>
     <resources>
         <image name="delete.png" width="133" height="131"/>
+        <image name="run.png" width="640" height="960"/>
         <image name="save-yellow.png" width="27" height="25"/>
         <image name="开始-圆-2.png" width="89" height="90"/>
-        <image name="朦胧图副本.png" width="640" height="960"/>
         <image name="横条.png" width="247" height="97"/>
     </resources>
 </document>

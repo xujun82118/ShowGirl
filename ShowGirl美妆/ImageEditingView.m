@@ -142,9 +142,16 @@
                                                   url:@"null"
                                           description:nil
                                             mediaType:contentType];
-    
+    NSArray *shareList = [ShareSDK getShareListWithType:
+                          ShareTypeWeixiSession,
+                          ShareTypeWeixiTimeline,
+                          ShareTypeSinaWeibo,
+                          ShareTypeTencentWeibo,
+                          ShareTypeQQ,
+                          ShareTypeCopy,
+                          nil];
     [ShareSDK showShareActionSheet:nil
-                         shareList:nil
+                         shareList:shareList
                            content:publishContent
                      statusBarTips:YES
                        authOptions:nil

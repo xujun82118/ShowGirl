@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="朦胧图副本.png" translatesAutoresizingMaskIntoConstraints="NO" id="nNm-fY-LRz" userLabel="Image View-相框">
+                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="style.png" translatesAutoresizingMaskIntoConstraints="NO" id="nNm-fY-LRz" userLabel="Image View-相框">
                     <rect key="frame" x="0.0" y="-17" width="320" height="585"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -106,8 +106,8 @@
         </view>
     </objects>
     <resources>
+        <image name="style.png" width="640" height="960"/>
         <image name="保存.png" width="27" height="25"/>
         <image name="开始-圆-1.png" width="89" height="90"/>
-        <image name="朦胧图副本.png" width="640" height="960"/>
     </resources>
 </document>

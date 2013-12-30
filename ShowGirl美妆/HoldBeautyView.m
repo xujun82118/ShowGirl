@@ -170,8 +170,17 @@
                                           description:nil
                                             mediaType:contentType];
     
+    NSArray *shareList = [ShareSDK getShareListWithType:
+                          ShareTypeWeixiSession,
+                          ShareTypeWeixiTimeline,
+                          ShareTypeSinaWeibo,
+                          ShareTypeTencentWeibo,
+                          ShareTypeQQ,
+                          ShareTypeCopy,
+                          nil];
+    
     [ShareSDK showShareActionSheet:nil
-                         shareList:nil
+                         shareList:shareList
                            content:publishContent
                      statusBarTips:YES
                        authOptions:nil
@@ -491,7 +500,10 @@
     
 	cell.textLabel.text = [[self.dataSourceArray objectAtIndex:indexPath.row] objectForKey:@"kMissionStringKey"];
     cell.backgroundColor = [UIColor clearColor];
-    cell.opaque = YES;
+    //cell.textLabel.textColor = [UIColor blueColor];
+    //cell.opaque = YES;
+    cell.imageView.image = [UIImage imageNamed:@"fighting.png"];
+
     
     cell.imageView.image = nil;
 

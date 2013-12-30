@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="人物卡通-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="红伞.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
@@ -99,10 +99,11 @@
                     </connections>
                 </button>
                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvL-YS-zAg">
-                    <rect key="frame" x="220" y="473" width="45" height="45"/>
+                    <rect key="frame" x="9" y="520" width="35" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="gqb-Wi-WuH"/>
+                        <constraint firstAttribute="height" constant="35" id="728-DC-sSI"/>
+                        <constraint firstAttribute="width" constant="35" id="WQv-nw-0BS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,14 +115,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="MvL-YS-zAg" firstAttribute="centerX" secondItem="94" secondAttribute="centerX" id="0gP-6m-FGX"/>
                 <constraint firstAttribute="bottom" secondItem="sQu-80-rQF" secondAttribute="bottom" constant="116" id="8Ks-2q-oab"/>
                 <constraint firstItem="Rix-LL-1nl" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="3" id="A3W-jo-fdr"/>
-                <constraint firstAttribute="trailing" secondItem="MvL-YS-zAg" secondAttribute="trailing" constant="55" id="Bkc-T8-OSu"/>
                 <constraint firstItem="94" firstAttribute="top" secondItem="das-Eb-XEB" secondAttribute="bottom" constant="8" id="DHY-zT-Mbh"/>
-                <constraint firstAttribute="bottom" secondItem="MvL-YS-zAg" secondAttribute="bottom" constant="50" id="GSl-mb-UHP"/>
                 <constraint firstItem="4" firstAttribute="centerY" secondItem="94" secondAttribute="centerY" id="Hyq-rB-q09"/>
                 <constraint firstItem="bnv-Or-mVM" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="Ibd-1V-3mQ"/>
+                <constraint firstAttribute="bottom" secondItem="MvL-YS-zAg" secondAttribute="bottom" constant="13" id="PxL-Hx-5cu"/>
                 <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="XQ8-Jo-gHv"/>
                 <constraint firstItem="82" firstAttribute="top" secondItem="1" secondAttribute="top" constant="59" id="aQf-6J-mJk"/>
                 <constraint firstAttribute="trailing" secondItem="94" secondAttribute="trailing" constant="33" id="byM-zf-yqO"/>
@@ -130,6 +129,7 @@
                 <constraint firstItem="82" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="35" id="hBo-CY-b2M"/>
                 <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="iXv-z2-9wZ"/>
                 <constraint firstAttribute="trailing" secondItem="das-Eb-XEB" secondAttribute="trailing" constant="20" id="mzW-Ij-DaC"/>
+                <constraint firstItem="MvL-YS-zAg" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="9" id="pMj-t4-ZRR"/>
                 <constraint firstItem="sQu-80-rQF" firstAttribute="top" secondItem="Rix-LL-1nl" secondAttribute="bottom" constant="8" id="pTR-QD-fMa"/>
                 <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="qg6-Tg-mRs"/>
             </constraints>
@@ -138,10 +138,10 @@
         </view>
     </objects>
     <resources>
-        <image name="人物卡通-1.png" width="640" height="960"/>
         <image name="完成-圆-btn.png" width="89" height="90"/>
         <image name="应用推荐.png" width="128" height="128"/>
         <image name="开始-圆-1.png" width="89" height="90"/>
         <image name="开始-圆-2.png" width="89" height="90"/>
+        <image name="红伞.png" width="640" height="960"/>
     </resources>
 </document>
