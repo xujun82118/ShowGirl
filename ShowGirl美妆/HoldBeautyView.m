@@ -134,12 +134,14 @@
     if (![self.textSelfString.text isEqualToString:@""])
     {
         shareMsg = [textSelfString.text stringByAppendingString:preString];
+
         
     }else if(![cell.textLabel.text isEqualToString:@""] && cell != nil)
     {
         shareMsg = [cell.textLabel.text stringByAppendingString:preString];
     }
     
+
     
     if ([shareMsg isEqualToString:@""]|| shareMsg == nil) {
         
@@ -153,6 +155,7 @@
         return;
     }
 
+    shareMsg =[@"亲们，我今天又完成了一件美丽任务：" stringByAppendingString:shareMsg];
 
     NSInteger contentType;
     if (proveImage.image && shareMsg) {

@@ -22,12 +22,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-yp-jHR">
-                    <rect key="frame" x="48" y="338" width="25" height="25"/>
+                    <rect key="frame" x="43" y="333" width="35" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="Cmi-8W-vPt"/>
+                        <constraint firstAttribute="height" constant="30" id="Uny-7J-49F"/>
+                        <constraint firstAttribute="width" constant="35" id="fup-MH-Nfx"/>
                     </constraints>
-                    <state key="normal" backgroundImage="保存.png">
+                    <state key="normal" backgroundImage="heart.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -83,13 +84,14 @@
             <constraints>
                 <constraint firstItem="nNm-fY-LRz" firstAttribute="centerX" secondItem="GIM-R1-1L6" secondAttribute="centerX" id="0XT-bw-yPb"/>
                 <constraint firstItem="JD3-G5-pBF" firstAttribute="leading" secondItem="GDV-WO-Ldy" secondAttribute="trailing" constant="35" id="8zd-0b-ZfO"/>
-                <constraint firstItem="LCf-yp-jHR" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="48" id="9zm-ng-df9"/>
                 <constraint firstItem="GDV-WO-Ldy" firstAttribute="top" secondItem="8Ls-OQ-mV1" secondAttribute="top" id="Avf-Zj-o8a"/>
                 <constraint firstItem="GDV-WO-Ldy" firstAttribute="top" secondItem="GIM-R1-1L6" secondAttribute="bottom" constant="42" id="Ebx-GY-Hgd"/>
                 <constraint firstItem="nNm-fY-LRz" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="FX8-5i-ZNi"/>
                 <constraint firstItem="GDV-WO-Ldy" firstAttribute="bottom" secondItem="JD3-G5-pBF" secondAttribute="bottom" id="JIZ-tM-dne"/>
                 <constraint firstAttribute="trailing" secondItem="JD3-G5-pBF" secondAttribute="trailing" constant="20" symbolic="YES" id="SUa-z4-fy2"/>
+                <constraint firstItem="8Ls-OQ-mV1" firstAttribute="top" secondItem="LCf-yp-jHR" secondAttribute="bottom" constant="30" id="ULk-5B-Am5"/>
                 <constraint firstItem="GIM-R1-1L6" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="60" id="Vgg-mo-eHt"/>
+                <constraint firstItem="LCf-yp-jHR" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="43" id="Vks-8D-pJE"/>
                 <constraint firstItem="nNm-fY-LRz" firstAttribute="top" secondItem="1" secondAttribute="top" constant="-17" id="XjM-d2-6aG"/>
                 <constraint firstItem="GDV-WO-Ldy" firstAttribute="leading" secondItem="8Ls-OQ-mV1" secondAttribute="trailing" constant="35" id="YSV-b3-5aM"/>
                 <constraint firstAttribute="trailing" secondItem="nNm-fY-LRz" secondAttribute="trailing" id="Yff-pE-wjk"/>
@@ -97,7 +99,6 @@
                 <constraint firstAttribute="bottom" secondItem="nNm-fY-LRz" secondAttribute="bottom" id="awK-H0-HRS"/>
                 <constraint firstItem="JD3-G5-pBF" firstAttribute="top" secondItem="GDV-WO-Ldy" secondAttribute="top" id="h2k-hf-IgO"/>
                 <constraint firstItem="GIM-R1-1L6" firstAttribute="top" secondItem="1" secondAttribute="top" constant="51" id="h8u-27-8MN"/>
-                <constraint firstItem="8Ls-OQ-mV1" firstAttribute="top" secondItem="LCf-yp-jHR" secondAttribute="bottom" constant="30" id="iSX-iN-BOk"/>
                 <constraint firstItem="GDV-WO-Ldy" firstAttribute="bottom" secondItem="8Ls-OQ-mV1" secondAttribute="bottom" id="rXr-8C-ZYr"/>
                 <constraint firstItem="8Ls-OQ-mV1" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="zcD-Ku-5hu"/>
             </constraints>
@@ -106,8 +107,8 @@
         </view>
     </objects>
     <resources>
+        <image name="heart.png" width="114" height="96"/>
         <image name="style.png" width="640" height="960"/>
-        <image name="保存.png" width="27" height="25"/>
         <image name="开始-圆-1.png" width="89" height="90"/>
     </resources>
 </document>

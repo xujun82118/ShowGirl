@@ -126,6 +126,8 @@
     shareMsg = [[[dataSourceArray objectAtIndex:currentSelect] objectForKey:@"kDeclareStringKey"] stringByAppendingString:preString];
     
     
+    shareMsg =[@"早上好，亲，今天我的美丽宣言是：" stringByAppendingString:shareMsg];
+    
     NSInteger contentType;
     if (editImage && shareMsg) {
         contentType = SSPublishContentMediaTypeNews;
