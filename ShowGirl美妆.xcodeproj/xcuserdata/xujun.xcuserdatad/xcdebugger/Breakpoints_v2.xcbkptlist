@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/HoldBeautyView.m"
-            timestampString = "410359519.048387"
+            timestampString = "410608045.933439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "-messageToShare"
             landmarkType = "5">
          </BreakpointContent>
@@ -256,22 +256,6 @@
             startingLineNumber = "56"
             endingLineNumber = "56"
             landmarkName = "-viewWillAppear:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/SetMissionViewController.m"
-            timestampString = "408984455.563633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "-addNewMission:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -360,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomImagePickerController.m"
-            timestampString = "409592495.803472"
+            timestampString = "410707343.924239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "-showPhoto"
             landmarkType = "5">
          </BreakpointContent>
@@ -376,11 +360,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomImagePickerController.m"
-            timestampString = "409592495.803472"
+            timestampString = "410707343.924239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -392,11 +376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomImagePickerController.m"
-            timestampString = "409592495.803472"
+            timestampString = "410707343.924239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "-closeView"
             landmarkType = "5">
          </BreakpointContent>
@@ -502,12 +486,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/StartView.m"
-            timestampString = "409588970.419375"
+            timestampString = "410530111.725362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "369"
-            endingLineNumber = "369"
-            landmarkName = "-imageFitlerProcessDone:"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "-showAlert:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -645,12 +629,12 @@
                   symbolName = "-[SetupViewController viewWillAppear:]"
                   moduleName = "ShowGirl&#32654;&#22918;"
                   urlString = "file:///Users/xujun/Documents/MoreBeauty/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
-                  timestampString = "410364472.607047"
+                  timestampString = "410707143.805685"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "64"
                   endingLineNumber = "64"
-                  offsetFromSymbolStart = "731">
+                  offsetFromSymbolStart = "828">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -659,12 +643,12 @@
                   symbolName = "-[SetupViewController viewWillAppear:]"
                   moduleName = "ShowGirl&#32654;&#22918;"
                   urlString = "file:///Users/xujun/Documents/MoreBeauty/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
-                  timestampString = "410364472.607478"
+                  timestampString = "410707143.805885"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "64"
                   endingLineNumber = "64"
-                  offsetFromSymbolStart = "1073">
+                  offsetFromSymbolStart = "1210">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -740,44 +724,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/MainWindowViewController.m"
-            timestampString = "409672494.078697"
+            timestampString = "410529776.824003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-startView:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CustomImagePickerController.m"
-            timestampString = "409592495.803472"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "-chooseDeclarePicker:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CustomImagePickerController.m"
-            timestampString = "409592495.803472"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "-pickerView:didSelectRow:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -826,6 +778,86 @@
             startingLineNumber = "41"
             endingLineNumber = "41"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/MainWindowViewController.m"
+            timestampString = "410529621.503714"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/HoldBeautyView.m"
+            timestampString = "410534014.064721"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-viewDidAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/SetMissionViewController.m"
+            timestampString = "410533793.019207"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "-addNewMission:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/HoldBeautyView.m"
+            timestampString = "410608045.933439"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-doShare:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomImagePickerController.m"
+            timestampString = "410707343.924239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "-pickerView:didSelectRow:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -7,9 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartView">
             <connections>
-                <outlet property="staticLabel1" destination="bnv-Or-mVM" id="y9C-h9-3tb"/>
-                <outlet property="staticLabel2" destination="das-Eb-XEB" id="DTg-rX-Kpa"/>
-                <outlet property="staticLabel3" destination="Rix-LL-1nl" id="3Hb-8K-VkV"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -22,45 +19,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每天一简单美丽任务, 让美丽持久" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="253" translatesAutoresizingMaskIntoConstraints="NO" id="das-Eb-XEB">
-                    <rect key="frame" x="24" y="247" width="253" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="0SH-7J-RVd"/>
-                        <constraint firstAttribute="width" constant="253" id="nDf-QN-z2s"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定时启动你的美丽宣言与任务" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-LL-1nl">
-                    <rect key="frame" x="42" y="390" width="200" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="K7N-bk-KZP"/>
-                        <constraint firstAttribute="width" constant="200" id="VBz-AT-LsF"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每天早上美丽自拍，每天都是新的开始" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-Or-mVM">
-                    <rect key="frame" x="34" y="109" width="275" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="SWf-D4-MCO"/>
-                        <constraint firstAttribute="width" constant="275" id="tkF-r8-9W7"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82">
-                    <rect key="frame" x="34" y="147" width="100" height="100"/>
+                    <rect key="frame" x="42" y="99" width="100" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="bcw-kL-ys4"/>
-                        <constraint firstAttribute="width" constant="100" id="jAg-ei-3IK"/>
+                        <constraint firstAttribute="height" constant="100" id="MDy-vj-sUT"/>
+                        <constraint firstAttribute="width" constant="100" id="rYF-ov-E65"/>
                     </constraints>
                     <state key="normal" title="晨起宣言" backgroundImage="开始-圆-1.png">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,8 +37,8 @@
                     <rect key="frame" x="187" y="285" width="90" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="90" id="XqS-ct-0tO"/>
-                        <constraint firstAttribute="height" constant="90" id="bNE-aR-QL2"/>
+                        <constraint firstAttribute="height" constant="90" id="7FM-8s-irs"/>
+                        <constraint firstAttribute="width" constant="90" id="vOY-4H-k7u"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="美丽任务" backgroundImage="开始-圆-2.png">
@@ -88,8 +52,8 @@
                     <rect key="frame" x="42" y="428" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="70" id="Opx-tA-zg4"/>
-                        <constraint firstAttribute="width" constant="70" id="kcY-3r-aoV"/>
+                        <constraint firstAttribute="height" constant="70" id="R8N-KT-XJW"/>
+                        <constraint firstAttribute="width" constant="70" id="RqQ-qx-93H"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="设置" backgroundImage="完成-圆-btn.png">
@@ -112,18 +76,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="das-Eb-XEB" secondAttribute="trailing" constant="43" id="GTU-mo-pO6"/>
-                <constraint firstItem="Rix-LL-1nl" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="42" id="H4f-D8-7XV"/>
-                <constraint firstItem="sQu-80-rQF" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="42" id="KxC-EW-EZA"/>
-                <constraint firstAttribute="trailing" secondItem="94" secondAttribute="trailing" constant="43" id="OJU-S0-xL1"/>
-                <constraint firstItem="bnv-Or-mVM" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="34" id="SHq-Tw-EVk"/>
-                <constraint firstItem="82" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="34" id="l9T-zT-I9O"/>
-                <constraint firstItem="sQu-80-rQF" firstAttribute="top" secondItem="Rix-LL-1nl" secondAttribute="bottom" constant="8" id="lWO-Qy-k1J"/>
-                <constraint firstItem="Rix-LL-1nl" firstAttribute="top" secondItem="94" secondAttribute="bottom" constant="15" id="lYW-cz-AbW"/>
-                <constraint firstItem="94" firstAttribute="top" secondItem="das-Eb-XEB" secondAttribute="bottom" constant="8" id="myF-xK-OMT"/>
-                <constraint firstItem="das-Eb-XEB" firstAttribute="top" secondItem="82" secondAttribute="bottom" id="ndy-JB-GYA"/>
-                <constraint firstItem="82" firstAttribute="top" secondItem="bnv-Or-mVM" secondAttribute="bottom" constant="8" id="qcQ-PB-fVm"/>
-                <constraint firstAttribute="bottom" secondItem="sQu-80-rQF" secondAttribute="bottom" constant="70" id="rdz-bT-kuF"/>
+                <constraint firstItem="94" firstAttribute="top" secondItem="1" secondAttribute="top" constant="285" id="MHB-0u-V2F"/>
+                <constraint firstItem="sQu-80-rQF" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="42" id="UrD-vn-GGx"/>
+                <constraint firstAttribute="bottom" secondItem="sQu-80-rQF" secondAttribute="bottom" constant="70" id="cnZ-RT-Ong"/>
+                <constraint firstItem="82" firstAttribute="top" secondItem="1" secondAttribute="top" constant="99" id="eMT-yY-WJO"/>
+                <constraint firstAttribute="trailing" secondItem="94" secondAttribute="trailing" constant="43" id="gm3-Ej-gNC"/>
+                <constraint firstItem="82" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="42" id="zkO-Si-0Rb"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

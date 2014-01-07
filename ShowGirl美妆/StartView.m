@@ -25,7 +25,6 @@
 
 @synthesize holdBeautyVeiwController;
 @synthesize setupViewController;
-@synthesize staticLabel1, staticLabel2, staticLabel3;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -242,6 +241,7 @@
 {
     [super viewWillAppear:animated];
     
+    /*
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL isFirstTime = [defaults boolForKey:@"isFirstTimeUse"];
     if (isFirstTime == NO) {
@@ -255,6 +255,7 @@
         staticLabel3.hidden = YES;
         
     }
+    */
 
 
     

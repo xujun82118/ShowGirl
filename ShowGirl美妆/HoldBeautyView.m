@@ -92,7 +92,8 @@
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    self.dataSourceArray = [defaults objectForKey:DEFAULT_MISSION_STRING_KEY];
     [self.CurrentMissionTableView  reloadData];
     
 }
@@ -113,6 +114,30 @@
 
 
 - (IBAction)doShare:(id)sender {
+    
+    //*******test
+    //关注用户
+    /*
+    [ShareSDK followUserWithType:ShareTypeSinaWeibo     //平台类型
+                           field:@"星星汰1982"      //关注用户的名称或ID
+                       fieldType:SSUserFieldTypeName   //字段类型，用于指定第二个参数是名称还是ID
+                     authOptions:nil                     //授权选项
+                    viewDelegate:nil                    //授权视图委托
+                          result:^(SSResponseState state, id<ISSUserInfo>userInfo, id<ICMErrorInfo> error) {               //返回回调
+                              NSString *msg = nil;
+                              if (state == SSResponseStateSuccess)
+                              {
+                                  NSLog(@"关注成功");
+                              }
+                              else if (state == SSResponseStateFail)
+                              {
+                                  NSLog(@"%@", [NSString stringWithFormat:@"关注失败:%@", error.errorDescription]);
+                              }
+                          }];
+    
+    return;
+    */
+    //********
     
     
     /*

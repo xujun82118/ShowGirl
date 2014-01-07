@@ -42,6 +42,10 @@
 		6B4451131871B90100AD454C /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4451111871B90100AD454C /* delete.png */; };
 		6B4451141871B90100AD454C /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B4451121871B90100AD454C /* heart.png */; };
 		6B8076EE18530E6400D35A14 /* 应用推荐.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8076ED18530E6400D35A14 /* 应用推荐.png */; };
+		6B8327921877AC3300C77862 /* intro-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B83278F1877AC3300C77862 /* intro-1.png */; };
+		6B8327931877AC3300C77862 /* intro-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8327901877AC3300C77862 /* intro-2.png */; };
+		6B8327941877AC3300C77862 /* intro-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8327911877AC3300C77862 /* intro-3.png */; };
+		6B83279618793CD000C77862 /* declare-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B83279518793CD000C77862 /* declare-bg.png */; };
 		6B92DA2417BC346C004F5FD2 /* HoldBeautyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B92DA2217BC346C004F5FD2 /* HoldBeautyView.m */; };
 		6B937C7B17B5E7FF00AAEDA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B937C7A17B5E7FF00AAEDA6 /* UIKit.framework */; };
 		6B937C7D17B5E7FF00AAEDA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B937C7C17B5E7FF00AAEDA6 /* Foundation.framework */; };
@@ -74,6 +78,15 @@
 		6BA29FBB184A122E0017D17F /* 设置-btn-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FB9184A122E0017D17F /* 设置-btn-2.png */; };
 		6BA29FBD184A1D330017D17F /* 完成-圆-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA29FBC184A1D330017D17F /* 完成-圆-btn.png */; };
 		6BB64D4E1825DE6800156FAA /* SetMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB64D4D1825DE6800156FAA /* SetMissionViewController.m */; };
+		6BBF3CE318779DF7000F0C73 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBF3CE018779DF7000F0C73 /* EAIntroPage.m */; };
+		6BBF3CE418779DF7000F0C73 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBF3CE218779DF7000F0C73 /* EAIntroView.m */; };
+		6BBF3CF01877A006000F0C73 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBF3CE91877A006000F0C73 /* 1.png */; };
+		6BBF3CF11877A006000F0C73 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBF3CEA1877A006000F0C73 /* 2.png */; };
+		6BBF3CF21877A006000F0C73 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBF3CEB1877A006000F0C73 /* 3.png */; };
+		6BBF3CF31877A006000F0C73 /* femalecodertocat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBF3CEC1877A006000F0C73 /* femalecodertocat@2x.png */; };
+		6BBF3CF41877A006000F0C73 /* introBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBF3CED1877A006000F0C73 /* introBg@2x.png */; };
+		6BBF3CF51877A006000F0C73 /* original@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBF3CEE1877A006000F0C73 /* original@2x.png */; };
+		6BBF3CF61877A006000F0C73 /* supportcat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBF3CEF1877A006000F0C73 /* supportcat@2x.png */; };
 		6BD5DF10181147A900A99F0C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5DF0E181147A900A99F0C /* SetupViewController.m */; };
 		6BD5DF11181147A900A99F0C /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD5DF0F181147A900A99F0C /* SetupViewController.xib */; };
 		6BD5DF1418115BE500A99F0C /* DeclareTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5DF1318115BE500A99F0C /* DeclareTimePickerViewController.m */; };
@@ -219,6 +232,10 @@
 		6B4451111871B90100AD454C /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		6B4451121871B90100AD454C /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		6B8076ED18530E6400D35A14 /* 应用推荐.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "应用推荐.png"; sourceTree = "<group>"; };
+		6B83278F1877AC3300C77862 /* intro-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro-1.png"; sourceTree = "<group>"; };
+		6B8327901877AC3300C77862 /* intro-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro-2.png"; sourceTree = "<group>"; };
+		6B8327911877AC3300C77862 /* intro-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro-3.png"; sourceTree = "<group>"; };
+		6B83279518793CD000C77862 /* declare-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "declare-bg.png"; sourceTree = "<group>"; };
 		6B92DA2117BC346C004F5FD2 /* HoldBeautyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldBeautyView.h; sourceTree = "<group>"; };
 		6B92DA2217BC346C004F5FD2 /* HoldBeautyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldBeautyView.m; sourceTree = "<group>"; };
 		6B937C7717B5E7FF00AAEDA6 /* ShowGirl美妆.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShowGirl美妆.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +279,17 @@
 		6BA29FBC184A1D330017D17F /* 完成-圆-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成-圆-btn.png"; sourceTree = "<group>"; };
 		6BB64D4C1825DE6800156FAA /* SetMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMissionViewController.h; sourceTree = "<group>"; };
 		6BB64D4D1825DE6800156FAA /* SetMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetMissionViewController.m; sourceTree = "<group>"; };
+		6BBF3CDF18779DF7000F0C73 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
+		6BBF3CE018779DF7000F0C73 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
+		6BBF3CE118779DF7000F0C73 /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
+		6BBF3CE218779DF7000F0C73 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
+		6BBF3CE91877A006000F0C73 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		6BBF3CEA1877A006000F0C73 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		6BBF3CEB1877A006000F0C73 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		6BBF3CEC1877A006000F0C73 /* femalecodertocat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "femalecodertocat@2x.png"; sourceTree = "<group>"; };
+		6BBF3CED1877A006000F0C73 /* introBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "introBg@2x.png"; sourceTree = "<group>"; };
+		6BBF3CEE1877A006000F0C73 /* original@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "original@2x.png"; sourceTree = "<group>"; };
+		6BBF3CEF1877A006000F0C73 /* supportcat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "supportcat@2x.png"; sourceTree = "<group>"; };
 		6BD5DF0D181147A900A99F0C /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		6BD5DF0E181147A900A99F0C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		6BD5DF0F181147A900A99F0C /* SetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
@@ -489,6 +517,7 @@
 		6B937C6E17B5E7FF00AAEDA6 = {
 			isa = PBXGroup;
 			children = (
+				6BBF3CDE18779DF7000F0C73 /* EAIntroView */,
 				6BE02CBD186B1526009622C8 /* ShareSDK */,
 				6BA1752518688220008C39EE /* AFpicker */,
 				6B0C2EE8182F4A75004FB994 /* YouMi */,
@@ -574,6 +603,7 @@
 		6B937C8117B5E7FF00AAEDA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B83279518793CD000C77862 /* declare-bg.png */,
 				6B4451111871B90100AD454C /* delete.png */,
 				6B4451121871B90100AD454C /* heart.png */,
 				6B3EAB551871AEB4001E240E /* launch-640-960.png */,
@@ -647,6 +677,27 @@
 				6BA175271868826D008C39EE /* AFPickerView.m */,
 			);
 			name = AFpicker;
+			sourceTree = "<group>";
+		};
+		6BBF3CDE18779DF7000F0C73 /* EAIntroView */ = {
+			isa = PBXGroup;
+			children = (
+				6B83278F1877AC3300C77862 /* intro-1.png */,
+				6B8327901877AC3300C77862 /* intro-2.png */,
+				6B8327911877AC3300C77862 /* intro-3.png */,
+				6BBF3CE91877A006000F0C73 /* 1.png */,
+				6BBF3CEA1877A006000F0C73 /* 2.png */,
+				6BBF3CEB1877A006000F0C73 /* 3.png */,
+				6BBF3CEC1877A006000F0C73 /* femalecodertocat@2x.png */,
+				6BBF3CED1877A006000F0C73 /* introBg@2x.png */,
+				6BBF3CEE1877A006000F0C73 /* original@2x.png */,
+				6BBF3CEF1877A006000F0C73 /* supportcat@2x.png */,
+				6BBF3CDF18779DF7000F0C73 /* EAIntroPage.h */,
+				6BBF3CE018779DF7000F0C73 /* EAIntroPage.m */,
+				6BBF3CE118779DF7000F0C73 /* EAIntroView.h */,
+				6BBF3CE218779DF7000F0C73 /* EAIntroView.m */,
+			);
+			path = EAIntroView;
 			sourceTree = "<group>";
 		};
 		6BE02CBD186B1526009622C8 /* ShareSDK */ = {
@@ -917,6 +968,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBF3CF11877A006000F0C73 /* 2.png in Resources */,
+				6BBF3CF41877A006000F0C73 /* introBg@2x.png in Resources */,
 				6BA29FB51849BC5E0017D17F /* 大标题.png in Resources */,
 				6B201F4E18419DEF002EE4E3 /* Images.xcassets in Resources */,
 				6BA175371869D805008C39EE /* pickerGlass.png in Resources */,
@@ -938,12 +991,14 @@
 				6B15902B186FBC8E00FE69D6 /* 人物卡通-1.png in Resources */,
 				6BDE6D3D17D1CBD40097AA27 /* Default-568h@2x.png in Resources */,
 				6BE6FA8F180CECC200411A52 /* btn_back.png in Resources */,
+				6BBF3CF31877A006000F0C73 /* femalecodertocat@2x.png in Resources */,
 				6B8076EE18530E6400D35A14 /* 应用推荐.png in Resources */,
 				6B159025186EAEB500FE69D6 /* ShowGirl美妆-Info.plist in Resources */,
 				6B260B96185F2D6C0091EE3D /* Start底图-640-960.png in Resources */,
 				6BE02D32186B1526009622C8 /* GooglePlus.bundle in Resources */,
 				6BA29FBD184A1D330017D17F /* 完成-圆-btn.png in Resources */,
 				6B93D9A517D1D9A50090933E /* MainWindowViewController.xib in Resources */,
+				6B8327941877AC3300C77862 /* intro-3.png in Resources */,
 				6B21366A184B05B800C0EE4B /* Start底图-6.png in Resources */,
 				6BA17530186882FC008C39EE /* PickerBG@2x.png in Resources */,
 				6BE02D47186B1527009622C8 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
@@ -967,13 +1022,20 @@
 				6BE6FA96180CECC200411A52 /* camera_button_switch_camera@2x.png in Resources */,
 				6BE02D42186B1527009622C8 /* ShareSDKiPadSimpleShareViewUI.bundle in Resources */,
 				6B93D9AD17D1DAA20090933E /* HoldBeautyView.xib in Resources */,
+				6BBF3CF61877A006000F0C73 /* supportcat@2x.png in Resources */,
 				6B213661184A36EF00C0EE4B /* 外圆.png in Resources */,
 				6B4451131871B90100AD454C /* delete.png in Resources */,
+				6B8327921877AC3300C77862 /* intro-1.png in Resources */,
 				6BE6FA94180CECC200411A52 /* camera_btn_ok@2x.png in Resources */,
 				6BA29FBA184A122E0017D17F /* 设置-btn-1.png in Resources */,
+				6B8327931877AC3300C77862 /* intro-2.png in Resources */,
 				6BE02D45186B1527009622C8 /* ShareSDKiPhoneDefaultShareViewUI.bundle in Resources */,
+				6BBF3CF01877A006000F0C73 /* 1.png in Resources */,
 				6B260B97185F2D6C0091EE3D /* Start底图-640-1136.png in Resources */,
 				6BA29F931846193B0017D17F /* 半透明信息提示框.png in Resources */,
+				6BBF3CF51877A006000F0C73 /* original@2x.png in Resources */,
+				6BBF3CF21877A006000F0C73 /* 3.png in Resources */,
+				6B83279618793CD000C77862 /* declare-bg.png in Resources */,
 				6BA175381869D805008C39EE /* pickerGlass@2x.png in Resources */,
 				6B213671184F70D600C0EE4B /* save-yellow.png in Resources */,
 				6BA29F95184621F30017D17F /* 聊天窗口小部件.png in Resources */,
@@ -1008,6 +1070,7 @@
 				6BF89344180A9B6F00238FF5 /* ImageUtil.m in Sources */,
 				6B937C8717B5E80000AAEDA6 /* main.m in Sources */,
 				6BD5DF201813C27000A99F0C /* CustomCell.m in Sources */,
+				6BBF3CE418779DF7000F0C73 /* EAIntroView.m in Sources */,
 				6BD5DF171811719400A99F0C /* MissionTimeViewController.m in Sources */,
 				6BF89359180A9EEB00238FF5 /* UIImage+RoundedCorner.m in Sources */,
 				6B937C8B17B5E80000AAEDA6 /* MainWindowAppDelegate.m in Sources */,
@@ -1017,6 +1080,7 @@
 				6B937C9417B5E80000AAEDA6 /* MainWindowViewController.m in Sources */,
 				6BF8935A180A9EEB00238FF5 /* UIImage+SplitImageIntoTwoParts.m in Sources */,
 				6BD5DF1418115BE500A99F0C /* DeclareTimePickerViewController.m in Sources */,
+				6BBF3CE318779DF7000F0C73 /* EAIntroPage.m in Sources */,
 				6BF8934A180A9BD600238FF5 /* CustomImagePickerController.m in Sources */,
 				6BF89358180A9EEB00238FF5 /* UIImage+Resize.m in Sources */,
 				6BF89357180A9EEB00238FF5 /* UIImage+Cut.m in Sources */,

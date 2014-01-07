@@ -88,9 +88,10 @@
             
             //设置背景色
             //label1.backgroundColor = [UIColor grayColor];
+           
             label1.tag = 91;
             //设置标签文本
-            NSString *preString = @"大声说：\n";
+            NSString *preString = @"Say:\n";
             
             label1.text = [preString stringByAppendingString:[[dataSourceArray objectAtIndex:currentSelect] objectForKey:@"kDeclareStringKey"]];
             
@@ -102,7 +103,13 @@
             label1.textAlignment = UITextAlignmentCenter;
             //设置字体大小适应label宽度
             label1.adjustsFontSizeToFitWidth = YES;
-            label1.numberOfLines = 3;
+            label1.numberOfLines = 4;
+            /*
+            UIImage *labelbgimage = [UIImage imageNamed:@"declare-bg.png"];
+            UIImageView *bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, ScreenHeight-70-80, 280, 80)];
+            bgImageView.image = labelbgimage;
+            //[PLCameraView addSubview:bgImageView];
+            */
             
             UITapGestureRecognizer *recognizer1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(chooseDeclarePicker:)];
             
@@ -112,6 +119,9 @@
             [label1 setUserInteractionEnabled:YES];
             [label1 addGestureRecognizer:recognizer1];
             [PLCameraView addSubview:label1];
+            
+
+            
             
         }
         
@@ -129,7 +139,7 @@
         
         UIImage *camerImage = [UIImage imageNamed:@"camera_shoot.png"];
         UIButton *cameraBtn = [[UIButton alloc] initWithFrame:
-                               CGRectMake(110, 5, camerImage.size.width, camerImage.size.height)];
+                               CGRectMake(/*110*/320/2-camerImage.size.width/2, 5, camerImage.size.width, camerImage.size.height)];
         [cameraBtn setImage:camerImage forState:UIControlStateNormal];
         [cameraBtn addTarget:self action:@selector(takePicture) forControlEvents:UIControlEventTouchUpInside];
         [overlyView addSubview:cameraBtn];
@@ -181,12 +191,12 @@
 #pragma mark - chooseDeclare
 - (IBAction)chooseDeclarePicker:(UITapGestureRecognizer *)sender
 {
-
-    
+   
     if (defaultPickerView == nil) {
         defaultPickerView = [[AFPickerView alloc] initWithFrame:CGRectMake(0,ScreenHeight-216,320,216) backgroundImage:@"PickerBG.png" shadowImage:@"PickerShadow.png" glassImage:@"pickerGlass.png" title:@"选择美丽宣言"];
         defaultPickerView.dataSource = self;
         defaultPickerView.delegate = self;
+        defaultPickerView.rowFont = [UIFont fontWithName:@"Arial" size:20];
         [self.view addSubview:defaultPickerView];
     }
     [defaultPickerView showPicker];
@@ -293,7 +303,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     UILabel *label = (UILabel*)[PLCameraView viewWithTag:91];
     
-    NSString *preString = @"大声说：\n";
+    NSString *preString = @"Say:\n";
     
     label.text = [preString stringByAppendingString:[[dataSourceArray objectAtIndex:row] objectForKey:@"kDeclareStringKey"]];
 

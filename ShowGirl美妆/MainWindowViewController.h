@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EAIntroView.h"
 @class StartView;
 
-@interface MainWindowViewController : UIViewController
+@interface MainWindowViewController : UIViewController<EAIntroDelegate>
 - (IBAction)startView:(id)sender;
 - (void)startOneOffTimer:(id)sender;
 -(void)targetMethodStartView:(NSTimer*)theTimer;
