@@ -253,6 +253,15 @@
         
         saveImageBtn.hidden = NO;
         [self.view addSubview:saveImageBtn];
+        
+        //存已照的相片，用于主界面
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSData *imageData = UIImageJPEGRepresentation(image, 100);
+        [defaults setObject:imageData forKey:@"lastPhoto"];
+        [defaults synchronize];
+        
+        //NSData * testimage = [defaults objectForKey:@"lastPhoto"];
+        //UIImage *Image = [UIImage imageWithData:testimage];
 
 	}else
     {

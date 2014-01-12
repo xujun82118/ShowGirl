@@ -47,6 +47,7 @@
     //有米广告初始化
     [YouMiConfig setUserID:@"BeatufifullEveryday"]; // [可选] 例如开发者的应用是有登录功能的，则可以使用登录后的用户账号来替代有米为每台机器提供的标识（有米会为每台设备生成的唯一标识符）。
     [YouMiConfig setUseInAppStore:YES];  // [可选]开启内置appStore，详细请看YouMiSDK常见问题解答
+    [YouMiConfig setShouldGetLocation:NO];
     [YouMiConfig launchWithAppID:@"48029e4c19982a01" appSecret:@"06c84e9e0fe2055a"];
     [self.window makeKeyAndVisible];
     // 设置显示全屏广告的window

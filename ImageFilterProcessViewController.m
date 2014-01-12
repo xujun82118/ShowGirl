@@ -39,6 +39,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImage *backgroundImage = [UIImage imageNamed:@"朦胧图副本.png"];
+    UIImageView *bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    bgImageView.image = backgroundImage;
+    [self.view addSubview:bgImageView];
+    
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftBtn setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
     [leftBtn setFrame:CGRectMake(10, 20, 34, 34)];

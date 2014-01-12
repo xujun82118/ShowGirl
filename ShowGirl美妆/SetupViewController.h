@@ -30,6 +30,9 @@
 - (IBAction)isDeclareTimeChanged:(id)sender;
 - (IBAction)isMissionTimeChanged:(id)sender;
 
+- (IBAction)weiBoMe:(id)sender;
+- (IBAction)addStars:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UISwitch *isEveryDayMission;
 @property (strong, nonatomic) IBOutlet UISwitch *isEveryDayDeclare;
 

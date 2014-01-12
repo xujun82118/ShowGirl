@@ -28,6 +28,8 @@
     BOOL isRemindedDeclare;
     BOOL isRemindedMission;
     
+    BOOL isONPhoto;//正在照相过程中
+    
     NSInteger CurrentDay;
     
     //ImageFilterProcessViewController *fitler;
@@ -37,16 +39,17 @@
 - (IBAction)setup:(id)sender;
 
 -(void)targetMethodCheckTime:(NSTimer*)theTimer;
+-(void)hideDeclareImage:(NSTimer*)theTimer;
 - (NSDictionary *)userInfo;
 
 - (IBAction)ShowHold:(id)sender;
 - (IBAction)showDeclaration:(id)sender;
-- (IBAction)doTakePhoto:(id)sender;
 - (IBAction)youMiAd:(id)sender;
-
+- (void)addYoumiBanner;
 - (IBAction)backToStart:(id)sender;
 
 -(void)showAlert:(NSString *)msg;
+
 
 - (NSInteger)getCurrentHour;
 - (NSInteger)getCurrentDay;

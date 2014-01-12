@@ -10,6 +10,9 @@
 #import "SetMissionViewController.h"
 #import <ShareSDK/ShareSDK.h>
 
+#import "YouMiConfig.h"
+#import "YouMiWall.h"
+#import "YouMiView.h"
 
 @interface HoldBeautyView ()
 
@@ -86,11 +89,12 @@
     deleteImageButton.hidden = YES;
     saveImageButton.hidden = YES;
     
-    
+    //初步化为1000
+    nowRow = 1000;
 }
 
 
--(void) viewDidAppear:(BOOL)animated
+-(void) viewWillAppear:(BOOL)animated
 {
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     self.dataSourceArray = [defaults objectForKey:DEFAULT_MISSION_STRING_KEY];
@@ -107,6 +111,7 @@
 
 - (IBAction)backToStart:(id)sender
 {
+    nowRow = 1000;
     [self dismissViewControllerAnimated:YES completion:(NULL)];
 
 }
@@ -477,7 +482,8 @@
     }
     [UIView commitAnimations];
     
-    
+    //置位当前选择
+    nowRow = 1000;
     [self.CurrentMissionTableView reloadData];
     
     
@@ -530,14 +536,13 @@
     cell.backgroundColor = [UIColor clearColor];
     //cell.textLabel.textColor = [UIColor blueColor];
     //cell.opaque = YES;
-    cell.imageView.image = [UIImage imageNamed:@"fighting.png"];
-
-    
     cell.imageView.image = nil;
 
-
-
-    
+    if (nowRow == indexPath.row) {
+        cell.imageView.image = [UIImage imageNamed:@"选择.png"];
+        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    }
+  
     return cell;
 }
 
@@ -575,6 +580,10 @@
     self.view.frame = rect;
     [UIView commitAnimations];
     [textSelfString resignFirstResponder];
+    
+    //存当前用户的选择，返回时清空
+    nowRow = indexPath.row;
+    
 }
 
 

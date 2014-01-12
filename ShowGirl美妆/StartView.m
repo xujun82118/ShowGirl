@@ -15,7 +15,10 @@
 #import "DeclareTimePickerViewController.h"
 #import "IphoneScreen.h"
 
+#import "YouMiConfig.h"
 #import "YouMiWall.h"
+#import "YouMiView.h"
+
 
 @interface StartView ()
 
@@ -31,14 +34,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-       /* [NSTimer scheduledTimerWithTimeInterval:3.0
-                                         target:self
-                                       selector:@selector(targetMethodCheckTime:)
-                                       userInfo:[self userInfo]
-                                        repeats:YES];
-        */
-        
+   
         if ([self getCurrentHour] <SHOWTIME_END) {
             isRemindedDeclare = NO;
         }else{
@@ -47,9 +43,49 @@
             
         }
         
+        //起动3次后，加载广告
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if ([defaults integerForKey:@"BeforeADTime"] == 0) {
+            [defaults setInteger:1 forKey:@"BeforeADTime"];
+        }else
+        {
+            
+            [defaults setInteger:([defaults integerForKey:@"BeforeADTime"]+1) forKey:@"BeforeADTime"];
+        }
+ 
+        
+        
         isRemindedMission = NO;
         
         isDeclare = NO;
+
+        isONPhoto = NO;
+
+        /*
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSData * lastimage = [defaults objectForKey:@"lastPhoto"];
+        if (lastimage) {
+            UIButton* declareBtn = (UIButton*)[self.view viewWithTag:101];
+            UIImage *Image = [UIImage imageWithData:lastimage];
+            
+            UIButton *lastImageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [lastImageBtn setImage: Image forState:UIControlStateNormal];
+            [lastImageBtn setFrame:CGRectMake(declareBtn.frame.origin.x, declareBtn.frame.origin.y, declareBtn.frame.size.width, declareBtn.frame.size.height)];
+            lastImageBtn.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+            lastImageBtn.layer.masksToBounds = YES;
+            lastImageBtn.layer.cornerRadius =50.0;
+            lastImageBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+            lastImageBtn.layer.borderWidth = 5.0f;
+            lastImageBtn.layer.rasterizationScale = [UIScreen mainScreen].scale;
+            lastImageBtn.layer.shouldRasterize = YES;
+            lastImageBtn.clipsToBounds = YES;
+            lastImageBtn.opaque = YES;
+            lastImageBtn.alpha = 0;
+            lastImageBtn.tag = 99;
+            [self.view addSubview:lastImageBtn];
+        }
+        */
+
         
         
     }
@@ -225,10 +261,37 @@
     
     
 
-    
+    [self addYoumiBanner];
+
+
 }
 
-
+- (void)addYoumiBanner
+{
+    //起动3次后，加载广告
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults integerForKey:@"BeforeADTime"] >= 3) {
+        // 创建广告条
+        YouMiView* adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:nil];
+        
+        //可以设置委托[可选]
+        adView.delegate = self;
+        //设置文字广告的属性[可选]
+        adView.indicateTranslucency = YES;
+        adView.indicateRounded = NO;
+        //添加对应的关键词 [可选]
+        [adView addKeyword:@"美女"];
+        
+        // 开始请求广告
+        [adView start];
+        
+        // 把广告条添加到特定的view中
+        UIView *bannerView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight-50, 320, 44)];
+        //bannerView.backgroundColor = [UIColor yellowColor];
+        [self.view addSubview:bannerView];
+        [bannerView addSubview:adView];
+    }
+}
 
 
 - (void)didReceiveMemoryWarning
@@ -237,28 +300,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewWillAppear:(BOOL)animated
+- (void) viewDidAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    
-    /*
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL isFirstTime = [defaults boolForKey:@"isFirstTimeUse"];
-    if (isFirstTime == NO) {
+    [super viewDidAppear:animated];
+
+    if (!isONPhoto) {
+        //获取btn位置
+        UIButton* declareBtn = (UIButton*)[self.view viewWithTag:101];
+        UIButton* lastImageBtn = (UIButton*)[self.view viewWithTag:99];
         
-        [defaults setBool:YES forKey:@"isFirstTimeUse"];
+        [UIView beginAnimations:@"DeclareBtnAnimation" context:(__bridge void *)(lastImageBtn)];
+        [UIView setAnimationDuration:1.0f];
+        [UIView setAnimationDelegate:self];
+        [UIView setAnimationDidStopSelector:@selector(imageViewDidStop:finished:context:)];
+        [lastImageBtn setFrame:CGRectMake(declareBtn.frame.origin.x+100, declareBtn.frame.origin.y, declareBtn.frame.size.width, declareBtn.frame.size.height)];
+        lastImageBtn.opaque = YES;
+        lastImageBtn.alpha = 1.0;
+        [UIView commitAnimations];
         
-    }else
-    {
-        staticLabel1.hidden = YES;
-        staticLabel2.hidden = YES;
-        staticLabel3.hidden = YES;
         
+        [NSTimer scheduledTimerWithTimeInterval:2.0
+                                         target:self
+                                       selector:@selector(hideDeclareImage:)
+                                       userInfo:[self userInfo]
+                                        repeats:NO];
     }
-    */
-
 
     
+}
+
+-(void)hideDeclareImage:(NSTimer*)theTimer
+{
+    //获取btn位置
+    UIButton* declareBtn = (UIButton*)[self.view viewWithTag:101];
+    UIButton* lastImageBtn = (UIButton*)[self.view viewWithTag:99];
+    [self.view addSubview:declareBtn];
+    [UIView beginAnimations:@"DeclareBtnAnimationHide" context:(__bridge void *)(lastImageBtn)];
+    [UIView setAnimationDuration:1.0f];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(imageViewDidStop:finished:context:)];
+    [lastImageBtn setFrame:CGRectMake(declareBtn.frame.origin.x+20, declareBtn.frame.origin.y, declareBtn.frame.size.width, declareBtn.frame.size.height)];
+    lastImageBtn.opaque = YES;
+    lastImageBtn.alpha = 0.5;
+    [UIView commitAnimations];
 }
 
 //显示每日养言界面
@@ -274,36 +358,14 @@
 //显示每日宣言界面
 - (IBAction)showDeclaration:(id)sender
 {
-    NSLog(@"Into Show declaraion....");
-   
-   [self doTakePhoto:NULL];
-    
-
-    
-}
-
-
-- (IBAction)youMiAd:(id)sender
-{
-    [YouMiWall showOffers:NO didShowBlock:^{
-        NSLog(@"有米积推荐已显示");
-    } didDismissBlock:^{
-        NSLog(@"有米积推荐已退出");
-    }];
-    
-}
-
-
-- (IBAction)doTakePhoto:(id)sender
-{
     /*
-    //一天只能宣言一次
-    if (isDeclare && setupViewController.isEveryDayDeclare.on) {
-        [self showAlert:@"你今天已经做过宣言了！"];
-        return;
-    }
+     //一天只能宣言一次
+     if (isDeclare && setupViewController.isEveryDayDeclare.on) {
+     [self showAlert:@"你今天已经做过宣言了！"];
+     return;
+     }
      */
-
+    
     /*
      //限制宣言时间为早上
      if (self.getCurrentHour>SHOWTIME_START && self.getCurrentHour <=SHOWTIME_END)
@@ -318,29 +380,39 @@
      }
      */
     
-
+    
     //调用自定义的图片处理控制器
     
-       CustomImagePickerController* _picker =[[CustomImagePickerController alloc] init];
-        //判断是否有相机
-        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-            [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-            _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-            [_picker setIsDeclare:YES];
-        }else{
-            [_picker setIsSingle:YES];
-            [_picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-        }
-        //指向他的委托函数？？
-        [_picker setCustomDelegate:self];
- 
+    CustomImagePickerController* _picker =[[CustomImagePickerController alloc] init];
+    //判断是否有相机
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        [_picker setIsDeclare:YES];
+    }else{
+        [_picker setIsSingle:YES];
+        [_picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+    //指向他的委托函数？？
+    [_picker setCustomDelegate:self];
 
-     
-    
     //调起pick处理器，及其view
     [self presentViewController:_picker animated:YES completion:NULL];
+    isONPhoto = YES;
+}
+
+
+
+- (IBAction)youMiAd:(id)sender
+{
+    [YouMiWall showOffers:NO didShowBlock:^{
+        NSLog(@"有米积推荐已显示");
+    } didDismissBlock:^{
+        NSLog(@"有米积推荐已退出");
+    }];
     
 }
+
 
 
 - (void)cameraPhoto:(UIImage *)image  //选择完图片
@@ -351,6 +423,7 @@
         [fitler setDelegate:self];
     fitler.currentImage = image;
     [self presentViewController:fitler animated:YES completion:NULL];
+
     
 }
 - (void)imageFitlerProcessDone:(UIImage *)image //图片处理完
@@ -361,6 +434,16 @@
     [self presentViewController:imageEditing animated:YES completion:NULL];
     
     isDeclare = YES;
+    
+    //存已照的相片，用于主界面
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *imageData = UIImageJPEGRepresentation(image, 100);
+    [defaults setObject:imageData forKey:@"lastPhoto"];
+    [defaults synchronize];
+    
+
+
+    
 }
 
 
@@ -392,7 +475,36 @@
 - (void)imageEditingFinishReturn
 {
     NSLog(@"Get delegate imageEditingFinishReturn");
-    //[self backToStart:NULL];
+    
+    /*
+    //获取btn位置
+    UIButton* declareBtn = (UIButton*)[self.view viewWithTag:101];
+    UIButton* lastImageBtn = (UIButton*)[self.view viewWithTag:99];
+  
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData * lastimage = [defaults objectForKey:@"lastPhoto"];
+    UIImage *Image = [UIImage imageWithData:lastimage];
+
+    [UIView beginAnimations:@"DeclareBtnAnimationHide" context:(__bridge void *)(lastImageBtn)];
+    [UIView setAnimationDuration:1.0f];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(imageViewDidStop:finished:context:)];
+    [lastImageBtn setFrame:CGRectMake(declareBtn.frame.origin.x+100, declareBtn.frame.origin.y, declareBtn.frame.size.width, declareBtn.frame.size.height)];
+    lastImageBtn.opaque = YES;
+    lastImageBtn.alpha = 1.0;
+    
+    [lastImageBtn setImage:Image forState:UIControlStateNormal];
+    [UIView commitAnimations];
+    
+    isONPhoto = NO;
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0
+                                     target:self
+                                   selector:@selector(hideDeclareImage:)
+                                   userInfo:[self userInfo]
+                                    repeats:NO];
+     
+     */
 }
 
 

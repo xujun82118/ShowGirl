@@ -7,6 +7,7 @@
 //
 
 #import "SetupViewController.h"
+#import <ShareSDK/ShareSDK.h>
 
 @interface SetupViewController ()
 
@@ -197,6 +198,96 @@
 
     
 }
+
+- (IBAction)weiBoMe:(id)sender
+{
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"亲的任何意见，我都无比重视^_^"
+                          message:nil//show the msg in the alert.
+                          delegate:self//delegate itself
+                          cancelButtonTitle:@"确定"
+                          otherButtonTitles: nil];
+    [alert show];
+    
+
+}
+
+
+- (IBAction)addStars:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/tian-tian-geng-mei-li/id782426992?ls=1&mt=8"];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+#pragma mark -
+#pragma mark alertView delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    
+    NSString*  shareMsg = @"@星星汰:";
+    
+    //构造分享内容
+    id<ISSContent> publishContent = [ShareSDK content:shareMsg
+                                       defaultContent:@"没有分享内容"
+                                                image:nil
+                                                title:@"天天更美丽"
+                                                  url:@"null"
+                                          description:nil
+                                            mediaType:SSPublishContentMediaTypeText];
+    
+    
+    
+    id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
+                                                         allowCallback:YES
+                                                         authViewStyle:SSAuthViewStyleFullScreenPopup
+                                                          viewDelegate:nil
+                                               authManagerViewDelegate:nil];
+    
+    //在授权页面中添加关注官方微博
+    [authOptions setFollowAccounts:[NSDictionary dictionaryWithObjectsAndKeys:
+                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"星星汰1982"],
+                                    SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),
+                                    nil]];
+    
+    //创建弹出菜单容器
+    id<ISSContainer> container = [ShareSDK container];
+    //[container setIPadContainerWithView:sender arrowDirect:UIPopoverArrowDirectionUp];
+    
+    
+    //显示分享菜单
+    [ShareSDK showShareViewWithType:ShareTypeSinaWeibo
+                          container:container
+                            content:publishContent
+                      statusBarTips:YES
+                        authOptions:authOptions
+                       shareOptions:[ShareSDK defaultShareOptionsWithTitle:nil
+                                                           oneKeyShareList:[NSArray defaultOneKeyShareList]
+                                                            qqButtonHidden:NO
+                                                     wxSessionButtonHidden:NO
+                                                    wxTimelineButtonHidden:NO
+                                                      showKeyboardOnAppear:NO
+                                                         shareViewDelegate:nil
+                                                       friendsViewDelegate:nil
+                                                     picViewerViewDelegate:nil]
+                             result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+                                 
+                                 if (state == SSPublishContentStateSuccess)
+                                 {
+                                     NSLog(@"发表成功");
+                                 }
+                                 else if (state == SSPublishContentStateFail)
+                                 {
+                                     NSLog(@"发布失败!error code == %d, error code == %@", [error errorCode], [error errorDescription]);
+                                 }
+                             }];
+
+    
+    
+    
+}
+
 
 
 @end

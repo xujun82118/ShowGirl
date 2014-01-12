@@ -21,6 +21,7 @@
     //CustomImagePickerController *picker;
     //ImageFilterProcessViewController *fitler;
     
+    NSInteger nowRow;//记忆当前选择
 }
 
 @property (nonatomic, retain) NSMutableArray *dataSourceArray;

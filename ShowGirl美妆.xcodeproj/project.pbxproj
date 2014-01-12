@@ -12,16 +12,17 @@
 		6B0C2EF7182F4BEF004FB994 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */; };
 		6B0C2EF9182F4C01004FB994 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */; };
 		6B0C2EFD182F4C20004FB994 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EFC182F4C20004FB994 /* libsqlite3.dylib */; };
+		6B146BE8187EE760002EBC0E /* 朦胧图副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B146BE7187EE760002EBC0E /* 朦胧图副本.png */; };
+		6B146BEA187EF17F002EBC0E /* lovebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B146BE9187EF17F002EBC0E /* lovebook.png */; };
+		6B146BEC188027B1002EBC0E /* plate-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B146BEB188027B1002EBC0E /* plate-btn.png */; };
 		6B159025186EAEB500FE69D6 /* ShowGirl美妆-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B937C8217B5E7FF00AAEDA6 /* ShowGirl美妆-Info.plist */; };
 		6B15902B186FBC8E00FE69D6 /* 人物卡通-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B15902A186FBC8E00FE69D6 /* 人物卡通-1.png */; };
-		6B15902D186FBE5A00FE69D6 /* 瑜伽.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B15902C186FBE5A00FE69D6 /* 瑜伽.png */; };
 		6B15902F186FC56000FE69D6 /* style.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B15902E186FC56000FE69D6 /* style.png */; };
 		6B159031186FC81700FE69D6 /* redstar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B159030186FC81700FE69D6 /* redstar.png */; };
 		6B201F4E18419DEF002EE4E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F4D18419DEF002EE4E3 /* Images.xcassets */; };
 		6B201F531841A5ED002EE4E3 /* 风车icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F521841A5ED002EE4E3 /* 风车icon-120.png */; };
 		6B201F551841A5FA002EE4E3 /* 风车icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B201F541841A5FA002EE4E3 /* 风车icon-57.png */; };
 		6B213655184A26C300C0EE4B /* 横条.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213654184A26C300C0EE4B /* 横条.png */; };
-		6B213657184A2FE400C0EE4B /* 红伞-圆.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213656184A2FE400C0EE4B /* 红伞-圆.png */; };
 		6B21365B184A316300C0EE4B /* 开始-圆-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213658184A316300C0EE4B /* 开始-圆-1.png */; };
 		6B21365C184A316300C0EE4B /* 开始-圆-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B213659184A316300C0EE4B /* 开始-圆-2.png */; };
 		6B21365D184A316300C0EE4B /* 开始-圆-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B21365A184A316300C0EE4B /* 开始-圆-3.png */; };
@@ -33,7 +34,6 @@
 		6B260B96185F2D6C0091EE3D /* Start底图-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */; };
 		6B260B97185F2D6C0091EE3D /* Start底图-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */; };
 		6B3EAB50186FCF86001E240E /* littlegirl.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB4F186FCF86001E240E /* littlegirl.png */; };
-		6B3EAB52186FF028001E240E /* fighting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB51186FF028001E240E /* fighting.png */; };
 		6B3EAB54186FF4FA001E240E /* run.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB53186FF4FA001E240E /* run.png */; };
 		6B3EAB571871AEB4001E240E /* launch-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB551871AEB4001E240E /* launch-640-960.png */; };
 		6B3EAB581871AEB4001E240E /* launch-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3EAB561871AEB4001E240E /* launch-640-1136.png */; };
@@ -202,8 +202,10 @@
 		6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B0C2EFC182F4C20004FB994 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6B146BE7187EE760002EBC0E /* 朦胧图副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "朦胧图副本.png"; sourceTree = "<group>"; };
+		6B146BE9187EF17F002EBC0E /* lovebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovebook.png; sourceTree = "<group>"; };
+		6B146BEB188027B1002EBC0E /* plate-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plate-btn.png"; sourceTree = "<group>"; };
 		6B15902A186FBC8E00FE69D6 /* 人物卡通-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物卡通-1.png"; sourceTree = "<group>"; };
-		6B15902C186FBE5A00FE69D6 /* 瑜伽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "瑜伽.png"; sourceTree = "<group>"; };
 		6B15902E186FC56000FE69D6 /* style.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style.png; sourceTree = "<group>"; };
 		6B159030186FC81700FE69D6 /* redstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redstar.png; sourceTree = "<group>"; };
 		6B201F4D18419DEF002EE4E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -222,7 +224,6 @@
 		6B260B94185F2D6C0091EE3D /* Start底图-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-640-960.png"; sourceTree = "<group>"; };
 		6B260B95185F2D6C0091EE3D /* Start底图-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start底图-640-1136.png"; sourceTree = "<group>"; };
 		6B3EAB4F186FCF86001E240E /* littlegirl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = littlegirl.png; sourceTree = "<group>"; };
-		6B3EAB51186FF028001E240E /* fighting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fighting.png; sourceTree = "<group>"; };
 		6B3EAB53186FF4FA001E240E /* run.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run.png; sourceTree = "<group>"; };
 		6B3EAB551871AEB4001E240E /* launch-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-640-960.png"; sourceTree = "<group>"; };
 		6B3EAB561871AEB4001E240E /* launch-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-640-1136.png"; sourceTree = "<group>"; };
@@ -603,17 +604,18 @@
 		6B937C8117B5E7FF00AAEDA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B146BEB188027B1002EBC0E /* plate-btn.png */,
+				6B146BE9187EF17F002EBC0E /* lovebook.png */,
+				6B146BE7187EE760002EBC0E /* 朦胧图副本.png */,
 				6B83279518793CD000C77862 /* declare-bg.png */,
 				6B4451111871B90100AD454C /* delete.png */,
 				6B4451121871B90100AD454C /* heart.png */,
 				6B3EAB551871AEB4001E240E /* launch-640-960.png */,
 				6B3EAB561871AEB4001E240E /* launch-640-1136.png */,
 				6B3EAB53186FF4FA001E240E /* run.png */,
-				6B3EAB51186FF028001E240E /* fighting.png */,
 				6B3EAB4F186FCF86001E240E /* littlegirl.png */,
 				6B159030186FC81700FE69D6 /* redstar.png */,
 				6B15902E186FC56000FE69D6 /* style.png */,
-				6B15902C186FBE5A00FE69D6 /* 瑜伽.png */,
 				6B15902A186FBC8E00FE69D6 /* 人物卡通-1.png */,
 				6BA175351869D805008C39EE /* pickerGlass.png */,
 				6BA175361869D805008C39EE /* pickerGlass@2x.png */,
@@ -985,7 +987,6 @@
 				6BE6FA92180CECC200411A52 /* camera_album@2x.png in Resources */,
 				6BE02D40186B1527009622C8 /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,
 				6BE6FA91180CECC200411A52 /* camera_album.png in Resources */,
-				6B3EAB52186FF028001E240E /* fighting.png in Resources */,
 				6BFBFE5C1861D48F0037375D /* InfoPlist.strings in Resources */,
 				6B213655184A26C300C0EE4B /* 横条.png in Resources */,
 				6B15902B186FBC8E00FE69D6 /* 人物卡通-1.png in Resources */,
@@ -1009,6 +1010,7 @@
 				6BA29FB71849BE660017D17F /* 纪念.png in Resources */,
 				6BE6FA93180CECC200411A52 /* camera_btn_ok.png in Resources */,
 				6BFBFE571861D3130037375D /* StartView.xib in Resources */,
+				6B146BE8187EE760002EBC0E /* 朦胧图副本.png in Resources */,
 				6BE02D35186B1526009622C8 /* PinterestSDKResources.bundle in Resources */,
 				6B3EAB50186FCF86001E240E /* littlegirl.png in Resources */,
 				6B15902F186FC56000FE69D6 /* style.png in Resources */,
@@ -1030,9 +1032,11 @@
 				6BA29FBA184A122E0017D17F /* 设置-btn-1.png in Resources */,
 				6B8327931877AC3300C77862 /* intro-2.png in Resources */,
 				6BE02D45186B1527009622C8 /* ShareSDKiPhoneDefaultShareViewUI.bundle in Resources */,
+				6B146BEA187EF17F002EBC0E /* lovebook.png in Resources */,
 				6BBF3CF01877A006000F0C73 /* 1.png in Resources */,
 				6B260B97185F2D6C0091EE3D /* Start底图-640-1136.png in Resources */,
 				6BA29F931846193B0017D17F /* 半透明信息提示框.png in Resources */,
+				6B146BEC188027B1002EBC0E /* plate-btn.png in Resources */,
 				6BBF3CF51877A006000F0C73 /* original@2x.png in Resources */,
 				6BBF3CF21877A006000F0C73 /* 3.png in Resources */,
 				6B83279618793CD000C77862 /* declare-bg.png in Resources */,
@@ -1044,14 +1048,12 @@
 				6B159031186FC81700FE69D6 /* redstar.png in Resources */,
 				6BA17534186882FC008C39EE /* PickerShadow@2x.png in Resources */,
 				6B201F551841A5FA002EE4E3 /* 风车icon-57.png in Resources */,
-				6B213657184A2FE400C0EE4B /* 红伞-圆.png in Resources */,
 				6B21365B184A316300C0EE4B /* 开始-圆-1.png in Resources */,
 				6BA29FB31849BB180017D17F /* 工作室.png in Resources */,
 				6BA29F8B1846100F0017D17F /* 风车icon-114.png in Resources */,
 				6B21365D184A316300C0EE4B /* 开始-圆-3.png in Resources */,
 				6B213673184F79E500C0EE4B /* 选择.png in Resources */,
 				6BE02D3B186B1526009622C8 /* WeiboSDK.bundle in Resources */,
-				6B15902D186FBE5A00FE69D6 /* 瑜伽.png in Resources */,
 				6BE6FA9A180CECC200411A52 /* camera_shoot@2x.png in Resources */,
 				6BE6FA99180CECC200411A52 /* camera_shoot.png in Resources */,
 				6B93E31D17D1DCF20090933E /* Start底图-7.png in Resources */,
