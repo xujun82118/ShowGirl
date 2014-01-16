@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomImagePickerController.h"
 #import "ImageFilterProcessViewController.h"
+#import "AddWaterMask.h"
 
 @protocol ImageEditingProcessDelegate;
 @interface ImageEditingView : UIViewController<CustomImagePickerControllerDelegate,ImageFitlerProcessDelegate>
@@ -23,6 +24,8 @@
     UIActionSheet *actionSheetShare;
 
     id <ImageEditingProcessDelegate> imageEditingDelegate;
+    
+    AddWaterMask* addWaterMask;
     
 }
 - (IBAction)doFinishReturn:(id)sender;

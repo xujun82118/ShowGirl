@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/HoldBeautyView.m"
-            timestampString = "411056115.162616"
+            timestampString = "411571850.532356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "-messageToShare"
             landmarkType = "5">
          </BreakpointContent>
@@ -550,13 +550,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[SetupViewController viewWillAppear:]"
                   moduleName = "ShowGirl&#32654;&#22918;"
-                  urlString = "file:///Users/xujun/Documents/MoreBeauty/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
-                  timestampString = "411229652.068287"
+                  urlString = "file:///Users/xujun/Documents/ShowGirl/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
+                  timestampString = "411574089.502489"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
                   endingLineNumber = "65"
-                  offsetFromSymbolStart = "731">
+                  offsetFromSymbolStart = "828">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -564,13 +564,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[SetupViewController viewWillAppear:]"
                   moduleName = "ShowGirl&#32654;&#22918;"
-                  urlString = "file:///Users/xujun/Documents/MoreBeauty/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
-                  timestampString = "411229652.068492"
+                  urlString = "file:///Users/xujun/Documents/ShowGirl/ShowGirl%E7%BE%8E%E5%A6%86/SetupViewController.m"
+                  timestampString = "411574089.502763"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
                   endingLineNumber = "65"
-                  offsetFromSymbolStart = "1073">
+                  offsetFromSymbolStart = "1210">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -786,16 +786,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShowGirl&#32654;&#22918;/ImageEditingView.m"
-            timestampString = "411205494.212303"
+            timestampString = "411571850.532356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
-            landmarkName = "-imageFitlerProcessDone:"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "-doShare:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -805,13 +805,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowGirl&#32654;&#22918;/StartView.m"
-            timestampString = "411229248.150003"
+            filePath = "ShowGirl&#32654;&#22918;/AddWaterMask.m"
+            timestampString = "411569329.39064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
-            landmarkName = "-imageEditingFinishReturn"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-addText:text:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/AddWaterMask.m"
+            timestampString = "411569329.39064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-addText:text:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/ImageEditingView.m"
+            timestampString = "411574089.443444"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "-actionSheet:clickedButtonAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowGirl&#32654;&#22918;/ImageEditingView.m"
+            timestampString = "411573812.407341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "-imageFitlerProcessDone:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

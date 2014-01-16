@@ -28,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+          addWaterMask = [AddWaterMask alloc] ;
     }
     
     return self;
@@ -190,6 +190,8 @@
     NSInteger contentType;
     if (proveImage.image && shareMsg) {
         contentType = SSPublishContentMediaTypeNews;
+        //加水印LOG
+        proveImage.image =[addWaterMask addImage:proveImage.image addMsakImage:[UIImage imageNamed:@"waterlogo.png"]];
     }else{
         contentType = SSPublishContentMediaTypeText;
     }
@@ -382,7 +384,11 @@
     if (actionSheet == actionSheetSaveImage) {
         if (buttonIndex == 0) {
             
+            //加水印LOG
+            proveImage.image =[addWaterMask addImage:proveImage.image addMsakImage:[UIImage imageNamed:@"waterlogo.png"]];
+            
             UIImageWriteToSavedPhotosAlbum(proveImage.image, nil, nil,nil);
+
             UIAlertView *alert = [[UIAlertView alloc]
                                   initWithTitle:@"保存成功！"
                                   message:nil//show the msg in the alert.

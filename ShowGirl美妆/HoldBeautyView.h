@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomImagePickerController.h"
 #import "ImageFilterProcessViewController.h"
+#import "AddWaterMask.h"
 
 
 @interface HoldBeautyView : UIViewController<UITextFieldDelegate,CustomImagePickerControllerDelegate,ImageFitlerProcessDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -20,6 +21,7 @@
     UIActionSheet *actionSheetShare;
     //CustomImagePickerController *picker;
     //ImageFilterProcessViewController *fitler;
+    AddWaterMask* addWaterMask;
     
     NSInteger nowRow;//记忆当前选择
 }

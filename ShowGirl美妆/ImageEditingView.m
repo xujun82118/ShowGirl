@@ -9,6 +9,7 @@
 #import "ImageEditingView.h"
 #import "ChooseStringViewController.h"
 #import <ShareSDK/ShareSDK.h>
+#import "AddWaterMask.h"
 
 
 @interface ImageEditingView ()
@@ -24,6 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        addWaterMask = [AddWaterMask alloc] ;
     }
     return self;
 }
@@ -131,6 +133,10 @@
     NSInteger contentType;
     if (editImage && shareMsg) {
         contentType = SSPublishContentMediaTypeNews;
+        
+        //加水印LOG
+        editImage =[addWaterMask addImage:editImage addMsakImage:[UIImage imageNamed:@"waterlogo.png"]];
+        
     }else{
         contentType = SSPublishContentMediaTypeText;
     }
@@ -245,10 +251,14 @@
 }
 - (void)imageFitlerProcessDone:(UIImage *)image //图片处理完
 {
+    
+
+    
     if (image != nil)
 	{
 		[ivEditingImage setImage:image];
 		//[self.view sendSubviewToBack:ivEditingImage];
+        editImage = image;
         [self.view addSubview:ivEditingImage];
         
         saveImageBtn.hidden = NO;
@@ -294,7 +304,8 @@
 {
     if (actionSheet == actionSheetSaveImage) {
         if (buttonIndex == 0) {
-            
+            //加水印LOG
+            editImage =[addWaterMask addImage:editImage addMsakImage:[UIImage imageNamed:@"waterlogo.png"]];
             UIImageWriteToSavedPhotosAlbum(editImage, nil, nil,nil);
             UIAlertView *alert = [[UIAlertView alloc]
                                   initWithTitle:@"保存成功！"
