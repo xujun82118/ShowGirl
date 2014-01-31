@@ -210,6 +210,7 @@
             declareNotification.repeatInterval = kCFCalendarUnitDay;
             declareNotification.timeZone=[NSTimeZone defaultTimeZone];
             declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
+            declareNotification.soundName = @"alert.mp3";
             
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsDeclareTime" forKey:@"DeclareOrMissionTime"];
             declareNotification.userInfo = info;
@@ -230,6 +231,7 @@
             missionNotification.repeatInterval = kCFCalendarUnitDay;
             missionNotification.timeZone=[NSTimeZone defaultTimeZone];
             missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+            missionNotification.soundName = @"alert.mp3";
             
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsMissionTime" forKey:@"DeclareOrMissionTime"];
             missionNotification.userInfo = info;
@@ -270,7 +272,7 @@
 {
     //起动3次后，加载广告
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults integerForKey:@"BeforeADTime"] >= 3) {
+    if ([defaults integerForKey:@"BeforeADTime"] >= 5) {
         // 创建广告条
         YouMiView* adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:nil];
         

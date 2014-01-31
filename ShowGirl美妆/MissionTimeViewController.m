@@ -101,6 +101,7 @@
         missionNotification.repeatInterval = kCFCalendarUnitDay;
         missionNotification.timeZone=[NSTimeZone defaultTimeZone];
         missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+        missionNotification.soundName = @"alert.mp3";
         
         NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsMissionTime" forKey:@"DeclareOrMissionTime"];
         missionNotification.userInfo = info;

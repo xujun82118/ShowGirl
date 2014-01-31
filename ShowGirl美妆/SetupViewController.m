@@ -145,6 +145,7 @@
             declareNotification.repeatInterval = kCFCalendarUnitDay;
             declareNotification.timeZone=[NSTimeZone defaultTimeZone];
             declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
+            declareNotification.soundName = @"alert.mp3";
           
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsDeclareTime" forKey:@"DeclareOrMissionTime"];
             declareNotification.userInfo = info;
@@ -187,6 +188,7 @@
             missionNotification.repeatInterval = kCFCalendarUnitDay;
             missionNotification.timeZone=[NSTimeZone defaultTimeZone];
             missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
+            missionNotification.soundName = @"alert.mp3";
             
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsMissionTime" forKey:@"DeclareOrMissionTime"];
             missionNotification.userInfo = info;
@@ -216,6 +218,19 @@
 
 - (IBAction)addStars:(id)sender
 {
+    
+//    NSString *str = [NSString stringWithFormat:
+//                     @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d",
+//                     782426992 ];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+    
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"去给'%@'打分吧！",@"天天更美丽"]
+//                                                        message:@"您的评价对我们很重要"
+//                                                       delegate:self
+//                                              cancelButtonTitle:nil
+//                                              otherButtonTitles:@"稍后评价",@"去评价",nil];
+//    [alertView show];
+    
     NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/tian-tian-geng-mei-li/id782426992?ls=1&mt=8"];
     [[UIApplication sharedApplication] openURL:url];
 }
