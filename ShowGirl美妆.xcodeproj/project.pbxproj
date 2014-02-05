@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B0C2EF3182F4ADB004FB994 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF2182F4ADB004FB994 /* libYouMi.a */; };
+		6B06240418A21A8B00698228 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B06240318A21A8B00698228 /* libYouMi.a */; };
 		6B0C2EF5182F4BE1004FB994 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF4182F4BE1004FB994 /* SystemConfiguration.framework */; };
 		6B0C2EF7182F4BEF004FB994 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */; };
 		6B0C2EF9182F4C01004FB994 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */; };
@@ -192,6 +192,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B06240318A21A8B00698228 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
 		6B0C2EEA182F4AC5004FB994 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
 		6B0C2EEB182F4AC5004FB994 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
 		6B0C2EEC182F4AC5004FB994 /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
@@ -200,7 +201,6 @@
 		6B0C2EEF182F4AC5004FB994 /* YouMiWallAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallAppModel.h; sourceTree = "<group>"; };
 		6B0C2EF0182F4AC5004FB994 /* YouMiWallSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpot.h; sourceTree = "<group>"; };
 		6B0C2EF1182F4AC5004FB994 /* YouMiWallSpotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpotView.h; sourceTree = "<group>"; };
-		6B0C2EF2182F4ADB004FB994 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
 		6B0C2EF4182F4BE1004FB994 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -469,6 +469,7 @@
 				6B2B551618857815000F675F /* libYixinSDK.a in Frameworks */,
 				6B2B551118857815000F675F /* RennSDK.framework in Frameworks */,
 				6B2B54E718857814000F675F /* DouBanConnection.framework in Frameworks */,
+				6B06240418A21A8B00698228 /* libYouMi.a in Frameworks */,
 				6B2B550918857815000F675F /* GoogleOpenSource.framework in Frameworks */,
 				6B2B551918857815000F675F /* ShareSDKiPadDefaultShareViewUI.framework in Frameworks */,
 				6B2B550318857815000F675F /* YiXinConnection.framework in Frameworks */,
@@ -493,7 +494,6 @@
 				6B937C7D17B5E7FF00AAEDA6 /* Foundation.framework in Frameworks */,
 				6B2B54E818857814000F675F /* DropboxConnection.framework in Frameworks */,
 				6B937C7F17B5E7FF00AAEDA6 /* CoreGraphics.framework in Frameworks */,
-				6B0C2EF3182F4ADB004FB994 /* libYouMi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +734,7 @@
 		6B937C7917B5E7FF00AAEDA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B06240318A21A8B00698228 /* libYouMi.a */,
 				6BE02D5A186B271B009622C8 /* libsqlite3.0.dylib */,
 				6BE02CBB186B11E0009622C8 /* CoreLocation.framework */,
 				6BE02CB9186B11CF009622C8 /* MessageUI.framework */,
@@ -750,7 +751,6 @@
 				6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */,
 				6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */,
 				6B0C2EF4182F4BE1004FB994 /* SystemConfiguration.framework */,
-				6B0C2EF2182F4ADB004FB994 /* libYouMi.a */,
 				6BF8935B180A9F9A00238FF5 /* ImageIO.framework */,
 				6B937C7A17B5E7FF00AAEDA6 /* UIKit.framework */,
 				6B937C7C17B5E7FF00AAEDA6 /* Foundation.framework */,
@@ -1272,6 +1272,7 @@
 					/Users/xujun/Documents/ShowGirl/ShareSDK/Extend/TencentWeiboSDK,
 					/Users/xujun/Documents/ShowGirl/ShareSDK/Extend/WeChatSDK,
 					/Users/xujun/Documents/ShowGirl/ShareSDK/Extend/YiXinSDK,
+					/Users/xujun/Documents/ShowGirl,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1322,6 +1323,7 @@
 					/Users/xujun/Documents/ShowGirl/ShareSDK/Extend/TencentWeiboSDK,
 					/Users/xujun/Documents/ShowGirl/ShareSDK/Extend/WeChatSDK,
 					/Users/xujun/Documents/ShowGirl/ShareSDK/Extend/YiXinSDK,
+					/Users/xujun/Documents/ShowGirl,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
