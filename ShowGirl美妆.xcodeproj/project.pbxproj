@@ -154,7 +154,6 @@
 		6BD5DF1418115BE500A99F0C /* DeclareTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5DF1318115BE500A99F0C /* DeclareTimePickerViewController.m */; };
 		6BD5DF171811719400A99F0C /* MissionTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5DF161811719400A99F0C /* MissionTimeViewController.m */; };
 		6BD5DF1D1813ADC800A99F0C /* ChooseStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5DF1C1813ADC800A99F0C /* ChooseStringViewController.m */; };
-		6BD5DF201813C27000A99F0C /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5DF1F1813C27000A99F0C /* CustomCell.m */; };
 		6BDE6D3D17D1CBD40097AA27 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B937C9017B5E80000AAEDA6 /* Default-568h@2x.png */; };
 		6BE02CB0186B1175009622C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE02CAF186B1175009622C8 /* Security.framework */; };
 		6BE02CB4186B11A6009622C8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE02CB3186B11A6009622C8 /* MediaPlayer.framework */; };
@@ -215,7 +214,6 @@
 		6B201F521841A5ED002EE4E3 /* 风车icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-120.png"; sourceTree = "<group>"; };
 		6B201F541841A5FA002EE4E3 /* 风车icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车icon-57.png"; sourceTree = "<group>"; };
 		6B213654184A26C300C0EE4B /* 横条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "横条.png"; sourceTree = "<group>"; };
-		6B213656184A2FE400C0EE4B /* 红伞-圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红伞-圆.png"; sourceTree = "<group>"; };
 		6B213658184A316300C0EE4B /* 开始-圆-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始-圆-1.png"; sourceTree = "<group>"; };
 		6B213659184A316300C0EE4B /* 开始-圆-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始-圆-2.png"; sourceTree = "<group>"; };
 		6B21365A184A316300C0EE4B /* 开始-圆-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始-圆-3.png"; sourceTree = "<group>"; };
@@ -373,8 +371,6 @@
 		6BD5DF161811719400A99F0C /* MissionTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionTimeViewController.m; sourceTree = "<group>"; };
 		6BD5DF1B1813ADC800A99F0C /* ChooseStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseStringViewController.h; sourceTree = "<group>"; };
 		6BD5DF1C1813ADC800A99F0C /* ChooseStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseStringViewController.m; sourceTree = "<group>"; };
-		6BD5DF1E1813C27000A99F0C /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		6BD5DF1F1813C27000A99F0C /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		6BE02CAF186B1175009622C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6BE02CB1186B1187009622C8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6BE02CB3186B11A6009622C8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -781,8 +777,6 @@
 				6BD5DF1C1813ADC800A99F0C /* ChooseStringViewController.m */,
 				6BB64D4C1825DE6800156FAA /* SetMissionViewController.h */,
 				6BB64D4D1825DE6800156FAA /* SetMissionViewController.m */,
-				6BD5DF1E1813C27000A99F0C /* CustomCell.h */,
-				6BD5DF1F1813C27000A99F0C /* CustomCell.m */,
 				6B436FC418082F1F00AF4498 /* ImageEditingView.h */,
 				6B436FC518082F1F00AF4498 /* ImageEditingView.m */,
 				6B436FC618082F1F00AF4498 /* ImageEditingView.xib */,
@@ -831,7 +825,6 @@
 				6B213658184A316300C0EE4B /* 开始-圆-1.png */,
 				6B213659184A316300C0EE4B /* 开始-圆-2.png */,
 				6B21365A184A316300C0EE4B /* 开始-圆-3.png */,
-				6B213656184A2FE400C0EE4B /* 红伞-圆.png */,
 				6B213654184A26C300C0EE4B /* 横条.png */,
 				6BA29FBC184A1D330017D17F /* 完成-圆-btn.png */,
 				6BA29FB8184A122E0017D17F /* 设置-btn-1.png */,
@@ -1093,7 +1086,6 @@
 				6BA175281868826D008C39EE /* AFPickerView.m in Sources */,
 				6BF89344180A9B6F00238FF5 /* ImageUtil.m in Sources */,
 				6B937C8717B5E80000AAEDA6 /* main.m in Sources */,
-				6BD5DF201813C27000A99F0C /* CustomCell.m in Sources */,
 				6BBF3CE418779DF7000F0C73 /* EAIntroView.m in Sources */,
 				6BD5DF171811719400A99F0C /* MissionTimeViewController.m in Sources */,
 				6BF89359180A9EEB00238FF5 /* UIImage+RoundedCorner.m in Sources */,
