@@ -100,7 +100,7 @@
             declareNotification.fireDate = fireDate;
             declareNotification.repeatInterval = kCFCalendarUnitDay;
             declareNotification.timeZone=[NSTimeZone defaultTimeZone];
-            declareNotification.soundName = @"alert.mp3";
+            declareNotification.soundName = @"cute.mp3";
             
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsDeclareTime" forKey:@"DeclareOrMissionTime"];
             declareNotification.userInfo = info;

@@ -145,7 +145,7 @@
             declareNotification.repeatInterval = kCFCalendarUnitDay;
             declareNotification.timeZone=[NSTimeZone defaultTimeZone];
             declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
-            declareNotification.soundName = @"alert.mp3";
+            declareNotification.soundName = @"cute.mp3";
           
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsDeclareTime" forKey:@"DeclareOrMissionTime"];
             declareNotification.userInfo = info;
@@ -188,7 +188,7 @@
             missionNotification.repeatInterval = kCFCalendarUnitDay;
             missionNotification.timeZone=[NSTimeZone defaultTimeZone];
             missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
-            missionNotification.soundName = @"alert.mp3";
+            missionNotification.soundName = @"cute.mp3";
             
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsMissionTime" forKey:@"DeclareOrMissionTime"];
             missionNotification.userInfo = info;

@@ -120,43 +120,7 @@
 
 - (IBAction)doShare:(id)sender {
     
-    //*******test
-    //关注用户
-    /*
-    [ShareSDK followUserWithType:ShareTypeSinaWeibo     //平台类型
-                           field:@"星星汰1982"      //关注用户的名称或ID
-                       fieldType:SSUserFieldTypeName   //字段类型，用于指定第二个参数是名称还是ID
-                     authOptions:nil                     //授权选项
-                    viewDelegate:nil                    //授权视图委托
-                          result:^(SSResponseState state, id<ISSUserInfo>userInfo, id<ICMErrorInfo> error) {               //返回回调
-                              NSString *msg = nil;
-                              if (state == SSResponseStateSuccess)
-                              {
-                                  NSLog(@"关注成功");
-                              }
-                              else if (state == SSResponseStateFail)
-                              {
-                                  NSLog(@"%@", [NSString stringWithFormat:@"关注失败:%@", error.errorDescription]);
-                              }
-                          }];
-    
-    return;
-    */
-    //********
-    
-    
-    /*
-    actionSheetShare = [[UIActionSheet alloc]
-                        initWithTitle:nil
-                        delegate:self
-                        cancelButtonTitle:@"取消"
-                        destructiveButtonTitle:nil
-                        otherButtonTitles:@"分享到新浪微博", nil];//define other button with buttongIndex
-    actionSheetShare.actionSheetStyle =UIActionSheetStyleBlackOpaque;//Define the actionsheet show style.
-    [actionSheetShare showInView:self.view];//show actionsheet in the self view.
-    */
- 
-    //**********
+
     UITableViewCell *cell = [self.CurrentMissionTableView cellForRowAtIndexPath:[self.CurrentMissionTableView indexPathForSelectedRow]];
     
     NSString * shareMsg = nil;
@@ -201,7 +165,7 @@
                                        defaultContent:@"没有分享内容"
                                                 image:[ShareSDK jpegImageWithImage:proveImage.image quality:CGFLOAT_DEFINED]
                                                 title:@"天天更美丽"
-                                                  url:@"null"
+                                                  url:@"https://itunes.apple.com/us/app/tian-tian-geng-mei-li/id782426992?ls=1&mt=8"
                                           description:nil
                                             mediaType:contentType];
     
@@ -213,6 +177,24 @@
                           ShareTypeQQ,
                           ShareTypeCopy,
                           nil];
+//    NSArray *shareList = [ShareSDK getShareListWithType:ShareTypeTwitter, ShareTypeFacebook, ShareTypeSinaWeibo, ShareTypeTencentWeibo, ShareTypeRenren, ShareTypeKaixin, ShareTypeSohuWeibo, ShareType163Weibo, nil];
+    //创建弹出菜单容器
+    id<ISSContainer> container = [ShareSDK container];
+    [container setIPadContainerWithView:sender arrowDirect:UIPopoverArrowDirectionUp];
+    
+//    id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
+//                                                         allowCallback:NO
+//                                                         authViewStyle:SSAuthViewStyleFullScreenPopup
+//                                                          viewDelegate:nil
+//                                               authManagerViewDelegate:_appDelegate.viewDelegate];
+    
+    //在授权页面中添加关注官方微博
+//    [authOptions setFollowAccounts:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"星星汰"],
+//                                    SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),
+//                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"星星汰"],
+//                                    SHARE_TYPE_NUMBER(ShareTypeTencentWeibo),
+//                                    nil]];
     
     [ShareSDK showShareActionSheet:nil
                          shareList:shareList
@@ -230,6 +212,7 @@
                                     NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
                                 }
                             }];
+    
     
     //**********
      

@@ -175,7 +175,7 @@
         NSCalendar* calendar = [NSCalendar currentCalendar];
        
         [components setHour:7];
-        [components setMinute:0];
+        [components setMinute:30];
         [components setSecond:0];
         NSDate *fireDate = [calendar dateFromComponents:components];
         [defaults setObject:fireDate forKey:DEFAULT_DECLARE_TIME];
@@ -183,7 +183,7 @@
      
         
         [components setHour:21];
-        [components setMinute:0];
+        [components setMinute:30];
         [components setSecond:0];
         NSDate *fireDate1 = [calendar dateFromComponents:components];
         [defaults setObject:fireDate1 forKey:DEFAULT_MISSION_TIME];
@@ -210,7 +210,7 @@
             declareNotification.repeatInterval = kCFCalendarUnitDay;
             declareNotification.timeZone=[NSTimeZone defaultTimeZone];
             declareNotification.alertBody = NSLocalizedString(@"Declare time is on", @"");
-            declareNotification.soundName = @"alert.mp3";
+            declareNotification.soundName = @"cute.mp3";
             
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsDeclareTime" forKey:@"DeclareOrMissionTime"];
             declareNotification.userInfo = info;
@@ -231,7 +231,7 @@
             missionNotification.repeatInterval = kCFCalendarUnitDay;
             missionNotification.timeZone=[NSTimeZone defaultTimeZone];
             missionNotification.alertBody = NSLocalizedString(@"Mission time is on", @"");
-            missionNotification.soundName = @"alert.mp3";
+            missionNotification.soundName = @"cute.mp3";
             
             NSDictionary* info = [NSDictionary dictionaryWithObject:@"IsMissionTime" forKey:@"DeclareOrMissionTime"];
             missionNotification.userInfo = info;
@@ -272,7 +272,7 @@
 {
     //起动3次后，加载广告
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults integerForKey:@"BeforeADTime"] >= 5) {
+    if ([defaults integerForKey:@"BeforeADTime"] >= 3) {
         // 创建广告条
         YouMiView* adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:nil];
         

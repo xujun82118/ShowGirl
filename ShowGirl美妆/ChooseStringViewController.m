@@ -185,7 +185,6 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     currentSelect = [defaults integerForKey:@"current"];
     
-    NSLog(@"---current = %d",currentSelect);
     
     if (indexPath.row == currentSelect) {
         [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewRowAnimationMiddle];

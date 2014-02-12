@@ -67,6 +67,7 @@
 		5DA5443418A7790C0049BF92 /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DA543F918A7790B0049BF92 /* ShareSDKiPhoneSimpleShareViewUI.bundle */; };
 		5DA5443518A7790C0049BF92 /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA543FA18A7790B0049BF92 /* ShareSDKiPhoneSimpleShareViewUI.framework */; };
 		5DA5443718A779540049BF92 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA5443618A779540049BF92 /* libYouMi.a */; };
+		5DF487AA18AA636F004DBAFC /* cute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5DF487A918AA636F004DBAFC /* cute.mp3 */; };
 		6B0C2EF5182F4BE1004FB994 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF4182F4BE1004FB994 /* SystemConfiguration.framework */; };
 		6B0C2EF7182F4BEF004FB994 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF6182F4BEF004FB994 /* CFNetwork.framework */; };
 		6B0C2EF9182F4C01004FB994 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0C2EF8182F4C01004FB994 /* QuartzCore.framework */; };
@@ -258,6 +259,7 @@
 		5DA543F918A7790B0049BF92 /* ShareSDKiPhoneSimpleShareViewUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKiPhoneSimpleShareViewUI.bundle; sourceTree = "<group>"; };
 		5DA543FA18A7790B0049BF92 /* ShareSDKiPhoneSimpleShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPhoneSimpleShareViewUI.framework; sourceTree = "<group>"; };
 		5DA5443618A779540049BF92 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
+		5DF487A918AA636F004DBAFC /* cute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cute.mp3; sourceTree = "<group>"; };
 		6B0C2EEA182F4AC5004FB994 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
 		6B0C2EEB182F4AC5004FB994 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
 		6B0C2EEC182F4AC5004FB994 /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
@@ -792,6 +794,7 @@
 		6B937C8117B5E7FF00AAEDA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DF487A918AA636F004DBAFC /* cute.mp3 */,
 				6B75C0F6189BDC1C0019B6AC /* alert.mp3 */,
 				6B2B55251888137D000F675F /* waterlogo.png */,
 				6B146BEB188027B1002EBC0E /* plate-btn.png */,
@@ -994,6 +997,7 @@
 				5DA5443218A7790C0049BF92 /* ShareSDKiPhoneDefaultShareViewUI.bundle in Resources */,
 				6B201F531841A5ED002EE4E3 /* 风车icon-120.png in Resources */,
 				6B213668184B03A300C0EE4B /* 云LOG.png in Resources */,
+				5DF487AA18AA636F004DBAFC /* cute.mp3 in Resources */,
 				6B75C0F7189BDC1C0019B6AC /* alert.mp3 in Resources */,
 				6BE6FA90180CECC200411A52 /* btn_back@2x.png in Resources */,
 				6BE6FA92180CECC200411A52 /* camera_album@2x.png in Resources */,
